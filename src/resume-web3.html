@@ -1,0 +1,234 @@
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Thomas Robert Butler IV</title>
+<style>
+body {
+  color: #000000;
+  background: #eeeeee;
+  font: 1.1em "Times New Roman";
+  line-height: 1.2;
+  margin: 40px 0;
+}
+#resume {
+  margin: 0 auto;
+  max-width: 800px;
+  padding: 40px 60px;
+  background: #ffffff;
+  border: 1px solid #cccccc;
+  box-shadow: 2px 2px 4px #aaaaaa;
+  -webkit-box-shadow: 2px 2px 4px #aaaaaa;
+}
+h1 {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 200%;
+  margin: 0;
+  padding: 0;
+}
+h2 {
+  border-bottom: 1px solid #000000;
+  text-transform: uppercase;
+  font-size: 130%;
+  margin: 1em 0 0 0;
+  padding: 0;
+}
+h3 {
+  font-size: 100%;
+  margin: 0.8em 0 0.3em 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+}
+p {
+  margin: 0 0 0.5em 0;
+  padding: 0;
+}
+ul {
+  padding: 0;
+  margin: 0 1.5em;
+}
+
+/* h2 immediately after h1 = title */
+h1 + h2 {
+  text-align: center;
+  border-bottom: none;
+}
+/* ul immediately after h1 + h2 = contact list */
+h1 + h2 + ul {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+h1 + h2 + ul > li {
+  display: inline;
+  white-space: pre;
+  list-style-type: none;
+}
+h1 + h2 + ul > li:after {
+  content: "  \2022  ";
+}
+h1 + h2 + ul > li:last-child:after {
+  content: "";
+}
+/* p immediately after contact list = summary */
+h1 + h2 + ul + p {
+  margin: 1em 0;
+}
+@media print {
+  body {
+    font-size: 10pt;
+    margin: 0;
+    padding: 0;
+    background: none;
+  }
+  #resume {
+    margin: 0;
+    padding: 0;
+    border: 0px;
+    background: none;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+  }
+  /* Do not underline abbr tags in PDF */
+  abbr {
+    text-decoration: none;
+    font-variant: none;
+  }
+  /* Make links black in PDF */
+  /* Move this outside the print block to apply this in HTML too */
+  a,
+  a:link,
+  a:visited,
+  a:hover {
+    color: #000000;
+    text-decoration: underline;
+  }
+}
+@page {
+  /* Change margins and paper size of PDF */
+  /* https://developer.mozilla.org/en-US/docs/Web/CSS/@page */
+  size: letter;
+  margin: 0.5in 0.8in;
+}
+@media screen and (max-width: 800px) {
+  body {
+    font-size: 16pt;
+    margin: 0;
+    padding: 0;
+    background: #ffffff !important;
+  }
+  #resume {
+    margin: 0;
+    padding: 1em;
+    border: 0px;
+    background: none;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+  }
+}
+
+</style>
+</head>
+<body>
+<div id="resume">
+<!-- The (first) h1 will be used as the <title> of the HTML page -->
+<h1>Thomas Robert Butler IV</h1>
+<h2>Software Engineer</h2>
+<!-- The unordered list immediately after the h1 will be formatted on a single
+line. It is intended to be used for contact details -->
+<ul>
+<li><a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#116;&#114;&#98;&#105;&#118;&#64;&#112;&#114;&#111;&#116;&#111;&#110;&#46;&#109;&#101;">&#116;&#114;&#98;&#105;&#118;&#64;&#112;&#114;&#111;&#116;&#111;&#110;&#46;&#109;&#101;</a></li>
+<li>(630) 636-8010</li>
+<li><a href="https://github.com/trbutler4">Github</a></li>
+<li><a href="https://www.linkedin.com/in/thomas-butler-1a435018b/">Linkedin</a></li>
+</ul>
+<!-- The paragraph after the h1 and ul and before the first h2 is optional. It
+is intended to be used for a short summary. -->
+
+<!-- 
+
+Highly skilled, and extremely passionate Software Engineer with a deep understanding of Ethereum 
+development and a track record in Solidity and Web3 related technologies. 
+A dedicated problem solver who consistently seeks innovative approaches to complex challenges 
+through rigorous experimentation. Possessing a strong sense of ownership, constantly striving to 
+improve efficiency and effectiveness. Committed to staying abreast of the latest technologies and 
+industry advancements. A collaborative team player with excellent communication skills, fostering 
+an open and transparent work environment. Security-minded and adept at identifying and mitigating 
+potential threats and vulnerabilities. Equipped with a solid foundation in computer science 
+fundamentals acquired through a BSE in Computer Engineering, extensive internship experience, 
+constant self-directed learning, and contributions to Ethereum communities, including current 
+work volunteering to build out ETH Chicago.
+
+
+-->
+
+<h2>Education</h2>
+<h3><span>University of Iowa, BSE Computer Science and Engineering</span> <span>2018 &ndash; 2023</span></h3>
+<ul>
+<li>GPA 3.2/4.0</li>
+<li><strong>Relevant Courses:</strong> Single Variable Calculus, Multivariable Calculus, Matrix Algebra, 
+  Differential Equations, Discrete Structures, Probability and Statistics, Linear Systems, 
+  Physics I &amp; II, CS Fundamentals, Software Design, Data Structures, Algorithms, Digital Design, 
+  Computer Architecture and Organization, Circuits, Thermodynamics, Principles of Macroeconomics, 
+  Applied Machine Learning, Theory of Computation, Software Engineering Project, 
+  Senior Design Project</li>
+</ul>
+<h2>Skills</h2>
+<ul>
+<li><strong>Languages:</strong> Python, C, C++, Java, JavaScript, Ruby on Rails, Haskell, Solidity, 
+ Rust (learning), Go (learning)</li>
+<li><strong>Tools/Technologies:</strong> Git/Github, AWS, Linux, Brownie, Hardhat, Foundry, React, Ethers,
+ Databases (SQL and NoSQL), Firebase, Docker, IPFS, ENS, Infura, Metamask</li>
+<li><strong>Software Engineering:</strong> TDD, BDD, Unit testing, Integration Testing, Agile, Scrum, CI/CD</li>
+<li><strong>Interpersonal:</strong> Leadership, Project Management, Communication</li>
+</ul>
+<h2>Relevant Work Experience</h2>
+<!-- You have to wrap the "left" and "right" half of these headings in spans by
+hand -->
+
+<h3><span>Software Engineering Coop, Maverick Software Consulting/Thomson Reuters</span> <span>June 2021 &ndash; May 2023</span></h3>
+<ul>
+<li>Responsible for all stages of the software development life cycle of an automated AWS cloud orphaned asset
+ cleanup application using Python and AWS Lambda with Step Functions which is projected to save the client $14 million initially.
+ and reduce cloud spend over time, took ownership in all aspects of development process from ideation to production
+ implementation, including unit and integration testing, CI/CD pipelines, and documentaion</li>
+<li>Contributed to the development of an internal AWS RDS Database tool that is used across all the clients cloud teams.</li>
+<li>Worked remotely with team members across multiple different time zones.</li>
+<li><strong>Tools Used:</strong> AWS (Lambda, Step Functions, CodePipeline, Boto3 API), Python, Github.</li>
+</ul>
+<h2>Relevant Projects</h2>
+<h3><span>Full-Stack Dapp - NFTicket</span></h3>
+<p>NFT event ticketing platform which allows organizers to easily create events, sell NFT tickets, 
+and redeem tickets for event access</p>
+<ul>
+<li>Lead team of 4 developers to follow software engineering best practices</li>
+<li>Includes react front end, with firebase + smart contract back end </li>
+<li><strong>Tools used:</strong> JavaScript, Solidity, React, Hardhat, Firebase, React</li>
+</ul>
+<h3><span>Full-Stack Dapp - Peerio</span></h3>
+<p>Decentralized peer review process on filecoin network. Includes tokenized voting system, with rewards tied 
+to a users reputation</p>
+<ul>
+<li><a href="https://ethglobal.com/showcase/peerio-0bv55">Hack FEVM Filecoin pool prize winner</a></li>
+<li><strong>Tools used:</strong> JavaScript, Solidity, React, Hardhat, Firebase, Filecoin, IPFS</li>
+</ul>
+<h3><span>Machine Learning - Smart Contract Vulnerability Detection</span></h3>
+<p>Supervised and Unsupervised methods to detect potential vulnerabilities in smart contracts 
+ - Supervised: Smart contract bytecode compiled to simplified opcodes, &ldquo;sliding window&rdquo; view created with opcode 
+ bigrams. Trained with neural network. 
+ - Unsupervised: Smart contract bytecode converted to RGB images, K-Means clustering to detect 
+ vulnerabilities </p>
+<ul>
+<li><strong>Tools used:</strong> Python, PyTorch, Jupyter Notebook, Hugging Face Datasets</li>
+</ul>
+<h2>Leadership Experience and Awards</h2>
+<h3><span>Sigma Chi Fraternity Alpha Eta Chapter, Academic Chair</span> <span>Spring 2018 &ndash; Spring 2019</span></h3>
+<h3><span>Sigma Chi Fraternity Alpha Eta Chapter, Risk Manager (Executive Board)</span> <span>Spring 2019 &ndash; Spring 2020</span></h3>
+<h3><span>BSA Troop 81, Eagle Scout</span> <span>Winter 2017</span></h3>
+<ul>
+<li>Earning the rank of Eagle Scout involved planning, fundraising, and executing a large-scale service project for the 
+DuPage County forest preserve in Illinois, totalling well over 100 volunteer hours, and over a year of planning</li>
+</ul></div>
+</body>
+</html>
