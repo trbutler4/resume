@@ -23,9 +23,9 @@ function App() {
         </Box>
 
         <Box className="resume-body" m={5}>
+
+            <Heading fontSize={22} textAlign={['left']}>Education</Heading>
             <Box className="body-education" p={5} flex='1' textAlign='left'>
-                <Heading fontSize={22} textAlign={['left']}>Education</Heading>
-                <br/>
                 <Text fontSize={18}>
                     University of Iowa, BSE Computer Science and Engineering
                 </Text>
@@ -43,9 +43,8 @@ function App() {
                 </UnorderedList>
             </Box>
 
+            <Heading fontSize={22} textAlign={['left']}>Skills</Heading>
             <Box className="body-skills" p={5} flex='1' textAlign='left'>
-                <Heading fontSize={22} textAlign={['left']}>Skills</Heading>
-                <br/>
                 <UnorderedList>
                     <ListItem>
                         <strong>Languages: </strong>
@@ -68,10 +67,8 @@ function App() {
                 </UnorderedList>
             </Box>
 
+            <Heading fontSize={22} textAlign={['left']}>Work Experience</Heading>
             <Box className="body-work-experience" p={5} flex='1' textAlign='left'>
-                <Heading fontSize={22} textAlign={['left']}>Work Experience</Heading>
-                <br/>
-
                 <Text fontSize={18}>
                     <strong>Cloud Software Engineer Intern</strong> &ndash; <em>Thomson Reuters </em>
                 </Text>
@@ -99,10 +96,8 @@ function App() {
                 </UnorderedList>
             </Box>
 
+            <Heading fontSize={22} textAlign={['left']}>Project Highlights</Heading>
             <Box className="body-projects" p={5} flex='1' textAlign='left'>
-                <Heading fontSize={22} textAlign={['left']}>Project Highlights</Heading>
-                <br/>
-
                 <Text fontSize={18}>
                     <strong>Full-Stack Dapp</strong> &ndash; <em>NFTicket</em>
                 </Text>
@@ -154,9 +149,8 @@ function App() {
                 </UnorderedList>
             </Box>
 
+            <Heading fontSize={22} textAlign={['left']}>Leadership Experience and Awards</Heading>
             <Box className="body-leadership-and-awards" p={5} flex='1' textAlign='left'>
-                <Heading fontSize={22} textAlign={['left']}>Leadership Experience and Awards</Heading>
-                <br/>
                 <Text fontSize={18}>
                     <strong>Academic Chair</strong> &ndash;
                     <em> Sigma Chi Fraternity Alpha Eta Chapter</em>
