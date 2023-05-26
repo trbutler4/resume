@@ -6,6 +6,7 @@ import {
     Heading,
     UnorderedList,
     ListItem,
+    Link,
 } from '@chakra-ui/react'
 
 function App() {
@@ -16,9 +17,9 @@ function App() {
             <Heading textAlign={['center']}>Thomas Robert Butler IV</Heading>
             <Heading textAlign={['center']}>Software Engineer</Heading>
             <Text fontSize={22} textAlign={['center']}>
-                <a href="mailto:trbiv@proton.me">trbiv@proton.me </a> |
-                <a href="https://github.com/trbutler4"> Github</a> |
-                <a href="https://www.linkedin.com/in/thomas-butler-1a435018b/"> LinkedIn</a>
+                <Link href="mailto:trbiv@proton.me" color='blue.500'>trbiv@proton.me </Link> |
+                <Link href="https://github.com/trbutler4" color='blue.500'> Github</Link> |
+                <Link href="https://www.linkedin.com/in/thomas-butler-1a435018b/" color='blue.500'> LinkedIn</Link>
             </Text>
         </Box>
 
@@ -53,8 +54,8 @@ function App() {
                     </ListItem>
                     <ListItem>
                         <strong>Tools/Technologies: </strong>
-                        Git/Github, AWS, Linux, Brownie, Hardhat, Foundry, React, Ethers,
-                        Databases (SQL and NO-SQL), Firebase, IPFS, ENS, Infura, Metamask
+                        Linux, Git/Github, AWS, Brownie, Hardhat, Foundry, React, Ethers,
+                        Databases (SQL and NO-SQL), APIs, Firebase, IPFS, ENS, Infura, Metamask
                     </ListItem>
                     <ListItem>
                         <strong>Software Engineering: </strong>
@@ -70,7 +71,47 @@ function App() {
             <Heading fontSize={22} textAlign={['left']}>Work Experience</Heading>
             <Box className="body-work-experience" p={5} flex='1' textAlign='left'>
                 <Text fontSize={18}>
-                    <strong>Cloud Software Engineer Intern</strong> &ndash; <em>Thomson Reuters </em>
+                    <strong>Software Engineer</strong> &ndash; <em> Ethereum Chicago (May 2023 - Present)</em>
+                </Text>
+                <UnorderedList>
+                    <ListItem>
+                        Volunteer software engineer for Ethereum Chicago core team, contributing
+                        to building out the Ethereum ecosystem in Chicago.
+                    </ListItem>
+                    <ListItem>
+                        Spearhead deployment of
+                         <Link href="https://forum.ethchicago.xyz/" color='blue.500'> forum.ethchicago.xyz</Link>
+                        , a Discourse server for contributors to the Ethereum Chicago community.
+                    </ListItem>
+                    <ListItem>
+                        Collaborate with other Ethereum Chicago core team members to develop
+                        infrastructure, including website, NFT ticketing, and other technical aspects
+                        of the participant experience.
+                    </ListItem>
+                </UnorderedList>
+
+                <br/>
+                <Text fontSize={18}>
+                    <strong>Intern</strong> &ndash; <em> Serval Ventures (March 2022 - Present)</em>
+                </Text>
+                <Text>
+                    Serval Ventures is an early stage venture buillder, investor, and innovation
+                    partner focusing on AI, data, mixed reality, and blockchain.
+                </Text>
+                <UnorderedList>
+                    <ListItem>
+                        Worked closely with founders of various AI and Blockchain focused
+                        startups to develop and implement business strategies.
+                    </ListItem>
+                    <ListItem>
+                        Founding member of a stealth proprietary AI investment fund.
+                    </ListItem>
+                </UnorderedList>
+
+                <br/>
+                <Text fontSize={18}>
+                    <strong>Cloud Software Engineer Intern</strong> &ndash;
+                    <em> Thomson Reuters (June 2021 - May 2023)</em>
                 </Text>
                 <UnorderedList>
                     <ListItem>
@@ -80,18 +121,61 @@ function App() {
                         Thomson Reuters $14 million initially, and reduce cloud spend over time.
                         Took ownership in all aspects of development process from ideation to
                         production implementation, including unit and integration testing,
-                        CI/CD pipelines, and documentaion
+                        CI/CD pipelines, and documentaion.
                     </ListItem>
                     <ListItem>
                         Contributed to the development of an internal AWS RDS Database tool
-                        that is used across all cloud teams at Thomson Reuters
+                        that is used across all cloud teams at Thomson Reuters.
                     </ListItem>
                     <ListItem>
-                        Worked remotely with multipls teams across the globe
+                        Worked remotely with multipls teams across the globe.
                     </ListItem>
                     <ListItem>
                         <strong>Tools Used: </strong> AWS (Lambda, Step Functions, CodePIpeline,
                             Boto3), Python
+                    </ListItem>
+                </UnorderedList>
+
+                <br/>
+                <Text fontSize={18}>
+                    <strong>Network Engineer Intern</strong> &ndash;
+                    <em> Arias Information Solutions (June 2020 - December 2020)</em>
+                </Text>
+                <UnorderedList>
+                    <ListItem>
+                        Conducted field inventory of the Illinois Tollway fiber optic communication
+                        system including network equipment at toll plazas, fiber termination
+                        points, and cable/conduit routing.
+                    </ListItem>
+                    <ListItem>
+                        Using data collected in the field, led updates of fiber network diagrams
+                        using Microsoft Visio. Collaborated with Tollway network staff, field
+                        technicians, and engineers to ensure the accuracy and consistency of the diagrams.
+                    </ListItem>
+                    <ListItem>
+                        Analyzed 200+ pages of different technical plans and spreadsheets to
+                        establish fiber and IoT device connectivity while working remotely.
+                    </ListItem>
+                </UnorderedList>
+
+                <br/>
+                <Text fontSize={18}>
+                    <strong>Software Engineer Intern</strong> &ndash;
+                    <em> Parsons Corporation (June 2019 - August 2019)</em>
+                </Text>
+                <UnorderedList>
+                    <ListItem>
+                        Contributed to the development of the Illinois Tollway Advanced Traffic
+                        Management System (ATMS).
+                    </ListItem>
+                    <ListItem>
+                        Performed field investigations and oversight of fiber optic communication
+                        system overhaul in the city of Chicago, collaborating with representatives
+                        from CDOT, DEO, and OEMC.
+                    </ListItem>
+                    <ListItem>
+                        Responsible for implementation of Illinois Tollway employee management
+                        software. Provided technical support after the implementation.
                     </ListItem>
                 </UnorderedList>
             </Box>
@@ -107,10 +191,36 @@ function App() {
                 </Text>
                 <UnorderedList>
                     <ListItem>
-                        Lead team of 4 developers to follow software engineering best practices
+                        Lead team of 4 developers to follow software engineering best practices.
                     </ListItem>
                     <ListItem>
-                        <strong>Tools Used: </strong> Hardhat, React, Firebase
+                        Fully tested Metamask integration using Cypress and Synpress.
+                    </ListItem>
+                    <ListItem>
+                        <strong>Tools Used: </strong> Hardhat, React, Firebase, Infura, Cypress,
+                            Synpress
+                    </ListItem>
+                </UnorderedList>
+
+                <br/>
+                <Text fontSize={18}>
+                    <strong>Full-Stack App</strong> &ndash; <em>Curate</em>
+                </Text>
+                <Text>
+                    Full stack web application that leverages Spotify and Apple music APIs to
+                    allow users to curate playlists, post them to the platform, like and comment
+                    on playlists, follow users, and upload/export playlists to and from Spotify
+                    and Apple Music.
+                </Text>
+                <UnorderedList>
+                    <ListItem>
+                        Includes CI/CD pipelines, PR templates, and branch protections
+                    </ListItem>
+                    <ListItem>
+                        Fully documented project wiki, detailing all aspects of the project
+                    </ListItem>
+                    <ListItem>
+                        <strong>Tools Used: </strong> React, Firebase, Node, Cypress
                     </ListItem>
                 </UnorderedList>
 
@@ -124,12 +234,12 @@ function App() {
                 </Text>
                 <UnorderedList>
                     <ListItem>
-                        <a href="https://ethglobal.com/showcase/peerio-0bv55">
+                        <Link href="https://ethglobal.com/showcase/peerio-0bv55" color='blue.500'>
                             Hack FEVM Filecoin pool prize winner
-                        </a>
+                        </Link>
                     </ListItem>
                     <ListItem>
-                        <strong>Tools Used: </strong> Hardhat, React, Firebase, IPFS (Web3.storage),
+                        <strong>Tools Used: </strong> Hardhat, React, Firebase, IPFS (Web3.storage)
                     </ListItem>
                 </UnorderedList>
 
@@ -164,7 +274,6 @@ function App() {
                     <em> BSA Troop 81</em>
                 </Text>
             </Box>
-
 
         </Box>
     </ChakraProvider>
