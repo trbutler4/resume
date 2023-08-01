@@ -22,6 +22,7 @@ function App() {
                 <Link href="https://github.com/trbutler4" color='blue.500'> Github</Link> |
                 <Link href="https://www.linkedin.com/in/thomas-butler-1a435018b/" color='blue.500'> LinkedIn</Link>
             </Text>
+            {/*
             <Text padding={4}>
                 Thomas Robert Butler IV is a dedicated and skilled Software Engineer with a passion for innovation and 
                 expertise in a wide range of technologies. He holds a BSE degree in Computer Science and Engineering from 
@@ -32,6 +33,7 @@ function App() {
                 Git/Github, and AWS. With his commitment to continuous learning and a drive for staying at the forefront of 
                 industry trends, Thomas is well-equipped to excel in dynamic software engineering roles.
             </Text>
+            */}
         </Box>
 
         <Box className="resume-body" m={5}>
@@ -40,7 +42,7 @@ function App() {
             <Divider />
             <Box className="body-education" p={5} flex='1' textAlign='left'>
                 <Text fontSize={18}>
-                    University of Iowa, BSE Computer Science and Engineering
+                    University of Iowa, BSE Computer Engineering
                 </Text>
                 <UnorderedList>
                     <ListItem>GPA 3.2/4.0</ListItem>
@@ -62,22 +64,26 @@ function App() {
                 <UnorderedList>
                     <ListItem>
                         <strong>Languages: </strong>
-                        Python, C, C++, Java, JavaScript, HTML, CSS, Ruby on Rails, Haskell,
-                        Solidity, Rust, Go
+                        Python, C, C++, Assembly, Java, JavaScript, Typescript, HTML, CSS, Ruby, 
+                        Haskell, Solidity, Rust, Go, Cairo
                     </ListItem>
                     <ListItem>
                         <strong>Tools/Technologies: </strong>
-                        Linux, Git/Github, AWS, Brownie, Hardhat, Foundry, React, Ethers,
-                        Databases (SQL and NO-SQL), APIs, Firebase, IPFS, ENS, Infura, Metamask
+                        Linux, Git/Github, AWS, Rails, Brownie, Truffle, Hardhat, Ganache, Foundry, React, 
+                        NextJs, Fleek, Ethers,
+                        Databases (SQL and NO-SQL), APIs, Firebase, IPFS, ENS, Infura, Metamask, Argent,
+                        Wagmi, Storybook, Chromatic, Ethereum, Polygon, Arbitrum, Starknet, Scarb, The Graph
                     </ListItem>
                     <ListItem>
                         <strong>Software Engineering: </strong>
                         TDD, BDD, Unit Testing, Integration Testing, CI/CD, Agile, Scrum
                     </ListItem>
+                    {/*
                     <ListItem>
                         <strong>Interpersonal: </strong>
                         Leadership, Project Management, Communication, Time Management, Remote Work
                     </ListItem>
+                    */}
                 </UnorderedList>
             </Box>
 
@@ -86,12 +92,27 @@ function App() {
             <Divider />
             <Box className="body-work-experience" p={5} flex='1' textAlign='left'>
                 <Text fontSize={18}>
-                    <strong>Software Engineer</strong> &ndash; <em> Ethereum Chicago (May 2023 - Present)</em>
+                    <strong>Software Engineer</strong> &ndash; <em> Term Finance (July 2023 - Present)</em>
                 </Text>
                 <UnorderedList>
                     <ListItem>
-                        Volunteer software engineer for Ethereum Chicago core team, contributing
-                        to building out the Ethereum ecosystem in Chicago.
+                        Worked asynchronously with a fully remote team to build Term's crypto lending platform. 
+                    </ListItem>
+                    <ListItem>
+                        <strong>Tools Used: </strong> React, Typescript, Storbybook, Polygon, Ethereum, 
+                            Chakra-UI, Chromatic, Git, Github
+                    </ListItem>
+                </UnorderedList>
+
+                <br/>
+                <Text fontSize={18}>
+                    <strong>Software Engineer</strong> &ndash; <em> ETHChicago (May 2023 - Present)</em>
+                </Text>
+                <UnorderedList>
+                    <ListItem>
+                        Volunteer software engineer for Ethereum Chicago core team, Collaborated and coordinated 
+                        efforts with ETHChicago ecosystem to ensure
+                        seamless integration and synergy across various elements of the Ethereum community in Chicago.
                     </ListItem>
                     <ListItem>
                         Spearhead deployment of
@@ -99,27 +120,23 @@ function App() {
                         , a Discourse server for contributors to the Ethereum Chicago community.
                     </ListItem>
                     <ListItem>
-                        Collaborate with other Ethereum Chicago core team members to develop
-                        infrastructure, including website, NFT ticketing, and other technical aspects
-                        of the participant experience.
-                    </ListItem>
-                </UnorderedList>
-
-                <br/>
-                <Text fontSize={18}>
-                    <strong>Intern</strong> &ndash; <em> Serval Ventures (March 2022 - May 2023)</em>
-                </Text>
-                <Text>
-                    Serval Ventures is an early stage venture buillder, investor, and innovation
-                    partner focusing on AI, data, mixed reality, and blockchain.
-                </Text>
-                <UnorderedList>
-                    <ListItem>
-                        Worked closely with founders of various AI and Blockchain focused
-                        startups to develop and implement business strategies.
+                        Independently, with feedback from Unlock protocol team and ETHChicago core team,
+                        built and launched 
+                         <Link href="https://ethchicago.xyz/" color='blue.500'> ethchicago.xyz </Link>
+                        including the NFT ticketing infrastructure, providing a seamless 
+                        NFT ticketing process for all ateendees. The website is hosted on IPFS via Fleek.
                     </ListItem>
                     <ListItem>
-                        Founding member of a stealth proprietary AI investment fund.
+                        Currently leading a team of 3 designers to enahnce the user experience and aesthetics of 
+                        the website.
+                    </ListItem>
+                    <ListItem>
+                        As a signer on the Gnosis Safe, managed transactions and treasury on both Arbitrum and 
+                        Ethereum.
+                    </ListItem>
+                    <ListItem>
+                        <strong>Tools Used: </strong> React, Typescript, Storbybook, Arbitrum, Chakra-UI, 
+                            Unlock Protocol, Gnosis Safe, Git, Github, Wagmi, Feek, IPFS, ENS
                     </ListItem>
                 </UnorderedList>
 
@@ -159,52 +176,48 @@ function App() {
 
                 <br/>
                 <Text fontSize={18}>
-                    <strong>Network Engineer Intern</strong> &ndash;
-                    <em> Arias Information Solutions (June 2020 - December 2020)</em>
+                    <strong>Open Source Contributions</strong> 
                 </Text>
                 <UnorderedList>
                     <ListItem>
-                        Conducted field inventory of the Illinois Tollway fiber optic communication
-                        system including network equipment at toll plazas, fiber termination
-                        points, and cable/conduit routing.
+                       Integrated Unlock Protocol NFT gated memberships into TurboETH. This included a component
+                        to create locks, a paywall, and components to display owned keys, created locks, and lock
+                        information by querying The Graph. 
                     </ListItem>
                     <ListItem>
-                        Using data collected in the field, led updates of fiber network diagrams
-                        using Microsoft Visio. Collaborated with Tollway network staff, field
-                        technicians, and engineers to ensure the accuracy and consistency of the diagrams.
-                    </ListItem>
-                    <ListItem>
-                        Analyzed 200+ pages of different technical plans and spreadsheets to
-                        establish fiber and IoT device connectivity while working remotely.
+                        <strong>Tools Used: </strong> React, Typescript, Wagmi, Unlock Protocol, The Graph
                     </ListItem>
                 </UnorderedList>
 
-                <br/>
-                <Text fontSize={18}>
-                    <strong>Software Engineer Intern</strong> &ndash;
-                    <em> Parsons Corporation (June 2019 - August 2019)</em>
-                </Text>
-                <UnorderedList>
-                    <ListItem>
-                        Contributed to the development of the Illinois Tollway Advanced Traffic
-                        Management System (ATMS).
-                    </ListItem>
-                    <ListItem>
-                        Performed field investigations and oversight of fiber optic communication
-                        system overhaul in the city of Chicago, collaborating with representatives
-                        from CDOT, DEO, and OEMC.
-                    </ListItem>
-                    <ListItem>
-                        Responsible for implementation of Illinois Tollway employee management
-                        software. Provided technical support after the implementation.
-                    </ListItem>
-                </UnorderedList>
+
             </Box>
 
             {/* Projects */}
             <Heading fontSize={22} textAlign={['left']}>Project Highlights</Heading>
             <Divider />
             <Box className="body-projects" p={5} flex='1' textAlign='left'>
+                <Text fontSize={18}>
+                    <strong>General Solidity and Cairo Projects</strong> 
+                </Text>
+                <UnorderedList>
+                    <ListItem>
+                        Read and followed all examples in the Cairo Book. Completed Cairo practice projects on Node 
+                        Guardians.
+                    </ListItem>
+                    <ListItem>
+                        Completed various Solidity projects on Node Guardians with topics including gas optimization, 
+                        secutiy, storage, and more.
+                    </ListItem>
+                    <ListItem>
+                        Completed various Soldity CTFs on Ethernaut, fully testing all solutions and exploits in 
+                        Solidity with Foundry.
+                    </ListItem>
+                    <ListItem>
+                        <strong>Tools Used: </strong> Solidity, Cairo, Hardat, Brownie, Foundry, Ethers, Scarb
+                    </ListItem>
+                </UnorderedList>
+
+                <br/>
                 <Text fontSize={18}>
                     <strong>Full-Stack dApp</strong> &ndash; <em><Link href="https://github.com/trbutler4/NFTicket" color="blue.500">NFTicket</Link></em>
                 </Text>
@@ -220,7 +233,7 @@ function App() {
                         Fully tested Metamask integration using Cypress and Synpress.
                     </ListItem>
                     <ListItem>
-                        <strong>Tools Used: </strong> Hardhat, React, Firebase, Infura, Cypress,
+                        <strong>Tools Used: </strong> Solidity, Hardhat, React, Firebase, Infura, Cypress,
                             Synpress
                     </ListItem>
                 </UnorderedList>
@@ -262,7 +275,7 @@ function App() {
                         </Link>
                     </ListItem>
                     <ListItem>
-                        <strong>Tools Used: </strong> Hardhat, React, Firebase, IPFS (Web3.storage)
+                        <strong>Tools Used: </strong> Solidity, Hardhat, React, Firebase, IPFS, Web3.Storage
                     </ListItem>
                 </UnorderedList>
 
@@ -351,10 +364,15 @@ function App() {
                 <UnorderedList>
                     <ListItem>
                        Supervised and Unsupervised methods to detect potential vulnerabilities in
-                        smart contracts.
+                        smart contracts. 
                     </ListItem>
                     <ListItem>
-                        <strong>Tools Used: </strong> Python, PyTorch, Jupyter Notebook
+                        Methods included analyzing bytecode directly by contructing a 
+                        'sliding window' of relevant opcodes, as well converting bytecode into RGB images, 
+                        both of which were analyzed using neural networks.
+                    </ListItem>
+                    <ListItem>
+                        <strong>Tools Used: </strong> Python, PyTorch, Jupyter Notebook, Solidity, Slither
                     </ListItem>
                 </UnorderedList>
 
@@ -374,7 +392,7 @@ function App() {
                         Unsupervised Learning: implemented k-means clustering algorithm to organize a data set into clusters.
                     </ListItem>
                     <ListItem>
-                        <strong>Tools Used: </strong> Java
+                        <strong>Tools Used: </strong> Java only
                     </ListItem>
                 </UnorderedList>
 
@@ -389,7 +407,7 @@ function App() {
                         on the rise and fall of the S&P 500 index on any given day.
                     </ListItem>
                     <ListItem>
-                        <strong>Tools Used: </strong> Python
+                        <strong>Tools Used: </strong> Python, Pandas, Numby
                     </ListItem>
                 </UnorderedList>
 
