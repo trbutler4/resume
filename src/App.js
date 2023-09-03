@@ -91,7 +91,7 @@ function App() {
                     </ListItem>
                     <ListItem>
                         <strong>Tools Used: </strong> React, Typescript, Storbybook, Polygon, Ethereum, 
-                            Chakra-UI, TailwindCSS, MaterialUI, Chromatic, Git, Github
+                        Chakra-UI, TailwindCSS, MaterialUI, Chromatic, Git, Github
                     </ListItem>
                 </UnorderedList>
 
