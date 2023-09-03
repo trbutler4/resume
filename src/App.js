@@ -46,15 +46,6 @@ function App() {
                 </Text>
                 <UnorderedList>
                     <ListItem>GPA 3.2/4.0</ListItem>
-                    <ListItem><strong>Relevant Courses:</strong> Single Variable Calculus,
-                        Multivariable Calculus, Matrix Algebra, Differential Equations,
-                        Discrete Structures, Probability and Statistics, Linear Systems,
-                        Physics I &amp; II, CS Fundamentals, Software Design, Data Structures,
-                        Algorithms, Digital Design, Computer Architecture and Organization,
-                        Circuits, Thermodynamics, Principles of Macroeconomics, Applied Machine
-                        Learning, Theory of Computation, Software Engineering Project,
-                        Senior Design Project
-                    </ListItem>
                 </UnorderedList>
             </Box>
 
@@ -71,8 +62,8 @@ function App() {
                         <strong>Tools/Technologies: </strong>
                         Linux, Git/Github, AWS, Rails, Brownie, Truffle, Hardhat, Ganache, Foundry, React, 
                         NextJs, Fleek, Ethers,
-                        Databases (SQL and NO-SQL), APIs, Firebase, IPFS, ENS, Infura, Metamask, Argent,
-                        Wagmi, Storybook, Chromatic, Ethereum, Polygon, Arbitrum, Starknet, Scarb, The Graph
+                        Databases (SQL and NO-SQL), APIs, Firebase, IPFS, ENS, The Graph, Infura, Metamask, Argent,
+                        Wagmi, Storybook, Chromatic, Ethereum, Polygon, Arbitrum, Starknet, Scarb, Katana
                     </ListItem>
                     <ListItem>
                         <strong>Software Engineering: </strong>
@@ -92,15 +83,15 @@ function App() {
             <Divider />
             <Box className="body-work-experience" p={5} flex='1' textAlign='left'>
                 <Text fontSize={18}>
-                    <strong>Software Engineer</strong> &ndash; <em> Term Finance (July 2023 - Present)</em>
+                    <strong>Frontend Software Engineer</strong> &ndash; <em> Freelance (July 2023 - Present)</em>
                 </Text>
                 <UnorderedList>
                     <ListItem>
-                        Worked asynchronously with a fully remote team to build Term's crypto lending platform. 
+                        Worked asynchronously with multiple fully remote teams to build frontends for crypto lending platforms, services, and communities.
                     </ListItem>
                     <ListItem>
                         <strong>Tools Used: </strong> React, Typescript, Storbybook, Polygon, Ethereum, 
-                            Chakra-UI, Chromatic, Git, Github
+                            Chakra-UI, TailwindCSS, MaterialUI, Chromatic, Git, Github
                     </ListItem>
                 </UnorderedList>
 
@@ -196,6 +187,22 @@ function App() {
             <Heading fontSize={22} textAlign={['left']}>Project Highlights</Heading>
             <Divider />
             <Box className="body-projects" p={5} flex='1' textAlign='left'>
+                <Text fontSize={18}>
+                    <strong>Starkfish -- a Starknet Chess Engine</strong> 
+                </Text>
+                <UnorderedList>
+                    <ListItem>
+                        Starkfish is a proveable chess engine, including move generation, evaluation, and search, written in cairo for deployment to Starknet.
+                    </ListItem>
+                    <ListItem>
+                        Includes frontend created with starknet-react and nextjs to play against the engine.
+                    </ListItem>
+                    <ListItem>
+                        <strong>Tools USed: </strong> Cairo, Katana, Starkli, Starknet, Starknet-react, NextJs
+                    </ListItem>
+                </UnorderedList>
+
+                <br/>
                 <Text fontSize={18}>
                     <strong>General Solidity and Cairo Projects</strong> 
                 </Text>
