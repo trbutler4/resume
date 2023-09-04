@@ -171,12 +171,18 @@ function App() {
                 </Text>
                 <UnorderedList>
                     <ListItem>
-                       Integrated Unlock Protocol NFT gated memberships into TurboETH. This included a component
+                       <strong>TurbETH - </strong>Integrated Unlock Protocol NFT gated memberships into TurboETH. This included a component
                         to create locks, a paywall, and components to display owned keys, created locks, and lock
                         information by querying The Graph. 
                     </ListItem>
                     <ListItem>
-                        <strong>Tools Used: </strong> React, Typescript, Wagmi, Unlock Protocol, The Graph
+                        <strong>Cairo Book - </strong>General typo fixes and improvements to the Cairo programming language documentaion
+                    </ListItem>
+                    <ListItem>
+                        <strong>Kakarot - </strong>Implemented Opcodes for the Kakarot EVM written in Cairo.
+                    </ListItem>
+                    <ListItem>
+                        <strong>Tools Used: </strong> React, Typescript, Wagmi, Unlock Protocol, The Graph, Cairo, Git, Github
                     </ListItem>
                 </UnorderedList>
 
