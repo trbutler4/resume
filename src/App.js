@@ -253,28 +253,6 @@ function App() {
 
                 <br/>
                 <Text fontSize={18}>
-                    <strong>Full-Stack App</strong> &ndash; <em><Link href="https://github.com/sep-23/team_01/wiki" color="blue.500">Curate</Link></em>
-                </Text>
-                <UnorderedList>
-                    <ListItem>
-                        Full stack web application that leverages Spotify and Apple music APIs to
-                        allow users to curate playlists, post them to the platform, like and comment
-                        on playlists, follow users, and upload/export playlists to and from Spotify
-                        and Apple Music.
-                    </ListItem>
-                    <ListItem>
-                        Includes CI/CD pipelines, PR templates, and branch protections
-                    </ListItem>
-                    <ListItem>
-                        Fully documented project wiki, detailing all aspects of the project
-                    </ListItem>
-                    <ListItem>
-                        <strong>Tools Used: </strong> React, Firebase, Node, Cypress
-                    </ListItem>
-                </UnorderedList>
-
-                <br/>
-                <Text fontSize={18}>
                     <strong>Full-Stack dApp</strong> &ndash; <em><Link href="https://github.com/brandonsurh/peerio" color="blue.500">Peerio</Link></em>
                 </Text>
                 <UnorderedList>
@@ -289,41 +267,6 @@ function App() {
                     </ListItem>
                     <ListItem>
                         <strong>Tools Used: </strong> Solidity, Hardhat, React, Firebase, IPFS, Web3.Storage
-                    </ListItem>
-                </UnorderedList>
-
-                <br/>
-                <Text fontSize={18}>
-                    <strong>Full-Stack App</strong> &ndash; <em><Link href="https://github.com/UIOWAjohnsonhj/selt2022_teamprojects-team-7" color='blue.500'>University Application Portal</Link></em>
-                </Text>
-                <UnorderedList>
-                    <ListItem>
-                        Full-stack application for university applicants to apply to multiple different schools,
-                        and allows administrators to review their applications.
-                    </ListItem>
-                    <ListItem>
-                        Followed software engineering best practices, fully documented project 
-                        <Link href="https://github.com/UIOWAjohnsonhj/selt2022_teamprojects-team-7/wiki" color='blue.500'> wiki</Link>
-                    </ListItem>
-                    <ListItem>
-                        <strong>Tools Used: </strong>Ruby on Rails, JavaScript, Springboot, SQL
-                    </ListItem>
-                </UnorderedList>
-
-                <br/>
-                <Text fontSize={18}>
-                    <strong>Computer Architecture</strong> &ndash;
-                    <em> SISC Computer</em>
-                </Text>
-                <UnorderedList>
-                    <ListItem>
-                        Built and tested SISC computer processor.
-                    </ListItem>
-                    <ListItem>
-                        Wrote machine code programs that correctly execute on the computer.
-                    </ListItem>
-                    <ListItem>
-                        <strong>Tools Used: </strong> Verilog HDL, ModelSim
                     </ListItem>
                 </UnorderedList>
 
@@ -349,25 +292,6 @@ function App() {
                     </ListItem>
                 </UnorderedList>
 
-                <br/>
-                <Text fontSize={18}>
-                    <strong>Desktop Application</strong> &ndash;
-                    <em> Voting Application</em>
-                </Text>
-                <UnorderedList>
-                    <ListItem>
-                        GUI desktop application for uniform national voting, allowing for voter, auditor, and media users 
-                    </ListItem>
-                    <ListItem>
-                        Uses SQL to get and store voter and candidate information.
-                    </ListItem>
-                    <ListItem>
-                        Includes user authentication for different user types.
-                    </ListItem>
-                    <ListItem>
-                        <strong>Tools Used: </strong>Java, SQL
-                    </ListItem>
-                </UnorderedList>
 
                 <br/>
                 <Text fontSize={18}>
@@ -389,58 +313,6 @@ function App() {
                     </ListItem>
                 </UnorderedList>
 
-                <br/>
-                <Text fontSize={18}>
-                    <strong>Machine Learning</strong> &ndash;
-                    <em> Supervised and Unsupervised learning algorithms</em>
-                </Text>
-                <UnorderedList>
-                    <ListItem>
-                        Implemented similarity functions for cosine similarity, hamming distance, and euclidean distance.
-                    </ListItem>
-                    <ListItem>
-                        Supervised Learning: implemented k-nearest neighbors algorithm to classify data points in a data set
-                    </ListItem>
-                    <ListItem>
-                        Unsupervised Learning: implemented k-means clustering algorithm to organize a data set into clusters.
-                    </ListItem>
-                    <ListItem>
-                        <strong>Tools Used: </strong> Java only
-                    </ListItem>
-                </UnorderedList>
-
-                <br/>
-                <Text fontSize={18}>
-                    <strong>Machine Learning</strong> &ndash;
-                    <em> S&P 500 Predictive Model Analysis</em>
-                </Text>
-                <UnorderedList>
-                    <ListItem>
-                        Implemented and compared Binary Decision Tree, Naive Bayes, and K-Nearest Neighbors predictive models 
-                        on the rise and fall of the S&P 500 index on any given day.
-                    </ListItem>
-                    <ListItem>
-                        <strong>Tools Used: </strong> Python, Pandas, Numby
-                    </ListItem>
-                </UnorderedList>
-
-                <br/>
-                <Text fontSize={18}>
-                    <strong>Algorithmic Trading</strong> &ndash;
-                    <em> Basic Strategies</em>
-                </Text>
-                <UnorderedList>
-                    <ListItem>
-                        Gathers stock market data via API requests
-                    </ListItem>
-                    <ListItem>
-                        Uses stock market data to create an equal weight S&P 500 index fund, as well as quantitative value-based
-                        and momentum-based investing strategies.
-                    </ListItem>
-                    <ListItem>
-                        <strong>Tools Used: </strong> Python, Pandas, Jupyter Notebook
-                    </ListItem>
-                </UnorderedList>
             </Box>
 
             <Heading fontSize={22} textAlign={['left']}>Leadership Experience and Awards</Heading>
