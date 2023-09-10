@@ -49,21 +49,16 @@ function App() {
                 </UnorderedList>
             </Box>
 
-            <Heading fontSize={22} textAlign={['left']}>Skills</Heading>
+            <Heading fontSize={22} textAlign={['left']}>Relevant Skills</Heading>
             <Divider />
             <Box className="body-skills" p={5} flex='1' textAlign='left'>
                 <UnorderedList>
                     <ListItem>
                         <strong>Languages: </strong>
-                        Python, C, C++, Assembly, Java, JavaScript, Typescript, HTML, CSS, Ruby, 
-                        Haskell, Solidity, Rust, Go, Cairo
+			C, C++, Assembly, VHDL
                     </ListItem>
                     <ListItem>
-                        <strong>Tools/Technologies: </strong>
-                        Linux, Git/Github, AWS, Rails, Brownie, Truffle, Hardhat, Ganache, Foundry, React, 
-                        NextJs, Fleek, Ethers,
-                        Databases (SQL and NO-SQL), APIs, Firebase, IPFS, ENS, The Graph, Infura, Metamask, Argent,
-                        Wagmi, Storybook, Chromatic, Ethereum, Polygon, Arbitrum, Starknet, Scarb, Katana
+                        <strong>Relevant Tools/Technologies: </strong>
                     </ListItem>
                     <ListItem>
                         <strong>Software Engineering: </strong>
@@ -82,19 +77,6 @@ function App() {
             <Heading fontSize={22} textAlign={['left']}>Work Experience</Heading>
             <Divider />
             <Box className="body-work-experience" p={5} flex='1' textAlign='left'>
-                <Text fontSize={18}>
-                    <strong>Frontend Software Engineer</strong> &ndash; <em> Freelance (July 2023 - Present)</em>
-                </Text>
-                <UnorderedList>
-                    <ListItem>
-                        Worked asynchronously with multiple fully remote teams to build frontends for crypto lending platforms, services, and communities.
-                    </ListItem>
-                    <ListItem>
-                        <strong>Tools Used: </strong> React, Typescript, Storbybook, Polygon, Ethereum, 
-                        Chakra-UI, TailwindCSS, MaterialUI, Chromatic, Git, Github
-                    </ListItem>
-                </UnorderedList>
-
                 <br/>
                 <Text fontSize={18}>
                     <strong>Software Engineer</strong> &ndash; <em> ETHChicago (May 2023 - Present)</em>
@@ -194,119 +176,19 @@ function App() {
             <Divider />
             <Box className="body-projects" p={5} flex='1' textAlign='left'>
                 <Text fontSize={18}>
-                    <strong>Starkfish -- a Starknet Chess Engine</strong> 
+                    <strong>Starkfish</strong> &ndash;
+                    <em> Proveable Chess Engine</em>
                 </Text>
                 <UnorderedList>
                     <ListItem>
-                        Starkfish is a proveable chess engine, including move generation, evaluation, and search, written in cairo for deployment to Starknet.
+                        Starkfish is a proveable chess engine, including move generation, evaluation, and search, 
+			written in Cairo for deployment to Starknet. Cairo is a turing-complete STARK-friendly CPU architecture.
                     </ListItem>
                     <ListItem>
                         Includes frontend created with starknet-react and nextjs to play against the engine.
                     </ListItem>
                     <ListItem>
                         <strong>Tools USed: </strong> Cairo, Katana, Starkli, Starknet, Starknet-react, NextJs
-                    </ListItem>
-                </UnorderedList>
-
-                <br/>
-                <Text fontSize={18}>
-                    <strong>General Solidity and Cairo Projects</strong> 
-                </Text>
-                <UnorderedList>
-                    <ListItem>
-                        Read and followed all examples in the Cairo Book. Completed Cairo practice projects on Node 
-                        Guardians.
-                    </ListItem>
-                    <ListItem>
-                        Completed various Solidity projects on Node Guardians with topics including gas optimization, 
-                        secutiy, storage, and more.
-                    </ListItem>
-                    <ListItem>
-                        Completed various Soldity CTFs on Ethernaut, fully testing all solutions and exploits in 
-                        Solidity with Foundry.
-                    </ListItem>
-                    <ListItem>
-                        <strong>Tools Used: </strong> Solidity, Cairo, Hardat, Brownie, Foundry, Ethers, Scarb
-                    </ListItem>
-                </UnorderedList>
-
-                <br/>
-                <Text fontSize={18}>
-                    <strong>Full-Stack dApp</strong> &ndash; <em><Link href="https://github.com/trbutler4/NFTicket" color="blue.500">NFTicket</Link></em>
-                </Text>
-                <UnorderedList>
-                    <ListItem>
-                        NFT event ticketing platform which allows organizers to easily create events,
-                        sell tickets, and redeem tickets for events.
-                    </ListItem>
-                    <ListItem>
-                        Lead team of 4 developers to follow software engineering best practices.
-                    </ListItem>
-                    <ListItem>
-                        Fully tested Metamask integration using Cypress and Synpress.
-                    </ListItem>
-                    <ListItem>
-                        <strong>Tools Used: </strong> Solidity, Hardhat, React, Firebase, Infura, Cypress,
-                            Synpress
-                    </ListItem>
-                </UnorderedList>
-
-                <br/>
-                <Text fontSize={18}>
-                    <strong>Full-Stack App</strong> &ndash; <em><Link href="https://github.com/sep-23/team_01/wiki" color="blue.500">Curate</Link></em>
-                </Text>
-                <UnorderedList>
-                    <ListItem>
-                        Full stack web application that leverages Spotify and Apple music APIs to
-                        allow users to curate playlists, post them to the platform, like and comment
-                        on playlists, follow users, and upload/export playlists to and from Spotify
-                        and Apple Music.
-                    </ListItem>
-                    <ListItem>
-                        Includes CI/CD pipelines, PR templates, and branch protections
-                    </ListItem>
-                    <ListItem>
-                        Fully documented project wiki, detailing all aspects of the project
-                    </ListItem>
-                    <ListItem>
-                        <strong>Tools Used: </strong> React, Firebase, Node, Cypress
-                    </ListItem>
-                </UnorderedList>
-
-                <br/>
-                <Text fontSize={18}>
-                    <strong>Full-Stack dApp</strong> &ndash; <em><Link href="https://github.com/brandonsurh/peerio" color="blue.500">Peerio</Link></em>
-                </Text>
-                <UnorderedList>
-                    <ListItem>
-                        Decentralized peer review process on filecoin network. Includes tokenized
-                        voting system, with rewards tied to a users reputation.
-                    </ListItem>
-                    <ListItem>
-                        <Link href="https://ethglobal.com/showcase/peerio-0bv55" color='blue.500'>
-                            Hack FEVM Filecoin pool prize winner
-                        </Link>
-                    </ListItem>
-                    <ListItem>
-                        <strong>Tools Used: </strong> Solidity, Hardhat, React, Firebase, IPFS, Web3.Storage
-                    </ListItem>
-                </UnorderedList>
-
-                <br/>
-                <Text fontSize={18}>
-                    <strong>Full-Stack App</strong> &ndash; <em><Link href="https://github.com/UIOWAjohnsonhj/selt2022_teamprojects-team-7" color='blue.500'>University Application Portal</Link></em>
-                </Text>
-                <UnorderedList>
-                    <ListItem>
-                        Full-stack application for university applicants to apply to multiple different schools,
-                        and allows administrators to review their applications.
-                    </ListItem>
-                    <ListItem>
-                        Followed software engineering best practices, fully documented project 
-                        <Link href="https://github.com/UIOWAjohnsonhj/selt2022_teamprojects-team-7/wiki" color='blue.500'> wiki</Link>
-                    </ListItem>
-                    <ListItem>
-                        <strong>Tools Used: </strong>Ruby on Rails, JavaScript, Springboot, SQL
                     </ListItem>
                 </UnorderedList>
 
@@ -323,7 +205,7 @@ function App() {
                         Wrote machine code programs that correctly execute on the computer.
                     </ListItem>
                     <ListItem>
-                        <strong>Tools Used: </strong> Verilog HDL, ModelSim
+                        <strong>Tools Used: </strong> VHDL, ModelSim, FPGA
                     </ListItem>
                 </UnorderedList>
 
@@ -346,81 +228,6 @@ function App() {
                     </ListItem>
                     <ListItem>
                         <strong>Tools Used: </strong>Python, C, Arduino, Atmel Studio
-                    </ListItem>
-                </UnorderedList>
-
-                <br/>
-                <Text fontSize={18}>
-                    <strong>Desktop Application</strong> &ndash;
-                    <em> Voting Application</em>
-                </Text>
-                <UnorderedList>
-                    <ListItem>
-                        GUI desktop application for uniform national voting, allowing for voter, auditor, and media users 
-                    </ListItem>
-                    <ListItem>
-                        Uses SQL to get and store voter and candidate information.
-                    </ListItem>
-                    <ListItem>
-                        Includes user authentication for different user types.
-                    </ListItem>
-                    <ListItem>
-                        <strong>Tools Used: </strong>Java, SQL
-                    </ListItem>
-                </UnorderedList>
-
-                <br/>
-                <Text fontSize={18}>
-                    <strong>Machine Learning</strong> &ndash;
-                    <em> Smart Contract Vulnerability Detection</em>
-                </Text>
-                <UnorderedList>
-                    <ListItem>
-                       Supervised and Unsupervised methods to detect potential vulnerabilities in
-                        smart contracts. 
-                    </ListItem>
-                    <ListItem>
-                        Methods included analyzing bytecode directly by contructing a 
-                        'sliding window' of relevant opcodes, as well converting bytecode into RGB images, 
-                        both of which were analyzed using neural networks.
-                    </ListItem>
-                    <ListItem>
-                        <strong>Tools Used: </strong> Python, PyTorch, Jupyter Notebook, Solidity, Slither
-                    </ListItem>
-                </UnorderedList>
-
-                <br/>
-                <Text fontSize={18}>
-                    <strong>Machine Learning</strong> &ndash;
-                    <em> Supervised and Unsupervised learning algorithms</em>
-                </Text>
-                <UnorderedList>
-                    <ListItem>
-                        Implemented similarity functions for cosine similarity, hamming distance, and euclidean distance.
-                    </ListItem>
-                    <ListItem>
-                        Supervised Learning: implemented k-nearest neighbors algorithm to classify data points in a data set
-                    </ListItem>
-                    <ListItem>
-                        Unsupervised Learning: implemented k-means clustering algorithm to organize a data set into clusters.
-                    </ListItem>
-                    <ListItem>
-                        <strong>Tools Used: </strong> Java only
-                    </ListItem>
-                </UnorderedList>
-
-                <br/>
-                <Text fontSize={18}>
-                    <strong>Machine Learning</strong> &ndash;
-                    <em> S&P 500 Predictive Model Analysis</em>
-                </Text>
-                <UnorderedList>
-                    <ListItem>
-                        Implemented and compared Binary Decision Tree, Naive Bayes, and K-Nearest Neighbors predictive models 
-                        on the rise and fall of the S&P 500 index on any given day.
-                    </ListItem>
-                    <ListItem>
-                        <strong>Tools Used: </strong> Python, Pandas, Numby
                     </ListItem>
                 </UnorderedList>
 
