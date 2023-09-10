@@ -55,10 +55,11 @@ function App() {
                 <UnorderedList>
                     <ListItem>
                         <strong>Languages: </strong>
-			C, C++, Assembly, VHDL
+			             Python, C, C++, Assembly, VHDL, Rust, Cairo
                     </ListItem>
                     <ListItem>
                         <strong>Relevant Tools/Technologies: </strong>
+                        ModelSim, FPGAs, Git, Github, Linux 
                     </ListItem>
                     <ListItem>
                         <strong>Software Engineering: </strong>
@@ -113,6 +114,7 @@ function App() {
                     </ListItem>
                 </UnorderedList>
 
+                {/* MSC / Thomson Reuters */}
                 <br/>
                 <Text fontSize={18}>
                     <strong>Cloud Software Engineering Coop</strong> &ndash;
@@ -147,6 +149,28 @@ function App() {
                     </ListItem>
                 </UnorderedList>
 
+                {/* Parsons */} 
+                <br/>
+                <Text fontSize={18}>
+                    <strong>Engineering Intern</strong> &ndash;
+                    <em> Parsons Corporation (June 2019 - August 2019)</em>
+                </Text>
+                <UnorderedList>
+                    <ListItem>
+                        Performed field investigation and oversight of a fiber optic communication system overhaul in 
+                        the city of Chicago, collaborating with representatives from CDOT, DEO, and OEMC, 
+                        to quicky and successfully implement to overhaul.
+                    </ListItem>
+                    <ListItem>
+                        Responsible for implementation of Illinois Tollway employee management software. Provided technical support
+                        after the implementation. 
+                    </ListItem>
+                    <ListItem>
+                        <strong>Tools Used: </strong> AWS (Lambda, Step Functions, CodePIpeline,
+                            Boto3), Python
+                    </ListItem>
+                </UnorderedList>
+
                 <br/>
                 <Text fontSize={18}>
                     <strong>Open Source Contributions</strong> 
@@ -167,8 +191,6 @@ function App() {
                         <strong>Tools Used: </strong> React, Typescript, Wagmi, Unlock Protocol, The Graph, Cairo, Git, Github
                     </ListItem>
                 </UnorderedList>
-
-
             </Box>
 
             {/* Projects */}
@@ -199,13 +221,24 @@ function App() {
                 </Text>
                 <UnorderedList>
                     <ListItem>
-                        Built and tested SISC computer processor.
+                        Implemented a SISC computer processor using Verlig and ModelSim.
                     </ListItem>
                     <ListItem>
-                        Wrote machine code programs that correctly execute on the computer.
+                        Implemented finite state machine for control unit in Verilog, handling R type, 
+                        ADD immediate instructionsm, LOAD, and STORE instructions. 
                     </ListItem>
                     <ListItem>
-                        <strong>Tools Used: </strong> VHDL, ModelSim, FPGA
+                        Simulated design using data files to validate all instructions.
+                    </ListItem>
+                    <ListItem>
+                        Documented changes with state machine and datapath diagrams. 
+                    </ListItem>
+                    <ListItem>
+                        Created machine language program for multiplying unsigned, 32-bit integers
+                        and writing result to memory.
+                    </ListItem>
+                    <ListItem>
+                        <strong>Tools Used: </strong> VHDL, ModelSim
                     </ListItem>
                 </UnorderedList>
 
@@ -227,27 +260,34 @@ function App() {
                         Arduino microcontroller with LED display module, bluetooth module, buzzer, and push button. 
                     </ListItem>
                     <ListItem>
+                        Implemented software and hardware debounce for push button. 
+                    </ListItem>
+                    <ListItem>
                         <strong>Tools Used: </strong>Python, C, Arduino, Atmel Studio
                     </ListItem>
                 </UnorderedList>
 
                 <br/>
                 <Text fontSize={18}>
-                    <strong>Algorithmic Trading</strong> &ndash;
-                    <em> Basic Strategies</em>
+                    <strong>Desktop Application</strong> &ndash;
+                    <em> Voting App</em>
                 </Text>
                 <UnorderedList>
                     <ListItem>
-                        Gathers stock market data via API requests
+                        GUI desktop application for uniform national voting, allowing for voter, auditor, 
+                        and media users. 
                     </ListItem>
                     <ListItem>
-                        Uses stock market data to create an equal weight S&P 500 index fund, as well as quantitative value-based
-                        and momentum-based investing strategies.
+                        Uses SQL to get and store voter and candidate information.
                     </ListItem>
                     <ListItem>
-                        <strong>Tools Used: </strong> Python, Pandas, Jupyter Notebook
+                        Includes user authentication for different user types.
+                    </ListItem>
+                    <ListItem>
+                        <strong>Tools Used: </strong>Java, SQL
                     </ListItem>
                 </UnorderedList>
+
             </Box>
 
             <Heading fontSize={22} textAlign={['left']}>Leadership Experience and Awards</Heading>
