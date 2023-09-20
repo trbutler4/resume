@@ -115,11 +115,11 @@ function App() {
                         built and launched 
                          <Link href="https://ethchicago.xyz/" color='blue.500'> ethchicago.xyz </Link>
                         including the NFT ticketing infrastructure, providing a seamless 
-                        NFT ticketing process for all ateendees. The website is hosted on IPFS via Fleek.
+                        NFT ticketing process for 500+ ateendees. The website is hosted on IPFS via Fleek.
                     </ListItem>
                     <ListItem>
-                        Currently leading a team of 3 designers to enahnce the user experience and aesthetics of 
-                        the website.
+                        Lead a team of 3 designers to enahnce the user experience and aesthetics of 
+                        the website, which has been visited over 10000 times in the list month.
                     </ListItem>
                     <ListItem>
                         As a signer on the Gnosis Safe, managed transactions and treasury on both Arbitrum and 
@@ -194,6 +194,20 @@ function App() {
             <Divider />
             <Box className="body-projects" p={5} flex='1' textAlign='left'>
                 <Text fontSize={18}>
+                    <strong>ZK Credit Proofs</strong> 
+                </Text>
+                <UnorderedList>
+                    <ListItem>
+			POC of using Polygon ID to issue credentials for an individuals credit score, and submit a ZK proof that 
+			their credit score is above a certain threshold to prevent the need for sharing SSN with the leasing compnany.
+                    </ListItem>
+                    <ListItem>
+                        <strong>Tools Used: </strong> Go, Polygon ID, NGROK, React
+                    </ListItem>
+                </UnorderedList>
+
+		<br />
+                <Text fontSize={18}>
                     <strong>Starkfish -- a Starknet Chess Engine</strong> 
                 </Text>
                 <UnorderedList>
@@ -204,7 +218,7 @@ function App() {
                         Includes frontend created with starknet-react and nextjs to play against the engine.
                     </ListItem>
                     <ListItem>
-                        <strong>Tools USed: </strong> Cairo, Katana, Starkli, Starknet, Starknet-react, NextJs
+                        <strong>Tools Used: </strong> Cairo, Katana, Starkli, Starknet, Starknet-react, NextJs
                     </ListItem>
                 </UnorderedList>
 
