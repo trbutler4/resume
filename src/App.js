@@ -38,16 +38,6 @@ function App() {
 
         <Box className="resume-body" m={5}>
 
-            <Heading fontSize={22} textAlign={['left']}>Education</Heading>
-            <Divider />
-            <Box className="body-education" p={5} flex='1' textAlign='left'>
-                <Text fontSize={18}>
-                    University of Iowa, BSE Computer Engineering
-                </Text>
-                <UnorderedList>
-                    <ListItem>GPA 3.2/4.0</ListItem>
-                </UnorderedList>
-            </Box>
 
             <Heading fontSize={22} textAlign={['left']}>Skills</Heading>
             <Divider />
@@ -454,6 +444,17 @@ function App() {
                     <ListItem>
                         <strong>Tools Used: </strong> Python, Pandas, Jupyter Notebook
                     </ListItem>
+                </UnorderedList>
+            </Box>
+
+            <Heading fontSize={22} textAlign={['left']}>Education</Heading>
+            <Divider />
+            <Box className="body-education" p={5} flex='1' textAlign='left'>
+                <Text fontSize={18}>
+                    University of Iowa, BSE Computer Engineering
+                </Text>
+                <UnorderedList>
+                    <ListItem>GPA 3.2/4.0</ListItem>
                 </UnorderedList>
             </Box>
 
