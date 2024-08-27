@@ -125,7 +125,8 @@ function App() {
           <UnorderedList>
             <ListItem>
               Leading a Starkware Exploration Project that aims to drastically improve mobile UX and sovereignty on Starknet by implementing a fork of GrapheneOS with a
-              light client built in, providing trustless access to the Starknet network, and by extension, Ethereum.
+              light client built in, providing both trustless access to the Starknet network, and complete user control of the device, with GrapheneOS removing 
+              the need for any 3rd party control and tracking.
             </ListItem>
             <ListItem>
               Hold weekly community calls to support contributors, sync on progress, and share project updates.
