@@ -149,7 +149,7 @@ function App() {
           </Text>
           <UnorderedList>
             <ListItem>
-              Developed and maintain the Cairo programming language extension for the Zed text editor.
+              Developed and maintain the Cairo programming language extension for the Zed text editor, with 79+ installs. 
             </ListItem>
             <ListItem>
               <strong>Tools Used: </strong> Rust, Tree-Sitter, Language Server Protocol, Git/Github
