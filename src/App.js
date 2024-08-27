@@ -127,7 +127,7 @@ function App() {
         <Box className="body-work-experience" p={5} flex='1' textAlign='left'>
 
           <Text fontSize={18}>
-            <strong>Maintainer/Software Engineer</strong> &ndash; <em> Starknet Phone / Starkware (September 2024 - Present) - </em>
+            <strong>Maintainer/Software Engineer</strong> &ndash; <em> Starknet Phone (September 2024 - Present) - </em>
             <Link href="https://github.com/keep-starknet-strange/starknet-phone" color='blue.500'>Github</Link>
           </Text>
           <UnorderedList>
@@ -167,15 +167,13 @@ function App() {
         <Divider />
         <Box className="body-projects" p={5} flex='1' textAlign='left'>
           <Text fontSize={18}>
-            <strong>Kakarot Bridge</strong>
+            <strong>Kakarot Bridge - </strong>
+            <Link href="https://github.com/trbutler4/kakarot-bridge" color='blue.500'>Github</Link>
           </Text>
           <UnorderedList>
             <ListItem>
               Lambda ZK Week Hackathon (Brussels) Winner:
               <Link href="https://dorahacks.io/buidl/14125" color='blue.500'> Hackathon Submission</Link>
-            </ListItem>
-            <ListItem>
-              <Link href="https://github.com/trbutler4/kakarot-bridge" color='blue.500'>Github</Link>
             </ListItem>
             <ListItem>
               A ERC20 token bridge enabling a 7 hour withdrawal window with almost no trust assumptions, enabled by Kakarot L2
