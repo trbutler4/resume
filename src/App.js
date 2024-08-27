@@ -20,20 +20,9 @@ function App() {
         <Text fontSize={22} textAlign={['center']}>
           <Link href="mailto:trbiv@proton.me" color='blue.500'>trbiv@proton.me </Link> |
           <Link href="https://github.com/trbutler4" color='blue.500'> Github</Link> |
+          <Link href="https://app.onlydust.com/u/trbutler4" color='blue.500'>OnlyDust</Link> |
           <Link href="https://www.linkedin.com/in/thomas-butler-1a435018b/" color='blue.500'> LinkedIn</Link>
         </Text>
-        {/*
-            <Text padding={4}>
-                Thomas Robert Butler IV is a dedicated and skilled Software Engineer with a passion for innovation and 
-                expertise in a wide range of technologies. He holds a BSE degree in Computer Science and Engineering from 
-                the University of Iowa and has experience in full-stack development, cloud computing, machine learning, 
-                and blockchain technologies. 
-                Thomas is most at home in front of a Linux terminal, and has a strong proficiency in multiple programming 
-                languages and tools, including Python, C++, Java, Solidity,
-                Git/Github, and AWS. With his commitment to continuous learning and a drive for staying at the forefront of 
-                industry trends, Thomas is well-equipped to excel in dynamic software engineering roles.
-            </Text>
-            */}
       </Box>
 
       <Box className="resume-body" m={5}>
@@ -48,10 +37,17 @@ function App() {
           </Text>
           <UnorderedList>
             <ListItem>
-              Full ownership of both iOS and Android mobile applications for Tholos MPC Crypto Wallet, implemented in React Native.
+              Full ownership of both iOS and Android mobile applications for
+              Tholos MPC Crypto Wallet, implemented in React Native and 
+              securing over $12 Million worth of digital assets.
             </ListItem>
             <ListItem>
-              Worked across the entire stack where needed, implementing complex and extremely critical code across a multitude of systems.
+              Worked across the entire stack where needed, implementing complex 
+              and critical code across a multitude of systems.
+            </ListItem>
+            <ListItem>
+              Wrote and update documentation on development processes, built tools and scripts to increase the teams 
+              speed and simplicity of development.
             </ListItem>
             <ListItem>
               Worked in a blockchain agnostic stack, supporting key management, signing, and web3 integration across numerous networks including Ethereum, the most popular EVM compatible blockchains and L2s (Polygon, Arbitrum, etc.), Bitcoin, Solana, and Cosmos ecosystem.
