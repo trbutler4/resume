@@ -20,7 +20,7 @@ function App() {
         <Text fontSize={22} textAlign={['center']}>
           <Link href="mailto:trbiv@proton.me" color='blue.500'>trbiv@proton.me </Link> |
           <Link href="https://github.com/trbutler4" color='blue.500'> Github</Link> |
-          <Link href="https://app.onlydust.com/u/trbutler4" color='blue.500'>OnlyDust</Link> |
+          <Link href="https://app.onlydust.com/u/trbutler4" color='blue.500'> OnlyDust</Link> |
           <Link href="https://www.linkedin.com/in/thomas-butler-1a435018b/" color='blue.500'> LinkedIn</Link>
         </Text>
       </Box>
