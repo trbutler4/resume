@@ -1,28 +1,28 @@
 import * as React from 'react';
 import { ChakraProvider } from "@chakra-ui/react"
 import {
-    Box,
-    Text,
-    Heading,
-    UnorderedList,
-    ListItem,
-    Link,
-    Divider
+  Box,
+  Text,
+  Heading,
+  UnorderedList,
+  ListItem,
+  Link,
+  Divider
 } from '@chakra-ui/react'
 
 function App() {
   return (
     <ChakraProvider>
 
-        <Box className="resume-header" m={2}>
-            <Heading textAlign={['center']}>Thomas Robert Butler IV</Heading>
-            <Heading textAlign={['center']}>Software Engineer</Heading>
-            <Text fontSize={22} textAlign={['center']}>
-                <Link href="mailto:trbiv@proton.me" color='blue.500'>trbiv@proton.me </Link> |
-                <Link href="https://github.com/trbutler4" color='blue.500'> Github</Link> |
-                <Link href="https://www.linkedin.com/in/thomas-butler-1a435018b/" color='blue.500'> LinkedIn</Link>
-            </Text>
-            {/*
+      <Box className="resume-header" m={2}>
+        <Heading textAlign={['center']}>Thomas Robert Butler IV</Heading>
+        <Heading textAlign={['center']}>Software Engineer</Heading>
+        <Text fontSize={22} textAlign={['center']}>
+          <Link href="mailto:trbiv@proton.me" color='blue.500'>trbiv@proton.me </Link> |
+          <Link href="https://github.com/trbutler4" color='blue.500'> Github</Link> |
+          <Link href="https://www.linkedin.com/in/thomas-butler-1a435018b/" color='blue.500'> LinkedIn</Link>
+        </Text>
+        {/*
             <Text padding={4}>
                 Thomas Robert Butler IV is a dedicated and skilled Software Engineer with a passion for innovation and 
                 expertise in a wide range of technologies. He holds a BSE degree in Computer Science and Engineering from 
@@ -34,152 +34,140 @@ function App() {
                 industry trends, Thomas is well-equipped to excel in dynamic software engineering roles.
             </Text>
             */}
-        </Box>
+      </Box>
 
-        <Box className="resume-body" m={5}>
+      <Box className="resume-body" m={5}>
 
 
-            <Heading fontSize={22} textAlign={['left']}>Skills</Heading>
-            <Divider />
-            <Box className="body-skills" p={5} flex='1' textAlign='left'>
-                <UnorderedList>
-                    <ListItem>
-                        <strong>Languages: </strong>
-                        Python, C, C++, Assembly, Java, JavaScript, Typescript, HTML, CSS, Ruby, 
-                        Haskell, Solidity, Rust, Go, Cairo
-                    </ListItem>
-                    <ListItem>
-                        <strong>Tools/Technologies: </strong>
-                        Linux, Git/Github, AWS, Rails, Brownie, Truffle, Hardhat, Ganache, Foundry, React, 
-                        NextJs, Fleek, Ethers,
-                        Databases (SQL and NO-SQL), APIs, Firebase, IPFS, ENS, The Graph, Infura, Metamask, Argent,
-                        Wagmi, Storybook, Chromatic, Ethereum, Polygon, Arbitrum, Starknet, Scarb, Katana
-                    </ListItem>
-                    <ListItem>
-                        <strong>Software Engineering: </strong>
-                        TDD, BDD, Unit Testing, Integration Testing, CI/CD, Agile, Scrum
-                    </ListItem>
-                    {/*
+        <Heading fontSize={22} textAlign={['left']}>Skills</Heading>
+        <Divider />
+        <Box className="body-skills" p={5} flex='1' textAlign='left'>
+          <UnorderedList>
+            <ListItem>
+              <strong>Languages: </strong>
+              Python, C, C++, Assembly, Java, JavaScript, Typescript, HTML, CSS, Ruby,
+              Haskell, Solidity, Rust, Go, Cairo
+            </ListItem>
+            <ListItem>
+              <strong>Tools/Technologies: </strong>
+              Linux, Git/Github, AWS, Rails, Brownie, Truffle, Hardhat, Ganache, Foundry, React,
+              NextJs, Fleek, Ethers,
+              Databases (SQL and NO-SQL), APIs, Firebase, IPFS, ENS, The Graph, Infura, Metamask, Argent,
+              Wagmi, Storybook, Chromatic, Ethereum, Polygon, Arbitrum, Starknet, Scarb, Katana
+            </ListItem>
+            <ListItem>
+              <strong>Software Engineering: </strong>
+              TDD, BDD, Unit Testing, Integration Testing, CI/CD, Agile, Scrum
+            </ListItem>
+            {/*
                     <ListItem>
                         <strong>Interpersonal: </strong>
                         Leadership, Project Management, Communication, Time Management, Remote Work
                     </ListItem>
                     */}
-                </UnorderedList>
-            </Box>
+          </UnorderedList>
+        </Box>
 
-            {/* Work Experience */}
-            <Heading fontSize={22} textAlign={['left']}>Work Experience</Heading>
-            <Divider />
-            <Box className="body-work-experience" p={5} flex='1' textAlign='left'>
-                <Text fontSize={18}>
-                    <strong>Frontend Software Engineer</strong> &ndash; <em> Freelance (July 2023 - Present)</em>
-                </Text>
-                <UnorderedList>
-                    <ListItem>
-                        Worked asynchronously with multiple fully remote teams to build frontends for crypto lending platforms, services, and communities.
-                    </ListItem>
-                    <ListItem>
-                        <strong>Tools Used: </strong> React, Typescript, Storbybook, Polygon, Ethereum, 
-                        Chakra-UI, TailwindCSS, MaterialUI, Chromatic, Git, Github
-                    </ListItem>
-                </UnorderedList>
+        {/* Work Experience */}
+        <Heading fontSize={22} textAlign={['left']}>Work Experience</Heading>
+        <Divider />
+        <Box className="body-work-experience" p={5} flex='1' textAlign='left'>
 
-                <br/>
-                <Text fontSize={18}>
-                    <strong>Software Engineer</strong> &ndash; <em> ETHChicago (May 2023 - Present)</em>
-                </Text>
-                <UnorderedList>
-                    <ListItem>
-                        Volunteer software engineer for Ethereum Chicago core team, Collaborated and coordinated 
-                        efforts with ETHChicago ecosystem to ensure
-                        seamless integration and synergy across various elements of the Ethereum community in Chicago.
-                    </ListItem>
-                    <ListItem>
-                        Spearhead deployment of
-                         <Link href="https://forum.ethchicago.xyz/" color='blue.500'> forum.ethchicago.xyz</Link>
-                        , a Discourse server for contributors to the Ethereum Chicago community.
-                    </ListItem>
-                    <ListItem>
-                        Independently, with feedback from Unlock protocol team and ETHChicago core team,
-                        built and launched 
-                         <Link href="https://ethchicago.xyz/" color='blue.500'> ethchicago.xyz </Link>
-                        including the NFT ticketing infrastructure, providing a seamless 
-                        NFT ticketing process for 500+ ateendees. The website is hosted on IPFS via Fleek.
-                    </ListItem>
-                    <ListItem>
-                        Lead a team of 3 designers to enahnce the user experience and aesthetics of 
-                        the website, which has been visited over 10000 times in the list month.
-                    </ListItem>
-                    <ListItem>
-                        As a signer on the Gnosis Safe, managed transactions and treasury on both Arbitrum and 
-                        Ethereum.
-                    </ListItem>
-                    <ListItem>
-                        <strong>Tools Used: </strong> React, Typescript, Storbybook, Arbitrum, Chakra-UI, 
-                            Unlock Protocol, Gnosis Safe, Git, Github, Wagmi, Feek, IPFS, ENS
-                    </ListItem>
-                </UnorderedList>
+          <Text fontSize={18}>
+            <strong>Mobile Engineer</strong> &ndash; <em> Tholos (July 2023 - Present)</em>
+          </Text>
+          <UnorderedList>
+            <ListItem>
+              Full ownership of both iOS and Android mobile applications for Tholos MPC Crypto Wallet, implemented in React Native.
+            </ListItem>
+            <ListItem>
+              Worked across the entire stack where needed, implementing complex and extremely critical code across a multitude of systems.
+            </ListItem>
+            <ListItem>
+              Fully remote team, across 3 timezones.
+            </ListItem>
+            <ListItem>
+              <strong>Tools Used: </strong> React Native, Native Wind, expo, JavaScript/Typescript, Bash, Python, Go, Rust, Postgres, Redis, AWS (Secure Enclave, API Gateway, Lambda), Docker, Git/Github
+            </ListItem>
+          </UnorderedList>
 
-                <br/>
-                <Text fontSize={18}>
-                    <strong>Cloud Software Engineering Coop</strong> &ndash;
-                    <em> Thomson Reuters (June 2021 - May 2023)</em>
-                </Text>
-                <UnorderedList>
-                    <ListItem>
-                        Responsible for all stages of the software development life cycle of
-                        an automated AWS cloud orphaned asset cleanup application using Python
-                        and AWS Lambda with Step Functions which is projected to save
-                        Thomson Reuters $14 million initially, and reduce cloud spend over time.
-                    </ListItem>
-                    <ListItem>
-                        Took ownership in all aspects of development process from ideation to
-                        production implementation, including unit and integration testing,
-                        CI/CD pipelines, and documentaion.
-                    </ListItem>
-                    <ListItem>
-                        Contributed to the development of an internal AWS RDS Database tool
-                        that is used across all cloud teams at Thomson Reuters.
-                    </ListItem>
-                    <ListItem>
-                        Worked remotely with multipls teams across the globe.
-                    </ListItem>
-                    <ListItem>
-                        Continually followed best AWS best practices, and guided team of 3 other
-                        engineers in software engineering best practices.
-                    </ListItem>
-                    <ListItem>
-                        <strong>Tools Used: </strong> AWS (Lambda, Step Functions, CodePIpeline,
-                            Boto3), Python
-                    </ListItem>
-                </UnorderedList>
+          <Text fontSize={18}>
+            <strong>Frontend Software Engineer</strong> &ndash; <em> Freelance (July 2023 - Present)</em>
+          </Text>
+          <UnorderedList>
+            <ListItem>
+              Worked asynchronously with multiple fully remote teams to build frontends for crypto lending platforms, services, and communities.
+            </ListItem>
+            <ListItem>
+              <strong>Tools Used: </strong> React, Typescript, Storbybook, Polygon, Ethereum,
+              Chakra-UI, TailwindCSS, MaterialUI, Chromatic, Git, Github
+            </ListItem>
+          </UnorderedList>
 
-                <br/>
-                <Text fontSize={18}>
-                    <strong>Open Source Contributions</strong> 
-                </Text>
-                <UnorderedList>
-                    <ListItem>
-                       <strong>TurbETH - </strong>Integrated Unlock Protocol NFT gated memberships into TurboETH. This included a component
-                        to create locks, a paywall, and components to display owned keys, created locks, and lock
-                        information by querying The Graph. 
-                    </ListItem>
-                    <ListItem>
-                        <strong>Cairo Book - </strong>General typo fixes and improvements to the Cairo programming language documentaion
-                    </ListItem>
-                    <ListItem>
-                        <strong>Kakarot - </strong>Implemented Opcodes for the Kakarot EVM written in Cairo.
-                    </ListItem>
-                    <ListItem>
-                        <strong>Tools Used: </strong> React, Typescript, Wagmi, Unlock Protocol, The Graph, Cairo, Git, Github
-                    </ListItem>
-                </UnorderedList>
+          <br />
+          <Text fontSize={18}>
+            <strong>Software Engineer</strong> &ndash; <em> ETHChicago (May 2023 - Present)</em>
+          </Text>
+          <UnorderedList>
+            <ListItem>
+              Volunteer software engineer for Ethereum Chicago core team, Collaborated and coordinated
+              efforts with ETHChicago ecosystem to ensure
+              seamless integration and synergy across various elements of the Ethereum community in Chicago.
+            </ListItem>
+            <ListItem>
+              Spearhead deployment of
+              <Link href="https://forum.ethchicago.xyz/" color='blue.500'> forum.ethchicago.xyz</Link>
+              , a Discourse server for contributors to the Ethereum Chicago community.
+            </ListItem>
+            <ListItem>
+              Independently, with feedback from Unlock protocol team and ETHChicago core team,
+              built and launched
+              <Link href="https://ethchicago.xyz/" color='blue.500'> ethchicago.xyz </Link>
+              including the NFT ticketing infrastructure, providing a seamless
+              NFT ticketing process for 500+ ateendees. The website is hosted on IPFS via Fleek.
+            </ListItem>
+            <ListItem>
+              Lead a team of 3 designers to enahnce the user experience and aesthetics of
+              the website, which has been visited over 10000 times in the list month.
+            </ListItem>
+            <ListItem>
+              As a signer on the Gnosis Safe, managed transactions and treasury on both Arbitrum and
+              Ethereum.
+            </ListItem>
+            <ListItem>
+              <strong>Tools Used: </strong> React, Typescript, Storbybook, Arbitrum, Chakra-UI,
+              Unlock Protocol, Gnosis Safe, Git, Github, Wagmi, Feek, IPFS, ENS
+            </ListItem>
+          </UnorderedList>
+
+          <br />
+          <Text fontSize={18}>
+            <strong>Open Source Contributions</strong>
+          </Text>
+          <UnorderedList>
+            <ListItem>
+              <strong>TurbETH - </strong>Integrated Unlock Protocol NFT gated memberships into TurboETH. This included a component
+              to create locks, a paywall, and components to display owned keys, created locks, and lock
+              information by querying The Graph.
+            </ListItem>
+            <ListItem>
+              <strong>Cairo Book - </strong>General typo fixes and improvements to the Cairo programming language documentaion
+            </ListItem>
+            <ListItem>
+              <strong>Kakarot - </strong>Implemented Opcodes for the Kakarot EVM written in Cairo.
+            </ListItem>
+            <ListItem>
+              <strong>Tools Used: </strong> React, Typescript, Wagmi, Unlock Protocol, The Graph, Cairo, Git, Github
+            </ListItem>
+          </UnorderedList>
 
 
-            </Box>
+        </Box>
 
-            {/* Projects */}
+        {/* Projects */}
+        {/*
+
+
             <Heading fontSize={22} textAlign={['left']}>Project Highlights</Heading>
             <Divider />
             <Box className="body-projects" p={5} flex='1' textAlign='left'>
@@ -446,36 +434,36 @@ function App() {
                     </ListItem>
                 </UnorderedList>
             </Box>
+          */}
 
-            <Heading fontSize={22} textAlign={['left']}>Education</Heading>
-            <Divider />
-            <Box className="body-education" p={5} flex='1' textAlign='left'>
-                <Text fontSize={18}>
-                    University of Iowa, BSE Computer Engineering
-                </Text>
-                <UnorderedList>
-                    <ListItem>GPA 3.2/4.0</ListItem>
-                </UnorderedList>
-            </Box>
-
-            <Heading fontSize={22} textAlign={['left']}>Leadership Experience and Awards</Heading>
-            <Divider />
-            <Box className="body-leadership-and-awards" p={5} flex='1' textAlign='left'>
-                <Text fontSize={18}>
-                    <strong>Academic Chair</strong> &ndash;
-                    <em> Sigma Chi Fraternity Alpha Eta Chapter</em>
-                </Text>
-                <Text fontSize={18}>
-                    <strong>Risk Manager (Executive Board)</strong> &ndash;
-                    <em> Sigma Chi Fraternity Alpha Eta Chapter</em>
-                </Text>
-                <Text fontSize={18}>
-                    <strong>Eagle Scout </strong> &ndash;
-                    <em> BSA Troop 81</em>
-                </Text>
-            </Box>
-
+        <Heading fontSize={22} textAlign={['left']}>Education</Heading>
+        <Divider />
+        <Box className="body-education" p={5} flex='1' textAlign='left'>
+          <Text fontSize={18}>
+            University of Iowa, BSE Computer Engineering
+          </Text>
         </Box>
+
+        {/*
+        <Heading fontSize={22} textAlign={['left']}>Leadership Experience and Awards</Heading>
+        <Divider />
+        <Box className="body-leadership-and-awards" p={5} flex='1' textAlign='left'>
+          <Text fontSize={18}>
+            <strong>Academic Chair</strong> &ndash;
+            <em> Sigma Chi Fraternity Alpha Eta Chapter</em>
+          </Text>
+          <Text fontSize={18}>
+            <strong>Risk Manager (Executive Board)</strong> &ndash;
+            <em> Sigma Chi Fraternity Alpha Eta Chapter</em>
+          </Text>
+          <Text fontSize={18}>
+            <strong>Eagle Scout </strong> &ndash;
+            <em> BSA Troop 81</em>
+          </Text>
+        </Box>
+          */}
+
+      </Box>
     </ChakraProvider>
   );
 }
