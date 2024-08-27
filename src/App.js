@@ -75,7 +75,7 @@ function App() {
               Worked asynchronously with multiple fully remote teams to build frontends for crypto lending platforms, services, and communities.
             </ListItem>
             <ListItem>
-              <strong>Tools Used: </strong> React, Wagmi, Typescript, Solidity, Foundry, Hardhat, Storbybook, Polygon, Ethereum,
+              <strong>Tools Used: </strong> React, Wagmi, Typescript, Solidity, Foundry, Hardhat, Slither, Storbybook, Polygon, Ethereum,
               Chakra-UI, TailwindCSS, MaterialUI, Chromatic, Git/Github
             </ListItem>
           </UnorderedList>
@@ -104,11 +104,7 @@ function App() {
             </ListItem>
             <ListItem>
               Lead a team of 3 designers to enahnce the user experience and aesthetics of
-              the website, which has been visited over 10000 times in the list month.
-            </ListItem>
-            <ListItem>
-              As a signer on the Gnosis Safe, managed transactions and treasury on both Arbitrum and
-              Ethereum.
+              the website, which has been visited over 10000 times in a single month.
             </ListItem>
             <ListItem>
               <strong>Tools Used: </strong> React, Typescript, Storbybook, Arbitrum, Chakra-UI,
