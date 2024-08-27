@@ -66,15 +66,21 @@ function App() {
 
           <br />
           <Text fontSize={18}>
-            <strong>Frontend Software Engineer</strong> &ndash; <em> Freelance (July 2023 - Present)</em>
+            <strong>Founder</strong> &ndash; <em> Suffix Labs (July 2023 - Present)</em>
           </Text>
           <UnorderedList>
+            <ListItem>
+              Founded Suffix Labs LLC to provide consulting and software development services.
+            </ListItem>
+            <ListItem>
+              Consulted on and wrote software for various Web3/Smart Contract related projects.
+            </ListItem>
             <ListItem>
               Worked asynchronously with multiple fully remote teams to build frontends for crypto lending platforms, services, and communities.
             </ListItem>
             <ListItem>
-              <strong>Tools Used: </strong> React, Typescript, Storbybook, Polygon, Ethereum,
-              Chakra-UI, TailwindCSS, MaterialUI, Chromatic, Git, Github
+              <strong>Tools Used: </strong> React, Wagmi, Typescript, Solidity, Foundry, Hardhat, Storbybook, Polygon, Ethereum,
+              Chakra-UI, TailwindCSS, MaterialUI, Chromatic, Git/Github
             </ListItem>
           </UnorderedList>
 
@@ -192,7 +198,7 @@ function App() {
               StarkSprouts is a fully on-chain game using the Dojo toolchain. The goal of the game is simply to grow a garden, which will slowly die, and must be watered to stay alive.
             </ListItem>
             <ListItem>
-              Gameplay implemented with ThreeJS, and the game was deployed on Slot.
+              Gameplay implemented with ThreeJS, and the game was deployed on Starknet using Slot.
             </ListItem>
             <ListItem>
               <strong>Tools Used: </strong> Cairo, Katana, Starkli, Dojo, ThreeJS, Slot
@@ -261,7 +267,7 @@ function App() {
 
           <br />
           <Text fontSize={18}>
-            <strong>Peerio: Decentralized peer review process</strong> &ndash; <em><Link href="https://github.com/brandonsurh/peerio" color="blue.500">Github</Link></em>
+            <strong>Peerio: Decentralized Peer Review Process</strong> &ndash; <em><Link href="https://github.com/brandonsurh/peerio" color="blue.500">Github</Link></em>
           </Text>
           <UnorderedList>
             <ListItem>
@@ -275,24 +281,6 @@ function App() {
             </ListItem>
             <ListItem>
               <strong>Tools Used: </strong> Solidity, Hardhat, React, Firebase, IPFS, Web3.Storage
-            </ListItem>
-          </UnorderedList>
-
-          <br />
-          <Text fontSize={18}>
-            <strong>Full-Stack App</strong> &ndash; <em><Link href="https://github.com/UIOWAjohnsonhj/selt2022_teamprojects-team-7" color='blue.500'>University Application Portal</Link></em>
-          </Text>
-          <UnorderedList>
-            <ListItem>
-              Full-stack application for university applicants to apply to multiple different schools,
-              and allows administrators to review their applications.
-            </ListItem>
-            <ListItem>
-              Followed software engineering best practices, fully documented project
-              <Link href="https://github.com/UIOWAjohnsonhj/selt2022_teamprojects-team-7/wiki" color='blue.500'> wiki</Link>
-            </ListItem>
-            <ListItem>
-              <strong>Tools Used: </strong>Ruby on Rails, JavaScript, Springboot, SQL
             </ListItem>
           </UnorderedList>
 
