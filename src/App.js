@@ -38,43 +38,13 @@ function App() {
 
       <Box className="resume-body" m={5}>
 
-
-        <Heading fontSize={22} textAlign={['left']}>Skills</Heading>
-        <Divider />
-        <Box className="body-skills" p={5} flex='1' textAlign='left'>
-          <UnorderedList>
-            <ListItem>
-              <strong>Languages: </strong>
-              Python, C, C++, Assembly, Java, JavaScript, Typescript, HTML, CSS, Ruby,
-              Haskell, Solidity, Rust, Go, Cairo
-            </ListItem>
-            <ListItem>
-              <strong>Tools/Technologies: </strong>
-              Linux, Git/Github, AWS, Rails, Brownie, Truffle, Hardhat, Ganache, Foundry, React,
-              NextJs, Fleek, Ethers,
-              Databases (SQL and NO-SQL), APIs, Firebase, IPFS, ENS, The Graph, Infura, Metamask, Argent,
-              Wagmi, Storybook, Chromatic, Ethereum, Polygon, Arbitrum, Starknet, Scarb, Katana
-            </ListItem>
-            <ListItem>
-              <strong>Software Engineering: </strong>
-              TDD, BDD, Unit Testing, Integration Testing, CI/CD, Agile, Scrum
-            </ListItem>
-            {/*
-                    <ListItem>
-                        <strong>Interpersonal: </strong>
-                        Leadership, Project Management, Communication, Time Management, Remote Work
-                    </ListItem>
-                    */}
-          </UnorderedList>
-        </Box>
-
         {/* Work Experience */}
         <Heading fontSize={22} textAlign={['left']}>Work Experience</Heading>
         <Divider />
         <Box className="body-work-experience" p={5} flex='1' textAlign='left'>
 
           <Text fontSize={18}>
-            <strong>Mobile Engineer</strong> &ndash; <em> Tholos (July 2023 - Present)</em>
+            <strong>Mobile Engineer</strong> &ndash; <em> Tholos (October 2023 - Present)</em>
           </Text>
           <UnorderedList>
             <ListItem>
@@ -84,13 +54,17 @@ function App() {
               Worked across the entire stack where needed, implementing complex and extremely critical code across a multitude of systems.
             </ListItem>
             <ListItem>
-              Fully remote team, across 3 timezones.
+              Worked in a blockchain agnostic stack, supporting key management, signing, and web3 integration across numerous networks including Ethereum, the most popular EVM compatible blockchains and L2s (Polygon, Arbitrum, etc.), Bitcoin, Solana, and Cosmos ecosystem.
+            </ListItem>
+            <ListItem>
+              Fully remote team, spanning 2 countries and 3 timezones.
             </ListItem>
             <ListItem>
               <strong>Tools Used: </strong> React Native, Native Wind, expo, JavaScript/Typescript, Bash, Python, Go, Rust, Postgres, Redis, AWS (Secure Enclave, API Gateway, Lambda), Docker, Git/Github
             </ListItem>
           </UnorderedList>
 
+          <br />
           <Text fontSize={18}>
             <strong>Frontend Software Engineer</strong> &ndash; <em> Freelance (July 2023 - Present)</em>
           </Text>
@@ -106,7 +80,7 @@ function App() {
 
           <br />
           <Text fontSize={18}>
-            <strong>Software Engineer</strong> &ndash; <em> ETHChicago (May 2023 - Present)</em>
+            <strong>Co-Founder/Software Engineer</strong> &ndash; <em> ETHChicago (May 2023 - Present)</em>
           </Text>
           <UnorderedList>
             <ListItem>
@@ -139,302 +113,248 @@ function App() {
               Unlock Protocol, Gnosis Safe, Git, Github, Wagmi, Feek, IPFS, ENS
             </ListItem>
           </UnorderedList>
+        </Box>
 
-          <br />
+        {/* Open Source Experience */}
+        <Heading fontSize={22} textAlign={['left']}>Open Source Experience</Heading>
+        <Divider />
+        <Box className="body-work-experience" p={5} flex='1' textAlign='left'>
+
           <Text fontSize={18}>
-            <strong>Open Source Contributions</strong>
+            <strong>Maintainer/Software Engineer</strong> &ndash; <em> Starknet Phone / Starkware (September 2024 - Present) - </em>
+            <Link href="https://github.com/keep-starknet-strange/starknet-phone" color='blue.500'>Github</Link>
           </Text>
           <UnorderedList>
             <ListItem>
-              <strong>TurbETH - </strong>Integrated Unlock Protocol NFT gated memberships into TurboETH. This included a component
-              to create locks, a paywall, and components to display owned keys, created locks, and lock
-              information by querying The Graph.
+              Leading a Starkware Exploration Project that aims to drastically improve mobile UX and sovereignty on Starknet by implementing a fork of GrapheneOS with a
+              light client built in, providing trustless access to the Starknet network, and by extension, Ethereum.
             </ListItem>
             <ListItem>
-              <strong>Cairo Book - </strong>General typo fixes and improvements to the Cairo programming language documentaion
+              Hold weekly community calls to support contributors, sync on progress, and share project updates.
             </ListItem>
             <ListItem>
-              <strong>Kakarot - </strong>Implemented Opcodes for the Kakarot EVM written in Cairo.
+              Driving development for a leading project on the OnlyDust platform, maintaining the repository and supporting 15+ contributors.
             </ListItem>
             <ListItem>
-              <strong>Tools Used: </strong> React, Typescript, Wagmi, Unlock Protocol, The Graph, Cairo, Git, Github
+              <strong>Tools Used: </strong> Android Studio, Java, Kotlin, Rust, Git/Github
             </ListItem>
           </UnorderedList>
 
+          <br />
+          <Text fontSize={18}>
+            <strong>Maintainer/Software Engineer</strong> &ndash; <em> Cairo Zed Extension (July 2024 - Present) - </em>
+            <Link href="https://github.com/trbutler4/zed-cairo" color='blue.500'>Github</Link>
+          </Text>
+          <UnorderedList>
+            <ListItem>
+              Developed and maintain the Cairo programming language extension for the Zed text editor.
+            </ListItem>
+            <ListItem>
+              <strong>Tools Used: </strong> Rust, Tree-Sitter, Language Server Protocol, Git/Github
+            </ListItem>
+          </UnorderedList>
 
         </Box>
 
         {/* Projects */}
-        {/*
+        <Heading fontSize={22} textAlign={['left']}>Project Highlights</Heading>
+        <Divider />
+        <Box className="body-projects" p={5} flex='1' textAlign='left'>
+          <Text fontSize={18}>
+            <strong>Kakarot Bridge</strong>
+          </Text>
+          <UnorderedList>
+            <ListItem>
+              Lambda ZK Week Hackathon (Brussels) Winner:
+              <Link href="https://dorahacks.io/buidl/14125" color='blue.500'> Hackathon Submission</Link>
+            </ListItem>
+            <ListItem>
+              <Link href="https://github.com/trbutler4/kakarot-bridge" color='blue.500'>Github</Link>
+            </ListItem>
+            <ListItem>
+              A ERC20 token bridge enabling a 7 hour withdrawal window with almost no trust assumptions, enabled by Kakarot L2
+            </ListItem>
+            <ListItem>
+              <strong>Tools Used: </strong>Solidity, Hardhat, Cairo, Docker, React, Starknet React
+            </ListItem>
+          </UnorderedList>
 
+          <br />
+          <Text fontSize={18}>
+            <strong>StarkSprouts - </strong>
+            <Link href="https://github.com/StarkSprouts/StarkSprouts" color='blue.500'>Github</Link>
+          </Text>
+          <UnorderedList>
+            <ListItem>
+              Top 10 at Starknet Hacker House Denver.
+            </ListItem>
+            <ListItem>
+              StarkSprouts is a fully on-chain game using the Dojo toolchain. The goal of the game is simply to grow a garden, which will slowly die, and must be watered to stay alive.
+            </ListItem>
+            <ListItem>
+              Gameplay implemented with ThreeJS, and the game was deployed on Slot.
+            </ListItem>
+            <ListItem>
+              <strong>Tools Used: </strong> Cairo, Katana, Starkli, Dojo, ThreeJS, Slot
+            </ListItem>
+          </UnorderedList>
 
-            <Heading fontSize={22} textAlign={['left']}>Project Highlights</Heading>
-            <Divider />
-            <Box className="body-projects" p={5} flex='1' textAlign='left'>
-                <Text fontSize={18}>
-                    <strong>ZK Credit Proofs</strong> 
-                </Text>
-                <UnorderedList>
-                    <ListItem>
-			POC of using Polygon ID to issue credentials for an individuals credit score, and submit a ZK proof that 
-			their credit score is above a certain threshold to prevent the need for sharing SSN with the leasing compnany.
-                    </ListItem>
-                    <ListItem>
-                        <strong>Tools Used: </strong> Go, Polygon ID, NGROK, React
-                    </ListItem>
-                </UnorderedList>
+          <br />
+          <Text fontSize={18}>
+            <strong>ZK Credit Proofs - </strong>
+            <Link href="https://github.com/trbutler4/ethchi2023_hackathon" color='blue.500'>Github</Link>
+          </Text>
+          <UnorderedList>
+            <ListItem>
+              POC of using Polygon ID to issue credentials for an individuals credit score, and submit a ZK proof that
+              their credit score is above a certain threshold to prevent the need for sharing SSN with the leasing compnany.
+            </ListItem>
+            <ListItem>
+              <strong>Tools Used: </strong> Go, Polygon ID, NGROK, React
+            </ListItem>
+          </UnorderedList>
 
-		<br />
-                <Text fontSize={18}>
-                    <strong>Starkfish -- a Starknet Chess Engine</strong> 
-                </Text>
-                <UnorderedList>
-                    <ListItem>
-                        Starkfish is a proveable chess engine, including move generation, evaluation, and search, written in cairo for deployment to Starknet.
-                    </ListItem>
-                    <ListItem>
-                        Includes frontend created with starknet-react and nextjs to play against the engine.
-                    </ListItem>
-                    <ListItem>
-                        <strong>Tools Used: </strong> Cairo, Katana, Starkli, Starknet, Starknet-react, NextJs
-                    </ListItem>
-                </UnorderedList>
+          <br />
+          <Text fontSize={18}>
+            <strong>NFTicket: NFT Ticketing Platform</strong> &ndash; <em><Link href="https://github.com/trbutler4/NFTicket" color="blue.500">Github</Link></em>
+          </Text>
+          <UnorderedList>
+            <ListItem>
+              NFT event ticketing platform which allows organizers to easily create events,
+              sell tickets, and redeem tickets for events.
+            </ListItem>
+            <ListItem>
+              Lead team of 4 developers to follow software engineering best practices.
+            </ListItem>
+            <ListItem>
+              Fully tested Metamask integration using Cypress and Synpress.
+            </ListItem>
+            <ListItem>
+              <strong>Tools Used: </strong> Solidity, Hardhat, React, Firebase, Infura, Cypress,
+              Synpress
+            </ListItem>
+          </UnorderedList>
 
-                <br/>
-                <Text fontSize={18}>
-                    <strong>General Solidity and Cairo Projects</strong> 
-                </Text>
-                <UnorderedList>
-                    <ListItem>
-                        Read and followed all examples in the Cairo Book. Completed Cairo practice projects on Node 
-                        Guardians.
-                    </ListItem>
-                    <ListItem>
-                        Completed various Solidity projects on Node Guardians with topics including gas optimization, 
-                        secutiy, storage, and more.
-                    </ListItem>
-                    <ListItem>
-                        Completed various Soldity CTFs on Ethernaut, fully testing all solutions and exploits in 
-                        Solidity with Foundry.
-                    </ListItem>
-                    <ListItem>
-                        <strong>Tools Used: </strong> Solidity, Cairo, Hardat, Brownie, Foundry, Ethers, Scarb
-                    </ListItem>
-                </UnorderedList>
+          {/*
+          <br />
+          <Text fontSize={18}>
+            <strong>Full-Stack App</strong> &ndash; <em><Link href="https://github.com/sep-23/team_01/wiki" color="blue.500">Curate</Link></em>
+          </Text>
+          <UnorderedList>
+            <ListItem>
+              Full stack web application that leverages Spotify and Apple music APIs to
+              allow users to curate playlists, post them to the platform, like and comment
+              on playlists, follow users, and upload/export playlists to and from Spotify
+              and Apple Music.
+            </ListItem>
+            <ListItem>
+              Includes CI/CD pipelines, PR templates, and branch protections
+            </ListItem>
+            <ListItem>
+              Fully documented project wiki, detailing all aspects of the project
+            </ListItem>
+            <ListItem>
+              <strong>Tools Used: </strong> React, Firebase, Node, Cypress
+            </ListItem>
+          </UnorderedList>
+            */}
 
-                <br/>
-                <Text fontSize={18}>
-                    <strong>Full-Stack dApp</strong> &ndash; <em><Link href="https://github.com/trbutler4/NFTicket" color="blue.500">NFTicket</Link></em>
-                </Text>
-                <UnorderedList>
-                    <ListItem>
-                        NFT event ticketing platform which allows organizers to easily create events,
-                        sell tickets, and redeem tickets for events.
-                    </ListItem>
-                    <ListItem>
-                        Lead team of 4 developers to follow software engineering best practices.
-                    </ListItem>
-                    <ListItem>
-                        Fully tested Metamask integration using Cypress and Synpress.
-                    </ListItem>
-                    <ListItem>
-                        <strong>Tools Used: </strong> Solidity, Hardhat, React, Firebase, Infura, Cypress,
-                            Synpress
-                    </ListItem>
-                </UnorderedList>
+          <br />
+          <Text fontSize={18}>
+            <strong>Peerio: Decentralized peer review process</strong> &ndash; <em><Link href="https://github.com/brandonsurh/peerio" color="blue.500">Github</Link></em>
+          </Text>
+          <UnorderedList>
+            <ListItem>
+              Decentralized peer review process on filecoin network. Includes tokenized
+              voting system, with rewards tied to a users reputation.
+            </ListItem>
+            <ListItem>
+              <Link href="https://ethglobal.com/showcase/peerio-0bv55" color='blue.500'>
+                Hack FEVM Filecoin pool prize winner
+              </Link>
+            </ListItem>
+            <ListItem>
+              <strong>Tools Used: </strong> Solidity, Hardhat, React, Firebase, IPFS, Web3.Storage
+            </ListItem>
+          </UnorderedList>
 
-                <br/>
-                <Text fontSize={18}>
-                    <strong>Full-Stack App</strong> &ndash; <em><Link href="https://github.com/sep-23/team_01/wiki" color="blue.500">Curate</Link></em>
-                </Text>
-                <UnorderedList>
-                    <ListItem>
-                        Full stack web application that leverages Spotify and Apple music APIs to
-                        allow users to curate playlists, post them to the platform, like and comment
-                        on playlists, follow users, and upload/export playlists to and from Spotify
-                        and Apple Music.
-                    </ListItem>
-                    <ListItem>
-                        Includes CI/CD pipelines, PR templates, and branch protections
-                    </ListItem>
-                    <ListItem>
-                        Fully documented project wiki, detailing all aspects of the project
-                    </ListItem>
-                    <ListItem>
-                        <strong>Tools Used: </strong> React, Firebase, Node, Cypress
-                    </ListItem>
-                </UnorderedList>
+          <br />
+          <Text fontSize={18}>
+            <strong>Full-Stack App</strong> &ndash; <em><Link href="https://github.com/UIOWAjohnsonhj/selt2022_teamprojects-team-7" color='blue.500'>University Application Portal</Link></em>
+          </Text>
+          <UnorderedList>
+            <ListItem>
+              Full-stack application for university applicants to apply to multiple different schools,
+              and allows administrators to review their applications.
+            </ListItem>
+            <ListItem>
+              Followed software engineering best practices, fully documented project
+              <Link href="https://github.com/UIOWAjohnsonhj/selt2022_teamprojects-team-7/wiki" color='blue.500'> wiki</Link>
+            </ListItem>
+            <ListItem>
+              <strong>Tools Used: </strong>Ruby on Rails, JavaScript, Springboot, SQL
+            </ListItem>
+          </UnorderedList>
 
-                <br/>
-                <Text fontSize={18}>
-                    <strong>Full-Stack dApp</strong> &ndash; <em><Link href="https://github.com/brandonsurh/peerio" color="blue.500">Peerio</Link></em>
-                </Text>
-                <UnorderedList>
-                    <ListItem>
-                        Decentralized peer review process on filecoin network. Includes tokenized
-                        voting system, with rewards tied to a users reputation.
-                    </ListItem>
-                    <ListItem>
-                        <Link href="https://ethglobal.com/showcase/peerio-0bv55" color='blue.500'>
-                            Hack FEVM Filecoin pool prize winner
-                        </Link>
-                    </ListItem>
-                    <ListItem>
-                        <strong>Tools Used: </strong> Solidity, Hardhat, React, Firebase, IPFS, Web3.Storage
-                    </ListItem>
-                </UnorderedList>
+          <br />
+          <Text fontSize={18}>
+            <strong>Computer Architecture</strong> &ndash;
+            <em> SISC Computer</em>
+          </Text>
+          <UnorderedList>
+            <ListItem>
+              Built and tested SISC computer processor.
+            </ListItem>
+            <ListItem>
+              Wrote machine code programs that correctly execute on the computer.
+            </ListItem>
+            <ListItem>
+              <strong>Tools Used: </strong> Verilog HDL, ModelSim
+            </ListItem>
+          </UnorderedList>
 
-                <br/>
-                <Text fontSize={18}>
-                    <strong>Full-Stack App</strong> &ndash; <em><Link href="https://github.com/UIOWAjohnsonhj/selt2022_teamprojects-team-7" color='blue.500'>University Application Portal</Link></em>
-                </Text>
-                <UnorderedList>
-                    <ListItem>
-                        Full-stack application for university applicants to apply to multiple different schools,
-                        and allows administrators to review their applications.
-                    </ListItem>
-                    <ListItem>
-                        Followed software engineering best practices, fully documented project 
-                        <Link href="https://github.com/UIOWAjohnsonhj/selt2022_teamprojects-team-7/wiki" color='blue.500'> wiki</Link>
-                    </ListItem>
-                    <ListItem>
-                        <strong>Tools Used: </strong>Ruby on Rails, JavaScript, Springboot, SQL
-                    </ListItem>
-                </UnorderedList>
+          <br />
+          <Text fontSize={18}>
+            <strong>Embedded System</strong> &ndash;
+            <em> Live Crypto Price Display Board</em>
+          </Text>
+          <UnorderedList>
+            <ListItem>
+              Embedded system that display the live prices of Bitcoin and Ethereum. Includes a push
+              button to swap between the different cryptocurrencies, and an alarm if the price crashes.
+            </ListItem>
+            <ListItem>
+              Python script to interact with API to retrieve live prices for Bitcoin and Ethereum, and send
+              serially to arduino via bluetooth module.
+            </ListItem>
+            <ListItem>
+              Arduino microcontroller with LED display module, bluetooth module, buzzer, and push button.
+            </ListItem>
+            <ListItem>
+              <strong>Tools Used: </strong>Python, C, Arduino, Atmel Studio
+            </ListItem>
+          </UnorderedList>
 
-                <br/>
-                <Text fontSize={18}>
-                    <strong>Computer Architecture</strong> &ndash;
-                    <em> SISC Computer</em>
-                </Text>
-                <UnorderedList>
-                    <ListItem>
-                        Built and tested SISC computer processor.
-                    </ListItem>
-                    <ListItem>
-                        Wrote machine code programs that correctly execute on the computer.
-                    </ListItem>
-                    <ListItem>
-                        <strong>Tools Used: </strong> Verilog HDL, ModelSim
-                    </ListItem>
-                </UnorderedList>
-
-                <br/>
-                <Text fontSize={18}>
-                    <strong>Embedded System</strong> &ndash;
-                    <em> Live Crypto Price Display Board</em>
-                </Text>
-                <UnorderedList>
-                    <ListItem>
-                        Embedded system that display the live prices of Bitcoin and Ethereum. Includes a push 
-                        button to swap between the different cryptocurrencies, and an alarm if the price crashes. 
-                    </ListItem>
-                    <ListItem>
-                        Python script to interact with API to retrieve live prices for Bitcoin and Ethereum, and send 
-                        serially to arduino via bluetooth module. 
-                    </ListItem>
-                    <ListItem>
-                        Arduino microcontroller with LED display module, bluetooth module, buzzer, and push button. 
-                    </ListItem>
-                    <ListItem>
-                        <strong>Tools Used: </strong>Python, C, Arduino, Atmel Studio
-                    </ListItem>
-                </UnorderedList>
-
-                <br/>
-                <Text fontSize={18}>
-                    <strong>Desktop Application</strong> &ndash;
-                    <em> Voting Application</em>
-                </Text>
-                <UnorderedList>
-                    <ListItem>
-                        GUI desktop application for uniform national voting, allowing for voter, auditor, and media users 
-                    </ListItem>
-                    <ListItem>
-                        Uses SQL to get and store voter and candidate information.
-                    </ListItem>
-                    <ListItem>
-                        Includes user authentication for different user types.
-                    </ListItem>
-                    <ListItem>
-                        <strong>Tools Used: </strong>Java, SQL
-                    </ListItem>
-                </UnorderedList>
-
-                <br/>
-                <Text fontSize={18}>
-                    <strong>Machine Learning</strong> &ndash;
-                    <em> Smart Contract Vulnerability Detection</em>
-                </Text>
-                <UnorderedList>
-                    <ListItem>
-                       Supervised and Unsupervised methods to detect potential vulnerabilities in
-                        smart contracts. 
-                    </ListItem>
-                    <ListItem>
-                        Methods included analyzing bytecode directly by contructing a 
-                        'sliding window' of relevant opcodes, as well converting bytecode into RGB images, 
-                        both of which were analyzed using neural networks.
-                    </ListItem>
-                    <ListItem>
-                        <strong>Tools Used: </strong> Python, PyTorch, Jupyter Notebook, Solidity, Slither
-                    </ListItem>
-                </UnorderedList>
-
-                <br/>
-                <Text fontSize={18}>
-                    <strong>Machine Learning</strong> &ndash;
-                    <em> Supervised and Unsupervised learning algorithms</em>
-                </Text>
-                <UnorderedList>
-                    <ListItem>
-                        Implemented similarity functions for cosine similarity, hamming distance, and euclidean distance.
-                    </ListItem>
-                    <ListItem>
-                        Supervised Learning: implemented k-nearest neighbors algorithm to classify data points in a data set
-                    </ListItem>
-                    <ListItem>
-                        Unsupervised Learning: implemented k-means clustering algorithm to organize a data set into clusters.
-                    </ListItem>
-                    <ListItem>
-                        <strong>Tools Used: </strong> Java only
-                    </ListItem>
-                </UnorderedList>
-
-                <br/>
-                <Text fontSize={18}>
-                    <strong>Machine Learning</strong> &ndash;
-                    <em> S&P 500 Predictive Model Analysis</em>
-                </Text>
-                <UnorderedList>
-                    <ListItem>
-                        Implemented and compared Binary Decision Tree, Naive Bayes, and K-Nearest Neighbors predictive models 
-                        on the rise and fall of the S&P 500 index on any given day.
-                    </ListItem>
-                    <ListItem>
-                        <strong>Tools Used: </strong> Python, Pandas, Numby
-                    </ListItem>
-                </UnorderedList>
-
-                <br/>
-                <Text fontSize={18}>
-                    <strong>Algorithmic Trading</strong> &ndash;
-                    <em> Basic Strategies</em>
-                </Text>
-                <UnorderedList>
-                    <ListItem>
-                        Gathers stock market data via API requests
-                    </ListItem>
-                    <ListItem>
-                        Uses stock market data to create an equal weight S&P 500 index fund, as well as quantitative value-based
-                        and momentum-based investing strategies.
-                    </ListItem>
-                    <ListItem>
-                        <strong>Tools Used: </strong> Python, Pandas, Jupyter Notebook
-                    </ListItem>
-                </UnorderedList>
-            </Box>
-          */}
+          <br />
+          <Text fontSize={18}>
+            <strong>Machine Learning</strong> &ndash;
+            <em> Smart Contract Vulnerability Detection</em>
+          </Text>
+          <UnorderedList>
+            <ListItem>
+              Supervised and Unsupervised methods to detect potential vulnerabilities in
+              smart contracts.
+            </ListItem>
+            <ListItem>
+              Methods included analyzing bytecode directly by contructing a
+              'sliding window' of relevant opcodes, as well converting bytecode into RGB images,
+              both of which were analyzed using neural networks.
+            </ListItem>
+            <ListItem>
+              <strong>Tools Used: </strong> Python, PyTorch, Jupyter Notebook, Solidity, Slither
+            </ListItem>
+          </UnorderedList>
+        </Box>
 
         <Heading fontSize={22} textAlign={['left']}>Education</Heading>
         <Divider />
