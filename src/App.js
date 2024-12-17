@@ -126,7 +126,7 @@ function App() {
             <ListItem>
               Leading a Starkware Exploration Project that aims to drastically improve mobile UX and sovereignty on Starknet by implementing a fork of GrapheneOS with a
               light client built in, providing both trustless access to the Starknet network, and complete user control of the device, with GrapheneOS removing 
-              the need for any 3rd party control and tracking.
+              all 3rd party control and tracking.
             </ListItem>
             <ListItem>
               Hold weekly community calls to support contributors, sync on progress, and share project updates.
@@ -272,45 +272,6 @@ function App() {
             </ListItem>
             <ListItem>
               <strong>Tools Used: </strong> Solidity, Hardhat, React, Firebase, IPFS, Web3.Storage
-            </ListItem>
-          </UnorderedList>
-
-          <br />
-          <Text fontSize={18}>
-            <strong>Computer Architecture</strong> &ndash;
-            <em> SISC Computer</em>
-          </Text>
-          <UnorderedList>
-            <ListItem>
-              Built and tested SISC computer processor.
-            </ListItem>
-            <ListItem>
-              Wrote machine code programs that correctly execute on the computer.
-            </ListItem>
-            <ListItem>
-              <strong>Tools Used: </strong> Verilog HDL, ModelSim
-            </ListItem>
-          </UnorderedList>
-
-          <br />
-          <Text fontSize={18}>
-            <strong>Embedded System</strong> &ndash;
-            <em> Live Crypto Price Display Board</em>
-          </Text>
-          <UnorderedList>
-            <ListItem>
-              Embedded system that display the live prices of Bitcoin and Ethereum. Includes a push
-              button to swap between the different cryptocurrencies, and an alarm if the price crashes.
-            </ListItem>
-            <ListItem>
-              Python script to interact with API to retrieve live prices for Bitcoin and Ethereum, and send
-              serially to arduino via bluetooth module.
-            </ListItem>
-            <ListItem>
-              Arduino microcontroller with LED display module, bluetooth module, buzzer, and push button.
-            </ListItem>
-            <ListItem>
-              <strong>Tools Used: </strong>Python, C, Arduino, Atmel Studio
             </ListItem>
           </UnorderedList>
 
