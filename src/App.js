@@ -15,8 +15,8 @@ function App() {
     <ChakraProvider>
 
       <Box className="resume-header" m={2}>
-        <Heading textAlign={['center']}>Thomas Robert Butler IV</Heading>
-        <Heading textAlign={['center']}>Software Engineer</Heading>
+        <Heading textAlign={['center']} fontSize={28}>Thomas Robert Butler IV</Heading>
+        <Heading textAlign={['center']} fontSize={28}>Software Engineer</Heading>
         <Text fontSize={22} textAlign={['center']}>
           <Link href="mailto:trbiv@proton.me" color='blue.500'>trbiv@proton.me </Link> |
           <Link href="https://github.com/trbutler4" color='blue.500'> Github</Link> |
@@ -39,15 +39,11 @@ function App() {
             <ListItem>
               Full ownership of both iOS and Android mobile applications for
               Tholos MPC Crypto Wallet, implemented in React Native and 
-              securing over $12 Million worth of digital assets.
+              securing over $35 Million worth of digital assets.
             </ListItem>
             <ListItem>
-              Worked across the entire stack where needed, implementing complex 
-              and critical code across a multitude of systems.
-            </ListItem>
-            <ListItem>
-              Wrote and update documentation on development processes, built tools and scripts to increase the teams 
-              speed and simplicity of development.
+              Worked across the entire stack, implementing complex 
+              and critical code across a multitude of systems, including websocket and aws secure enclave.
             </ListItem>
             <ListItem>
               Worked in a blockchain agnostic stack, supporting key management, signing, and web3 integration across numerous networks including Ethereum, the most popular EVM compatible blockchains and L2s (Polygon, Arbitrum, etc.), Bitcoin, Solana, and Cosmos ecosystem.
@@ -75,11 +71,15 @@ function App() {
               Worked asynchronously with multiple fully remote teams to build frontends for crypto lending platforms, services, and communities.
             </ListItem>
             <ListItem>
+              Contribute stake and run validators across various blockchain networks.
+            </ListItem>
+            <ListItem>
               <strong>Tools Used: </strong> React, Wagmi, Typescript, Solidity, Foundry, Hardhat, Slither, Storbybook, Polygon, Ethereum,
               Chakra-UI, TailwindCSS, MaterialUI, Chromatic, Git/Github
             </ListItem>
           </UnorderedList>
 
+          {/*
           <br />
           <Text fontSize={18}>
             <strong>Co-Founder/Software Engineer</strong> &ndash; <em> ETHChicago (May 2023 - Present)</em>
@@ -111,6 +111,7 @@ function App() {
               Unlock Protocol, Gnosis Safe, Git, Github, Wagmi, Feek, IPFS, ENS
             </ListItem>
           </UnorderedList>
+          */}
         </Box>
 
         {/* Open Source Experience */}
@@ -196,6 +197,7 @@ function App() {
             </ListItem>
           </UnorderedList>
 
+          {/*
           <br />
           <Text fontSize={18}>
             <strong>ZK Credit Proofs - </strong>
@@ -232,7 +234,6 @@ function App() {
             </ListItem>
           </UnorderedList>
 
-          {/*
           <br />
           <Text fontSize={18}>
             <strong>Full-Stack App</strong> &ndash; <em><Link href="https://github.com/sep-23/team_01/wiki" color="blue.500">Curate</Link></em>
@@ -254,7 +255,6 @@ function App() {
               <strong>Tools Used: </strong> React, Firebase, Node, Cypress
             </ListItem>
           </UnorderedList>
-            */}
 
           <br />
           <Text fontSize={18}>
@@ -274,6 +274,7 @@ function App() {
               <strong>Tools Used: </strong> Solidity, Hardhat, React, Firebase, IPFS, Web3.Storage
             </ListItem>
           </UnorderedList>
+            */}
 
           <br />
           <Text fontSize={18}>
