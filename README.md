@@ -1,70 +1,58 @@
-# Getting Started with Create React App
+# Resume
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A clean, simple HTML and CSS resume with no dependencies.
 
-## Available Scripts
+## Overview
 
-In the project directory, you can run:
+This is a static HTML resume that requires no build process, dependencies, or frameworks. It's designed to be lightweight, fast, and easy to maintain.
 
-### `npm start`
+## Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Pure HTML/CSS with no JavaScript dependencies
+- Responsive design that works on desktop, tablet, and mobile
+- Print-friendly styling
+- Clean, professional layout
+- Easy to edit and customize
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Usage
 
-### `npm test`
+Simply open `index.html` in any web browser to view the resume.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Editing
 
-### `npm run build`
+To update the resume content:
+1. Open `index.html` in any text editor
+2. Modify the HTML content within the `<body>` tags
+3. Adjust styling by editing the CSS within the `<style>` tags in the `<head>` section
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Hosting
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+You can host this resume anywhere that serves static files:
+- GitHub Pages
+- Netlify
+- Vercel
+- Any web server
+- Or simply open the file locally in a browser
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## File Structure
 
-### `npm run eject`
+```
+resume/
+├── index.html          # Main resume file (HTML + CSS)
+└── README.md          # This file
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Customization
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Colors
+The main brand color is `#3182ce` (blue) used for links. You can change this by updating the CSS color values.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Fonts
+The resume uses system fonts for maximum compatibility and fast loading.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Layout
+The layout is responsive and will automatically adjust for different screen sizes. Print styles are also included for generating PDFs.
 
-## Learn More
+## Previous Version
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This resume was previously built with React and Chakra UI but has been simplified to use only HTML and CSS for easier maintenance and faster loading.
