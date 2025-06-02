@@ -14,7 +14,7 @@ export interface WorkExperience {
   duration: string;
   responsibilities: string[];
   tools: string[];
-  status?: 'optional';
+  status?: "optional";
 }
 
 export interface OpenSourceExperience {
@@ -57,7 +57,11 @@ export interface EmphasizeConfig {
   metrics: string[];
 }
 
-export type SectionName = 'workExperience' | 'openSourceExperience' | 'projects' | 'education';
+export type SectionName =
+  | "workExperience"
+  | "openSourceExperience"
+  | "projects"
+  | "education";
 
 export interface ResumeConfig {
   resumeType: string;
@@ -67,7 +71,6 @@ export interface ResumeConfig {
   openSourceExperience: OpenSourceExperience[];
   projects: Project[];
   education: Education[];
-  skillsToHighlight: string[];
   sectionsOrder: SectionName[];
   emphasize: EmphasizeConfig;
 }
