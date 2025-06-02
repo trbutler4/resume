@@ -180,29 +180,29 @@
     },
     {
       "id": "maverick-software-coop",
-      "position": "Cloud Software Engineer",
-      "company": "Maverick Software Consulting -- Thomson Reuters",
-      "duration": "June 2021 - May 2023",
+      "position": "cloud software engineer",
+      "company": "maverick software consulting -- thomson reuters",
+      "duration": "june 2021 - may 2023",
       "responsibilities": [
-        "Responsible for all stages of the software development life cycle of an automated AWS cloud orphaned asset cleanup application using Python and AWS Lambda with Step Functions which is projected to save Thomson Reuters $14 million initially, and reduce cloud spend over time.",
-        "Took ownership in all aspects of development process from ideation to production implementation, including unit and integration testing, CI/CD pipelines, and documentaion.",
-        "Contributed to the development of an internal AWS RDS Database tool that is used across all cloud teams at Thomson Reuters.",
-        "Worked remotely with multipls teams across the globe.",
-        "Continually followed best AWS best practices, and guided team of 3 other engineers in software engineering best practices."
+        "responsible for all stages of the software development life cycle of an automated aws cloud orphaned asset cleanup application using python and aws lambda with step functions which is projected to save thomson reuters $14 million initially, and reduce cloud spend over time.",
+        "took ownership in all aspects of development process from ideation to production implementation, including unit and integration testing, ci/cd pipelines, and documentaion.",
+        "contributed to the development of an internal aws rds database tool that is used across all cloud teams at thomson reuters.",
+        "worked remotely with multipls teams across the globe.",
+        "continually followed best aws best practices, and guided team of 3 other engineers in software engineering best practices."
       ],
       "tools": [
-        "Git/Github",
+        "git/github",
         "Python",
         "AWS",
-        "AWS Lambda",
-        "AWS Step Functions",
-        "AWS Lambda Layers",
-        "AWS CloudFormation",
-        "AWS CodePipeline",
-        "Github Actions"
+        "AWS lambda",
+        "AWS step functions",
+        "AWS lambda layers",
+        "AWS cloudformation",
+        "AWS codepipeline",
+        "Github actions"
       ],
       "tags": ["consulting", "coop", "cloud", "devops", "software engineering"],
-      "highlights": ["$14 Million"],
+      "highlights": ["$14 million"],
       "status": "optional"
     }
   ],
@@ -269,6 +269,7 @@
       "tools": [
         "Solidity",
         "Hardhat",
+        "Foundry",
         "Cairo",
         "Docker",
         "React",
@@ -306,39 +307,5 @@
       "degree": "BSE Computer Science and Engineering",
       "tags": ["computer-science", "engineering", "bachelor"]
     }
-  ],
-  "skillCategories": {
-    "languages": [
-      "Python",
-      "Golang",
-      "Rust",
-      "JavaScript",
-      "TypeScript",
-      "Java",
-      "Kotlin",
-      "C",
-      "Solidity",
-      "Cairo"
-    ],
-    "frameworks": ["React", "React Native", "Expo", "PyTorch", "NumPy"],
-    "tools": [
-      "Docker",
-      "Kubernetes",
-      "Git/Github",
-      "AWS",
-      "Postgres",
-      "Redis",
-      "Hardhat",
-      "Foundry"
-    ],
-    "domains": [
-      "Blockchain",
-      "AI/ML",
-      "Mobile Development",
-      "Infrastructure",
-      "Security",
-      "DeFi",
-      "Gaming"
-    ]
-  }
+  ]
 }
