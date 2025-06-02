@@ -22,10 +22,10 @@ export const aiMlConfig: ResumeConfig = {
   projects: [AISmartContractVulnerabilityProject, KakarotBridgeProject],
   education: [UIowaEducation],
   sectionsOrder: [
+    "education",
     "workExperience",
     "projects",
     "openSourceExperience",
-    "education",
   ],
   emphasize: {
     keywords: [],
@@ -49,10 +49,10 @@ export const blockchainConfig: ResumeConfig = {
   projects: [KakarotBridgeProject, StarkSproutsProject],
   education: [UIowaEducation],
   sectionsOrder: [
+    "education",
     "workExperience",
     "openSourceExperience",
     "projects",
-    "education",
   ],
   emphasize: {
     keywords: [],
@@ -80,10 +80,10 @@ export const fullStackConfig: ResumeConfig = {
   ],
   education: [UIowaEducation],
   sectionsOrder: [
+    "education",
     "workExperience",
     "projects",
     "openSourceExperience",
-    "education",
   ],
   emphasize: {
     keywords: [],
@@ -108,10 +108,10 @@ export const mobileConfig: ResumeConfig = {
   projects: [StarkSproutsProject, KakarotBridgeProject],
   education: [UIowaEducation],
   sectionsOrder: [
+    "education",
     "workExperience",
     "openSourceExperience",
     "projects",
-    "education",
   ],
   emphasize: {
     keywords: [],
@@ -135,10 +135,10 @@ export const sreConfig: ResumeConfig = {
   ],
   education: [UIowaEducation],
   sectionsOrder: [
+    "education",
     "workExperience",
     "projects",
     "openSourceExperience",
-    "education",
   ],
   emphasize: {
     keywords: [],
@@ -171,10 +171,10 @@ export const suffixLabsConfig: ResumeConfig = {
   ],
   education: [UIowaEducation],
   sectionsOrder: [
+    "education",
     "workExperience",
     "openSourceExperience",
     "projects",
-    "education",
   ],
   emphasize: {
     keywords: [],
