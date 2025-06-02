@@ -1,5 +1,4 @@
 import {
-  ExperienceData,
   WorkExperience,
   OpenSourceExperience,
   Project,
