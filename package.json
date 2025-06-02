@@ -3,12 +3,25 @@
   "version": "1.0.0",
   "description": "TypeScript-based resume generator with configurable templates",
   "main": "dist/generate-resume.js",
+  "bin": {
+    "resume-gen": "dist/cli.js"
+  },
   "scripts": {
     "build": "tsc",
     "dev": "tsc --watch",
-    "generate": "npm run build && node dist/generate-resume.js",
-    "clean": "rm -rf dist",
-    "type-check": "tsc --noEmit"
+    "generate": "npm run build && node dist/cli.js generate",
+    "generate:all": "npm run build && node dist/cli.js all",
+    "cli": "npm run build && node dist/cli.js",
+    "start": "npm run build && node dist/cli.js dev",
+    "serve": "npm run build && node dist/cli.js dev",
+    "clean": "npm run build && node dist/cli.js clean --all",
+    "clean:build": "rm -rf dist",
+    "clean:resumes": "npm run build && node dist/cli.js clean --resumes",
+    "list": "npm run build && node dist/cli.js list",
+    "info": "npm run build && node dist/cli.js info",
+    "type-check": "tsc --noEmit",
+    "install-global": "npm run build && npm install -g .",
+    "postinstall": "npm run build"
   },
   "keywords": [
     "resume",
@@ -19,6 +32,12 @@
   ],
   "author": "Thomas Robert Butler IV",
   "license": "MIT",
+  "dependencies": {
+    "commander": "^11.0.0",
+    "chalk": "^4.1.2",
+    "ora": "^5.4.1",
+    "browser-sync": "^2.29.3"
+  },
   "devDependencies": {
     "@types/node": "^20.0.0",
     "typescript": "^5.0.0"

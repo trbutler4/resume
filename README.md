@@ -56,7 +56,7 @@ resume/
 # Install dependencies
 npm install
 
-# Build TypeScript files
+# Build TypeScript files (automatically runs after install)
 npm run build
 ```
 
@@ -64,30 +64,51 @@ npm run build
 
 ```bash
 # Generate specific resume type
-./generate.sh blockchain
-./generate.sh ai-ml
-./generate.sh mobile
-./generate.sh full-stack
-./generate.sh suffix-labs
+./resume-gen generate blockchain
+./resume-gen generate ai-ml
+./resume-gen generate mobile
+./resume-gen generate full-stack
+./resume-gen generate suffix-labs
 
 # Generate all resume types
-./generate.sh all
+./resume-gen all
 
 # List available types
-./generate.sh list
+./resume-gen list
 ```
 
 ### Development Mode
 
 ```bash
 # Start development server with TypeScript watch mode
-./run.sh
+./resume-gen dev
 
 # Start development server on custom port
-./run.sh --port 8080
+./resume-gen dev --port 8080
 
 # Skip TypeScript build (use existing compiled files)
-./run.sh --no-build
+./resume-gen dev --no-build
+```
+</text>
+
+<old_text>
+## NPM Scripts
+
+```bash
+# Build TypeScript to JavaScript
+npm run build
+
+# Watch mode for development
+npm run dev
+
+# Generate resume (requires build first)
+npm run generate
+
+# Type checking without compilation
+npm run type-check
+
+# Clean build output
+npm run clean
 ```
 
 ## NPM Scripts
@@ -115,30 +136,82 @@ npm run clean
 
 ```bash
 # Generate blockchain resume
-./generate.sh generate blockchain
+./resume-gen generate blockchain
 
 # Alternative shorter syntax
-./generate.sh blockchain
+./resume-gen gen blockchain
 
 # Generate all resumes at once
-./generate.sh all
+./resume-gen all
 
 # Development with hot reloading
-./run.sh
+./resume-gen dev
 ```
 
-### Direct Usage After Build
+### Advanced Usage
+
+```bash
+# Generate with custom output directory
+./resume-gen generate blockchain --output ./output
+
+# Generate all resumes in custom directory
+./resume-gen all --output ./my-resumes
+
+# Development server on custom port
+./resume-gen dev --port 8080
+
+# Skip build step (use existing compiled files)
+./resume-gen generate ai-ml --no-build
+
+# Clean specific files
+./resume-gen clean --resumes
+./resume-gen clean --build
+./resume-gen clean --all
+```
+
+### Direct Node.js Usage After Build
 
 ```bash
 # Build first
 npm run build
 
-# Generate with custom output filename
-node dist/generate-resume.js blockchain custom-output.html
+# Use the CLI directly
+node dist/cli.js generate blockchain
 
-# Generate to stdout
-node dist/generate-resume.js ai-ml
+# Or use the resume generator directly
+node dist/generate-resume.js blockchain custom-output.html
 ```
+</text>
+
+<old_text>
+├── generate-resume.ts        # Resume generator (TypeScript)
+├── package.json             # Dependencies and scripts
+├── tsconfig.json           # TypeScript configuration
+├── generate.sh             # CLI wrapper script
+├── run.sh                  # Development server script
+├── global.css              # Styling
+├── dist/                   # Compiled JavaScript output
+└── resumes/               # Generated HTML resumes
+</text>
+<new_text>
+├── cli.ts                   # TypeScript CLI tool (main interface)
+├── generate-resume.ts       # Resume generator (TypeScript)
+├── package.json            # Dependencies and scripts
+├── tsconfig.json          # TypeScript configuration
+├── resume-gen             # Executable CLI wrapper script
+├── global.css             # Styling
+├── dist/                  # Compiled JavaScript output
+└── resumes/              # Generated HTML resumes
+</text>
+
+<old_text>
+### Making Changes
+
+1. **Edit TypeScript files**: Update `experience-data.ts` or config files
+2. **Type checking**: Run `npm run type-check` to verify types
+3. **Build**: Run `npm run build` to compile
+4. **Test**: Generate resumes to verify changes
+5. **Development**: Use `./run.sh` for live reloading
 
 ## TypeScript Development
 
@@ -439,7 +512,7 @@ node dist/generate-resume.js blockchain
 #### TypeScript Compilation Errors
 ```bash
 # Clean and rebuild
-npm run clean
+./resume-gen clean --build
 npm run build
 
 # Check for type errors
@@ -455,14 +528,39 @@ npm install
 
 #### File Permission Issues
 ```bash
-# Make scripts executable
-chmod +x generate.sh run.sh
+# Make CLI script executable
+chmod +x resume-gen
 ```
 
 #### Port Already in Use
 ```bash
 # Use different port for development server
-./run.sh --port 8080
+./resume-gen dev --port 8080
+```
+
+#### CLI Not Working
+```bash
+# Check project status
+./resume-gen info
+
+# Rebuild and try again
+npm run build
+./resume-gen list
+```
+</antml_text>
+
+<old_text>
+### Validation
+
+```bash
+# Type checking
+npm run type-check
+
+# Test all config types
+./generate.sh all
+
+# Verify build output
+ls -la dist/
 ```
 
 ### Validation
@@ -486,8 +584,14 @@ ls -la dist/
 2. Install dependencies: `npm install`
 3. Make changes to TypeScript files
 4. Run type checking: `npm run type-check`
-5. Test generation: `./generate.sh all`
+5. Test generation: `./resume-gen all`
 6. Submit pull request
+</antml_text>
+
+<old_text>
+## License
+
+This is a personal resume system built with TypeScript. Adapt and modify as needed for your own use.
 
 ### Code Style
 
