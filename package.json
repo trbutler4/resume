@@ -1,0 +1,29 @@
+{
+  "name": "resume-generator",
+  "version": "1.0.0",
+  "description": "TypeScript-based resume generator with configurable templates",
+  "main": "dist/generate-resume.js",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "generate": "npm run build && node dist/generate-resume.js",
+    "clean": "rm -rf dist",
+    "type-check": "tsc --noEmit"
+  },
+  "keywords": [
+    "resume",
+    "generator",
+    "typescript",
+    "html",
+    "cv"
+  ],
+  "author": "Thomas Robert Butler IV",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}

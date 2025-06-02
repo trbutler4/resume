@@ -1,59 +1,112 @@
-# Modular Resume System
+# TypeScript Resume Generator
 
-A flexible, data-driven resume generation system that allows you to easily customize your resume for different job types and requirements.
+A modern, type-safe resume generation system built with TypeScript that allows you to easily customize your resume for different job types and requirements.
 
 ## Overview
 
-This system separates your experience data from presentation, allowing you to:
-- Store all your experience in a centralized JSON file
-- Create different resume configurations for various job types
-- Generate tailored HTML resumes with one command
-- Easily add, remove, or reorder sections based on job requirements
+This system separates your experience data from presentation using TypeScript modules, providing:
+- Type-safe experience data management
+- Configurable resume templates for various job types
+- Automated build process with TypeScript compilation
+- Development server with hot reloading
+- Generated HTML resumes with one command
+
+## Features
+
+- **Type Safety**: Full TypeScript support with comprehensive type definitions
+- **Modular Architecture**: Separate data, configs, and generation logic
+- **Hot Reloading**: Development server with automatic rebuilds
+- **Multiple Output Formats**: HTML generation with CSS styling
+- **Extensible**: Easy to add new resume types and sections
+- **CLI Tools**: Simple command-line interface for generation
 
 ## File Structure
 
 ```
 resume/
-├── experience-data.json       # All your experience data
-├── configs/                   # Resume configurations
-│   ├── blockchain.json       # Blockchain/Web3 focused
-│   ├── ai-ml.json           # AI/ML focused
-│   ├── mobile.json          # Mobile development focused
-│   └── full-stack.json      # General full-stack
-├── generate-resume.js        # Resume generator script
-├── generate.sh              # CLI wrapper script
-├── global.css               # Styling (unchanged)
-└── README.md               # This file
+├── types.ts                  # TypeScript type definitions
+├── experience-data.ts        # All your experience data (TypeScript)
+├── configs/                  # Resume configurations (TypeScript)
+│   ├── index.ts             # Config exports and utilities
+│   ├── blockchain.ts        # Blockchain/Web3 focused
+│   ├── ai-ml.ts            # AI/ML focused
+│   ├── mobile.ts           # Mobile development focused
+│   ├── full-stack.ts       # General full-stack
+│   └── suffix-labs.ts      # Consulting/founder focused
+├── generate-resume.ts        # Resume generator (TypeScript)
+├── package.json             # Dependencies and scripts
+├── tsconfig.json           # TypeScript configuration
+├── generate.sh             # CLI wrapper script
+├── run.sh                  # Development server script
+├── global.css              # Styling
+├── dist/                   # Compiled JavaScript output
+└── resumes/               # Generated HTML resumes
 ```
 
 ## Quick Start
 
-### Generate a Specific Resume Type
+### Prerequisites
+
+- Node.js (16.0.0 or higher)
+- npm (comes with Node.js)
+
+### Installation
 
 ```bash
-# Generate blockchain-focused resume
+# Install dependencies
+npm install
+
+# Build TypeScript files
+npm run build
+```
+
+### Generate Resumes
+
+```bash
+# Generate specific resume type
 ./generate.sh blockchain
-
-# Generate AI/ML-focused resume
 ./generate.sh ai-ml
-
-# Generate mobile development resume
 ./generate.sh mobile
-
-# Generate full-stack resume
 ./generate.sh full-stack
-```
+./generate.sh suffix-labs
 
-### Generate All Resume Types
-
-```bash
+# Generate all resume types
 ./generate.sh all
+
+# List available types
+./generate.sh list
 ```
 
-### List Available Types
+### Development Mode
 
 ```bash
-./generate.sh list
+# Start development server with TypeScript watch mode
+./run.sh
+
+# Start development server on custom port
+./run.sh --port 8080
+
+# Skip TypeScript build (use existing compiled files)
+./run.sh --no-build
+```
+
+## NPM Scripts
+
+```bash
+# Build TypeScript to JavaScript
+npm run build
+
+# Watch mode for development
+npm run dev
+
+# Generate resume (requires build first)
+npm run generate
+
+# Type checking without compilation
+npm run type-check
+
+# Clean build output
+npm run clean
 ```
 
 ## Usage Examples
@@ -69,127 +122,194 @@ resume/
 
 # Generate all resumes at once
 ./generate.sh all
+
+# Development with hot reloading
+./run.sh
 ```
 
-### Direct Node.js Usage
+### Direct Usage After Build
 
 ```bash
-# Generate with custom output filename
-node generate-resume.js blockchain resume-blockchain-custom.html
+# Build first
+npm run build
 
-# Generate to stdout (no file created)
-node generate-resume.js ai-ml
+# Generate with custom output filename
+node dist/generate-resume.js blockchain custom-output.html
+
+# Generate to stdout
+node dist/generate-resume.js ai-ml
 ```
 
-## Adding New Experience
+## TypeScript Development
 
-### 1. Add to Experience Data
+### Type Definitions
 
-Edit `experience-data.json` and add your new experience to the appropriate section:
+The system uses comprehensive TypeScript types defined in `types.ts`:
 
-```json
-{
-  "workExperience": [
+```typescript
+interface WorkExperience {
+  id: string;
+  position: string;
+  company: string;
+  duration: string;
+  responsibilities: string[];
+  tools: string[];
+  status?: 'optional';
+}
+
+interface ResumeConfig {
+  resumeType: string;
+  title: string;
+  workExperience: SectionConfig;
+  openSourceExperience: SectionConfig;
+  projects: SectionConfig;
+  education: EducationConfig;
+  skillsToHighlight: string[];
+  sectionsOrder: SectionName[];
+  emphasize: EmphasizeConfig;
+}
+```
+
+### Adding New Experience
+
+#### 1. Update Experience Data
+
+Edit `experience-data.ts` and add your new experience:
+
+```typescript
+import { ExperienceData } from './types';
+
+export const experienceData: ExperienceData = {
+  workExperience: [
     {
-      "id": "new-job-id",
-      "position": "Software Engineer",
-      "company": "New Company",
-      "duration": "Jan 2024 - Present",
-      "responsibilities": [
+      id: "new-job-id",
+      position: "Software Engineer",
+      company: "New Company",
+      duration: "Jan 2024 - Present",
+      responsibilities: [
         "Built awesome software",
         "Led team of 5 engineers"
       ],
-      "tools": ["Python", "React", "AWS"],
-      "tags": ["backend", "leadership", "cloud"],
-      "highlights": ["team leadership", "scalable architecture"]
-    }
-  ]
-}
+      tools: ["Python", "React", "AWS"]
+    },
+    // ... existing experiences
+  ],
+  // ... other sections
+};
 ```
 
-### 2. Update Resume Configurations
+#### 2. Update Resume Configurations
 
 Add the new experience ID to relevant configuration files in `configs/`:
 
-```json
-{
-  "workExperience": {
-    "include": ["new-job-id", "existing-job-id"],
-    "order": ["new-job-id", "existing-job-id"]
-  }
-}
+```typescript
+import { ResumeConfig } from '../types';
+
+export const blockchainConfig: ResumeConfig = {
+  workExperience: {
+    include: ["new-job-id", "existing-job-id"],
+    order: ["new-job-id", "existing-job-id"]
+  },
+  // ... other config
+};
 ```
 
-## Creating New Resume Configurations
+### Creating New Resume Configurations
 
-### 1. Create Configuration File
+#### 1. Create Configuration File
 
-Create a new file in `configs/` directory (e.g., `configs/devops.json`):
+Create a new file in `configs/` directory (e.g., `configs/devops.ts`):
 
-```json
-{
-  "resumeType": "devops",
-  "title": "Senior DevOps Engineer",
-  "workExperience": {
-    "include": ["job-id-1", "job-id-2"],
-    "order": ["job-id-1", "job-id-2"]
+```typescript
+import { ResumeConfig } from '../types';
+
+export const devopsConfig: ResumeConfig = {
+  resumeType: "devops",
+  title: "Senior DevOps Engineer",
+  workExperience: {
+    include: ["job-id-1", "job-id-2"],
+    order: ["job-id-1", "job-id-2"]
   },
-  "openSourceExperience": {
-    "include": ["project-id-1"],
-    "order": ["project-id-1"],
-    "limit": 1
+  openSourceExperience: {
+    include: ["project-id-1"],
+    order: ["project-id-1"],
+    limit: 1
   },
-  "projects": {
-    "include": ["project-id-1", "project-id-2"],
-    "order": ["project-id-1", "project-id-2"],
-    "limit": 2
+  projects: {
+    include: ["project-id-1", "project-id-2"],
+    order: ["project-id-1", "project-id-2"],
+    limit: 2
   },
-  "education": {
-    "include": ["university-iowa"]
+  education: {
+    include: ["university-iowa"]
   },
-  "skillsToHighlight": [
+  skillsToHighlight: [
     "Docker", "Kubernetes", "AWS", "Terraform"
   ],
-  "sectionsOrder": [
+  sectionsOrder: [
     "workExperience",
     "projects",
     "openSourceExperience",
     "education"
   ],
-  "emphasize": {
-    "keywords": ["DevOps", "CI/CD", "infrastructure", "automation"],
-    "metrics": ["99.9% uptime", "50% cost reduction"]
+  emphasize: {
+    keywords: [],
+    metrics: ["99.9% uptime", "50% cost reduction"]
   }
-}
+};
 ```
 
-### 2. Update Generate Script
+#### 2. Export from Index
+
+Update `configs/index.ts`:
+
+```typescript
+import { devopsConfig } from './devops';
+
+export { devopsConfig };
+
+export const configs: Record<string, ResumeConfig> = {
+  'devops': devopsConfig,
+  // ... existing configs
+};
+```
+
+#### 3. Update Generate Script
 
 Add the new resume type to `generate.sh`:
 
 ```bash
-RESUME_TYPES=("blockchain" "ai-ml" "mobile" "full-stack" "devops")
+RESUME_TYPES=("blockchain" "ai-ml" "mobile" "full-stack" "suffix-labs" "devops")
 ```
 
 ## Configuration Options
 
 ### Section Control
 
-- **include**: Array of IDs to include in the section
-- **order**: Array defining the display order
-- **limit**: Maximum number of items to show (optional)
+```typescript
+interface SectionConfig {
+  include: string[];        // Array of IDs to include
+  order: string[];         // Array defining display order  
+  limit?: number;          // Maximum number of items (optional)
+}
+```
 
 ### Text Emphasis
 
-- **keywords**: Words to bold throughout the resume
-- **metrics**: Specific metrics/numbers to emphasize
+```typescript
+interface EmphasizeConfig {
+  keywords: string[];      // Words to bold throughout the resume
+  metrics: string[];       // Specific metrics/numbers to emphasize
+}
+```
 
 ### Section Ordering
 
-Control which sections appear and in what order:
+```typescript
+type SectionName = 'workExperience' | 'openSourceExperience' | 'projects' | 'education';
 
-```json
-"sectionsOrder": [
+// Control which sections appear and in what order
+sectionsOrder: SectionName[] = [
   "workExperience",
   "openSourceExperience", 
   "projects",
@@ -197,121 +317,197 @@ Control which sections appear and in what order:
 ]
 ```
 
-## Experience Data Structure
+## Data Structure Reference
 
 ### Work Experience
 
-```json
-{
-  "id": "unique-identifier",
-  "position": "Job Title",
-  "company": "Company Name",
-  "duration": "Month Year - Month Year",
-  "responsibilities": ["Bullet point 1", "Bullet point 2"],
-  "tools": ["Tool1", "Tool2"],
-  "tags": ["category1", "category2"],
-  "highlights": ["key achievement 1"],
-  "status": "optional"  // Optional: exclude unless specifically included
+```typescript
+interface WorkExperience {
+  id: string;              // Unique identifier
+  position: string;        // Job title
+  company: string;         // Company name
+  duration: string;        // "Month Year - Month Year"
+  responsibilities: string[]; // Bullet points
+  tools: string[];         // Technologies used
+  status?: 'optional';     // Exclude unless specifically included
 }
 ```
 
 ### Projects
 
-```json
-{
-  "id": "project-id",
-  "name": "Project Name",
-  "link": "https://github.com/...",
-  "description": "Project description",
-  "achievements": ["Award won", "Recognition received"],
-  "hackathonLink": "https://...",  // Optional
-  "additionalInfo": "Extra details",  // Optional
-  "tools": ["Tool1", "Tool2"],
-  "tags": ["category1", "category2"],
-  "highlights": ["key feature", "impressive metric"]
+```typescript
+interface Project {
+  id: string;              // Unique identifier
+  name: string;            // Project name
+  link: string;            // GitHub/demo URL
+  description: string;     // Project description
+  achievements?: string[]; // Awards, recognition
+  hackathonLink?: string;  // Optional hackathon submission
+  additionalInfo?: string; // Extra details
+  tools: string[];         // Technologies used
 }
 ```
 
 ### Open Source Experience
 
-```json
-{
-  "id": "oss-project-id",
-  "position": "Role (Maintainer, Contributor, etc.)",
-  "project": "Project Name",
-  "duration": "Month Year - Present",
-  "link": "https://github.com/...",
-  "responsibilities": ["Contribution 1", "Contribution 2"],
-  "tools": ["Tool1", "Tool2"],
-  "tags": ["category1", "category2"],
-  "highlights": ["community impact", "technical achievement"]
+```typescript
+interface OpenSourceExperience {
+  id: string;              // Unique identifier
+  position: string;        // Role (Maintainer, Contributor, etc.)
+  project: string;         // Project name
+  duration: string;        // "Month Year - Present"
+  link: string;            // GitHub URL
+  responsibilities: string[]; // Contributions
+  tools: string[];         // Technologies used
 }
 ```
 
-## Customization Tips
+### Education
 
-### For Different Job Types
-
-1. **Blockchain/Web3**: Emphasize DeFi, smart contracts, cryptocurrencies
-2. **AI/ML**: Highlight model performance, SOTA results, ML frameworks
-3. **Mobile**: Focus on React Native, iOS/Android, mobile UX
-4. **Full-Stack**: Balance frontend/backend, emphasize end-to-end ownership
-5. **DevOps**: Infrastructure, CI/CD, monitoring, scalability
-
-### Keyword Optimization
-
-Use the `emphasize.keywords` array to bold important terms that match job descriptions:
-
-```json
-"emphasize": {
-  "keywords": ["React", "TypeScript", "microservices", "AWS"],
-  "metrics": ["99.9% uptime", "$1M+ cost savings"]
+```typescript
+interface Education {
+  id: string;              // Unique identifier
+  institution: string;     // University/school name
+  degree: string;          // Degree type and major
 }
 ```
+
+## Development Workflow
+
+### Making Changes
+
+1. **Edit TypeScript files**: Update `experience-data.ts` or config files
+2. **Type checking**: Run `npm run type-check` to verify types
+3. **Build**: Run `npm run build` to compile
+4. **Test**: Generate resumes to verify changes
+5. **Development**: Use `./run.sh` for live reloading
+
+### Adding New Sections
+
+1. **Update types**: Add new interfaces in `types.ts`
+2. **Update data**: Add new section to `ExperienceData` interface and data
+3. **Update generator**: Add new generation method in `ResumeGenerator` class
+4. **Update configs**: Add section configuration options
+5. **Test**: Verify all existing configs still work
+
+### Debugging
+
+#### TypeScript Errors
+
+```bash
+# Check for TypeScript errors
+npm run type-check
+
+# Build with detailed error output
+npx tsc --noEmit --pretty
+```
+
+#### Runtime Issues
+
+```bash
+# Build and run with verbose output
+npm run build
+node dist/generate-resume.js blockchain
+```
+
+## Customization for Job Types
+
+### Blockchain/Web3
+- Emphasize: DeFi, smart contracts, Web3 integration
+- Tools: Solidity, Cairo, Ethereum, Starknet
+- Metrics: TVL, transaction volume, security audits
+
+### AI/ML
+- Emphasize: Model performance, SOTA results, research
+- Tools: PyTorch, TensorFlow, Hugging Face
+- Metrics: Accuracy improvements, model efficiency
+
+### Mobile Development  
+- Emphasize: Cross-platform, native performance, UX
+- Tools: React Native, Swift, Kotlin, Flutter
+- Metrics: App store ratings, download numbers
+
+### Full-Stack
+- Emphasize: End-to-end ownership, system design
+- Tools: React, Node.js, databases, cloud platforms
+- Metrics: System scalability, performance improvements
 
 ## Troubleshooting
 
 ### Common Issues
 
-1. **Node.js not found**: Install Node.js from [nodejs.org](https://nodejs.org)
-2. **Permission denied on generate.sh**: Run `chmod +x generate.sh`
-3. **Invalid JSON**: Validate your JSON using [jsonlint.com](https://jsonlint.com)
-4. **Missing experience**: Check that IDs in config match those in experience-data.json
+#### TypeScript Compilation Errors
+```bash
+# Clean and rebuild
+npm run clean
+npm run build
+
+# Check for type errors
+npm run type-check
+```
+
+#### Missing Dependencies
+```bash
+# Reinstall dependencies
+rm -rf node_modules package-lock.json
+npm install
+```
+
+#### File Permission Issues
+```bash
+# Make scripts executable
+chmod +x generate.sh run.sh
+```
+
+#### Port Already in Use
+```bash
+# Use different port for development server
+./run.sh --port 8080
+```
 
 ### Validation
 
-Check your JSON files are valid:
-
 ```bash
-# Validate experience data
-node -e "console.log('Valid JSON:', !!JSON.parse(require('fs').readFileSync('experience-data.json')))"
+# Type checking
+npm run type-check
 
-# Validate specific config
-node -e "console.log('Valid JSON:', !!JSON.parse(require('fs').readFileSync('configs/blockchain.json')))"
+# Test all config types
+./generate.sh all
+
+# Verify build output
+ls -la dist/
 ```
 
-## Development
+## Contributing
 
-### Adding New Features
+### Development Setup
 
-The system is modular and extensible. Key areas for enhancement:
+1. Fork the repository
+2. Install dependencies: `npm install`
+3. Make changes to TypeScript files
+4. Run type checking: `npm run type-check`
+5. Test generation: `./generate.sh all`
+6. Submit pull request
 
-1. **New sections**: Add generators in `ResumeGenerator` class
-2. **Styling**: Modify `global.css` or add section-specific styles
-3. **Export formats**: Add PDF generation, LaTeX output, etc.
-4. **Data validation**: Add JSON schema validation
-5. **Web interface**: Create a GUI for easier editing
+### Code Style
 
-### Contributing
+- Use TypeScript strict mode
+- Provide comprehensive type definitions
+- Follow consistent naming conventions
+- Add JSDoc comments for complex functions
+- Test all configuration types
+
+### Adding Features
 
 When adding new features:
 
-1. Update `experience-data.json` with new data structure
-2. Add corresponding configuration options
-3. Update the generator script
-4. Test with existing configurations
-5. Update this README
+1. **Update types**: Define TypeScript interfaces
+2. **Update data structure**: Modify `experience-data.ts`
+3. **Add configuration options**: Update config interfaces
+4. **Update generator**: Modify `ResumeGenerator` class
+5. **Test thoroughly**: Verify all existing configs work
+6. **Update documentation**: Modify this README
 
 ## License
 
-This is a personal resume system. Adapt and modify as needed for your own use.
+This is a personal resume system built with TypeScript. Adapt and modify as needed for your own use.

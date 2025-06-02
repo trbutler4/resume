@@ -1,35 +1,38 @@
 #!/usr/bin/env node
 
-const fs = require("fs");
-const path = require("path");
+import * as fs from 'fs';
+import * as path from 'path';
+import { experienceData } from './experience-data';
+import { getConfig, getAvailableConfigTypes } from './configs';
+import { 
+  ExperienceData, 
+  ResumeConfig, 
+  WorkExperience, 
+  OpenSourceExperience, 
+  Project, 
+  Education 
+} from './types';
 
 class ResumeGenerator {
+  private experienceData: ExperienceData;
+  private config: ResumeConfig | null = null;
+
   constructor() {
-    this.experienceData = null;
-    this.config = null;
+    this.experienceData = experienceData;
   }
 
-  loadData() {
+  loadConfig(configType: string): void {
     try {
-      const dataPath = path.join(__dirname, "experience-data.json");
-      this.experienceData = JSON.parse(fs.readFileSync(dataPath, "utf8"));
-    } catch (error) {
-      console.error("Error loading experience data:", error);
-      process.exit(1);
-    }
-  }
-
-  loadConfig(configType) {
-    try {
-      const configPath = path.join(__dirname, "configs", `${configType}.json`);
-      this.config = JSON.parse(fs.readFileSync(configPath, "utf8"));
+      this.config = getConfig(configType);
     } catch (error) {
       console.error(`Error loading config for ${configType}:`, error);
       process.exit(1);
     }
   }
 
-  generateHeader() {
+  generateHeader(): string {
+    if (!this.config) throw new Error('Config not loaded');
+    
     const { personalInfo } = this.experienceData;
     const title = this.config.title || personalInfo.title;
 
@@ -44,22 +47,19 @@ class ResumeGenerator {
         </header>`;
   }
 
-  generateWorkExperience() {
-    if (
-      !this.config.workExperience ||
-      !this.config.workExperience.include.length
-    ) {
+  generateWorkExperience(): string {
+    if (!this.config || !this.config.workExperience || !this.config.workExperience.include.length) {
       return "";
     }
 
     const experiences = this.config.workExperience.include
-      .map((id) =>
-        this.experienceData.workExperience.find((exp) => exp.id === id),
+      .map((id: string) =>
+        this.experienceData.workExperience.find((exp: WorkExperience) => exp.id === id)
       )
-      .filter((exp) => exp)
+      .filter((exp): exp is WorkExperience => exp !== undefined)
       .sort((a, b) => {
-        const orderA = this.config.workExperience.order.indexOf(a.id);
-        const orderB = this.config.workExperience.order.indexOf(b.id);
+        const orderA = this.config!.workExperience.order.indexOf(a.id);
+        const orderB = this.config!.workExperience.order.indexOf(b.id);
         return orderA - orderB;
       });
 
@@ -69,11 +69,8 @@ class ResumeGenerator {
             <hr class="divider" />
             <div class="section-content">`;
 
-    experiences.forEach((exp) => {
-      if (
-        exp.status === "optional" &&
-        this.config.resumeType !== "blockchain"
-      ) {
+    experiences.forEach((exp: WorkExperience) => {
+      if (exp.status === "optional" && this.config!.resumeType !== "blockchain") {
         return;
       }
 
@@ -84,7 +81,7 @@ class ResumeGenerator {
                 </div>
                 <ul>`;
 
-      exp.responsibilities.forEach((resp) => {
+      exp.responsibilities.forEach((resp: string) => {
         html += `<li>${this.emphasizeText(resp)}</li>`;
       });
 
@@ -102,22 +99,19 @@ class ResumeGenerator {
     return html;
   }
 
-  generateOpenSourceExperience() {
-    if (
-      !this.config.openSourceExperience ||
-      !this.config.openSourceExperience.include.length
-    ) {
+  generateOpenSourceExperience(): string {
+    if (!this.config || !this.config.openSourceExperience || !this.config.openSourceExperience.include.length) {
       return "";
     }
 
     const experiences = this.config.openSourceExperience.include
-      .map((id) =>
-        this.experienceData.openSourceExperience.find((exp) => exp.id === id),
+      .map((id: string) =>
+        this.experienceData.openSourceExperience.find((exp: OpenSourceExperience) => exp.id === id)
       )
-      .filter((exp) => exp)
+      .filter((exp): exp is OpenSourceExperience => exp !== undefined)
       .sort((a, b) => {
-        const orderA = this.config.openSourceExperience.order.indexOf(a.id);
-        const orderB = this.config.openSourceExperience.order.indexOf(b.id);
+        const orderA = this.config!.openSourceExperience.order.indexOf(a.id);
+        const orderB = this.config!.openSourceExperience.order.indexOf(b.id);
         return orderA - orderB;
       });
 
@@ -130,7 +124,7 @@ class ResumeGenerator {
             <hr class="divider" />
             <div class="section-content">`;
 
-    limitedExperiences.forEach((exp) => {
+    limitedExperiences.forEach((exp: OpenSourceExperience) => {
       html += `
                 <div class="job-title">
                     <strong>${exp.position}</strong> –
@@ -139,7 +133,7 @@ class ResumeGenerator {
                 </div>
                 <ul>`;
 
-      exp.responsibilities.forEach((resp) => {
+      exp.responsibilities.forEach((resp: string) => {
         html += `<li>${this.emphasizeText(resp)}</li>`;
       });
 
@@ -157,17 +151,17 @@ class ResumeGenerator {
     return html;
   }
 
-  generateProjects() {
-    if (!this.config.projects || !this.config.projects.include.length) {
+  generateProjects(): string {
+    if (!this.config || !this.config.projects || !this.config.projects.include.length) {
       return "";
     }
 
     const projects = this.config.projects.include
-      .map((id) => this.experienceData.projects.find((proj) => proj.id === id))
-      .filter((proj) => proj)
+      .map((id: string) => this.experienceData.projects.find((proj: Project) => proj.id === id))
+      .filter((proj): proj is Project => proj !== undefined)
       .sort((a, b) => {
-        const orderA = this.config.projects.order.indexOf(a.id);
-        const orderB = this.config.projects.order.indexOf(b.id);
+        const orderA = this.config!.projects.order.indexOf(a.id);
+        const orderB = this.config!.projects.order.indexOf(b.id);
         return orderA - orderB;
       });
 
@@ -180,7 +174,7 @@ class ResumeGenerator {
             <hr class="divider" />
             <div class="section-content">`;
 
-    limitedProjects.forEach((proj) => {
+    limitedProjects.forEach((proj: Project) => {
       html += `
                 <div class="job-title">
                     <strong>${proj.name} - </strong>
@@ -189,7 +183,7 @@ class ResumeGenerator {
                 <ul>`;
 
       if (proj.achievements && proj.achievements.length > 0) {
-        proj.achievements.forEach((achievement) => {
+        proj.achievements.forEach((achievement: string) => {
           let achievementHtml = `<li>${this.emphasizeText(achievement)}`;
           if (proj.hackathonLink) {
             achievementHtml += `: <a href="${proj.hackathonLink}">Hackathon Submission</a>`;
@@ -219,14 +213,14 @@ class ResumeGenerator {
     return html;
   }
 
-  generateEducation() {
-    if (!this.config.education || !this.config.education.include.length) {
+  generateEducation(): string {
+    if (!this.config || !this.config.education || !this.config.education.include.length) {
       return "";
     }
 
     const education = this.config.education.include
-      .map((id) => this.experienceData.education.find((edu) => edu.id === id))
-      .filter((edu) => edu);
+      .map((id: string) => this.experienceData.education.find((edu: Education) => edu.id === id))
+      .filter((edu): edu is Education => edu !== undefined);
 
     let html = `
         <section class="section">
@@ -234,7 +228,7 @@ class ResumeGenerator {
             <hr class="divider" />
             <div class="education-content">`;
 
-    education.forEach((edu) => {
+    education.forEach((edu: Education) => {
       html += `${edu.institution}, ${edu.degree}`;
     });
 
@@ -245,29 +239,29 @@ class ResumeGenerator {
     return html;
   }
 
-  emphasizeText(text) {
-    if (!this.config.emphasize) return text;
+  emphasizeText(text: string): string {
+    if (!this.config || !this.config.emphasize) return text;
 
     let emphasizedText = text;
 
     // Emphasize keywords
     if (this.config.emphasize.keywords) {
-      this.config.emphasize.keywords.forEach((keyword) => {
+      this.config.emphasize.keywords.forEach((keyword: string) => {
         const regex = new RegExp(`\\b${keyword}\\b`, "gi");
         emphasizedText = emphasizedText.replace(
           regex,
-          `<strong>${keyword}</strong>`,
+          `<strong>${keyword}</strong>`
         );
       });
     }
 
     // Emphasize metrics
     if (this.config.emphasize.metrics) {
-      this.config.emphasize.metrics.forEach((metric) => {
+      this.config.emphasize.metrics.forEach((metric: string) => {
         if (emphasizedText.includes(metric)) {
           emphasizedText = emphasizedText.replace(
             metric,
-            `<strong>${metric}</strong>`,
+            `<strong>${metric}</strong>`
           );
         }
       });
@@ -276,8 +270,10 @@ class ResumeGenerator {
     return emphasizedText;
   }
 
-  generateSections() {
-    const sectionGenerators = {
+  generateSections(): string {
+    if (!this.config) throw new Error('Config not loaded');
+
+    const sectionGenerators: Record<string, () => string> = {
       workExperience: () => this.generateWorkExperience(),
       openSourceExperience: () => this.generateOpenSourceExperience(),
       projects: () => this.generateProjects(),
@@ -285,12 +281,12 @@ class ResumeGenerator {
     };
 
     return this.config.sectionsOrder
-      .map((sectionName) => sectionGenerators[sectionName]())
-      .filter((section) => section.trim() !== "")
+      .map((sectionName: string) => sectionGenerators[sectionName]())
+      .filter((section: string) => section.trim() !== "")
       .join("\n");
   }
 
-  generateHTML() {
+  generateHTML(): string {
     const header = this.generateHeader();
     const sections = this.generateSections();
 
@@ -312,8 +308,7 @@ class ResumeGenerator {
 </html>`;
   }
 
-  generate(configType, outputPath) {
-    this.loadData();
+  generate(configType: string, outputPath?: string): void {
     this.loadConfig(configType);
 
     const html = this.generateHTML();
@@ -332,8 +327,9 @@ if (require.main === module) {
   const args = process.argv.slice(2);
 
   if (args.length < 1) {
+    const availableConfigs = getAvailableConfigTypes();
     console.log("Usage: node generate-resume.js <config-type> [output-file]");
-    console.log("Available configs: blockchain, ai-ml, mobile, full-stack");
+    console.log(`Available configs: ${availableConfigs.join(', ')}`);
     process.exit(1);
   }
 
@@ -344,4 +340,4 @@ if (require.main === module) {
   generator.generate(configType, outputPath);
 }
 
-module.exports = ResumeGenerator;
+export default ResumeGenerator;

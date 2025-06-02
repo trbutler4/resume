@@ -6,7 +6,7 @@
 set -e
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-GENERATOR_SCRIPT="$SCRIPT_DIR/generate-resume.js"
+GENERATOR_SCRIPT="$SCRIPT_DIR/dist/generate-resume.js"
 
 # Available resume types
 RESUME_TYPES=("blockchain" "ai-ml" "mobile" "full-stack" "suffix-labs")
@@ -54,11 +54,27 @@ check_dependencies() {
         exit 1
     fi
 
+    if ! command -v npm &> /dev/null; then
+        echo -e "${RED}Error: npm is required but not installed.${NC}"
+        exit 1
+    fi
+
+    # Install dependencies if node_modules doesn't exist
+    if [ ! -d "$SCRIPT_DIR/node_modules" ]; then
+        echo -e "${YELLOW}Installing dependencies...${NC}"
+        cd "$SCRIPT_DIR" && npm install
+    fi
+
+    # Build TypeScript files
+    echo -e "${YELLOW}Building TypeScript files...${NC}"
+    cd "$SCRIPT_DIR" && npm run build
+
     if [ ! -f "$GENERATOR_SCRIPT" ]; then
-        echo -e "${RED}Error: Generator script not found at $GENERATOR_SCRIPT${NC}"
+        echo -e "${RED}Error: Generator script not found at $GENERATOR_SCRIPT after build${NC}"
         exit 1
     fi
 }
+</edits>
 
 validate_resume_type() {
     local type="$1"
