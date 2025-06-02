@@ -1,24 +1,34 @@
 import { ResumeConfig } from '../types';
+import {
+  DefaultPersonalInfo,
+  TholosWorkExperience,
+  NakamotoWorkExperience,
+  StarknetPhoneOpenSourceExperience,
+  CairoZedOpenSourceExperience,
+  StarkSproutsProject,
+  KakarotBridgeProject,
+  UIowaEducation
+} from '../experience-data';
 
 export const mobileConfig: ResumeConfig = {
   resumeType: "mobile",
   title: "Senior Mobile Software Engineer",
-  workExperience: {
-    include: ["tholos-mobile", "nakamoto-senior"],
-    order: ["tholos-mobile", "nakamoto-senior"]
-  },
-  openSourceExperience: {
-    include: ["starknet-phone", "cairo-zed"],
-    order: ["starknet-phone", "cairo-zed"]
-  },
-  projects: {
-    include: ["starksprouts", "kakarot-bridge"],
-    order: ["starksprouts", "kakarot-bridge"],
-    limit: 2
-  },
-  education: {
-    include: ["university-iowa"]
-  },
+  personalInfo: DefaultPersonalInfo,
+  workExperience: [
+    TholosWorkExperience,
+    NakamotoWorkExperience
+  ],
+  openSourceExperience: [
+    StarknetPhoneOpenSourceExperience,
+    CairoZedOpenSourceExperience
+  ],
+  projects: [
+    StarkSproutsProject,
+    KakarotBridgeProject
+  ],
+  education: [
+    UIowaEducation
+  ],
   skillsToHighlight: [
     "React Native",
     "JavaScript",

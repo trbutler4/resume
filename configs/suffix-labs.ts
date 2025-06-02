@@ -1,24 +1,38 @@
 import { ResumeConfig } from '../types';
+import {
+  DefaultPersonalInfo,
+  SuffixLabsWorkExperience,
+  TholosWorkExperience,
+  NakamotoWorkExperience,
+  StarknetPhoneOpenSourceExperience,
+  CairoZedOpenSourceExperience,
+  KakarotBridgeProject,
+  StarkSproutsProject,
+  AISmartContractVulnerabilityProject,
+  UIowaEducation
+} from '../experience-data';
 
 export const suffixLabsConfig: ResumeConfig = {
   resumeType: "suffix-labs",
   title: "Founder & Blockchain Consultant",
-  workExperience: {
-    include: ["suffix-labs-founder", "tholos-mobile", "nakamoto-senior"],
-    order: ["suffix-labs-founder", "tholos-mobile", "nakamoto-senior"]
-  },
-  openSourceExperience: {
-    include: ["starknet-phone", "cairo-zed"],
-    order: ["starknet-phone", "cairo-zed"]
-  },
-  projects: {
-    include: ["kakarot-bridge", "starksprouts", "ai-smart-contract-vuln"],
-    order: ["kakarot-bridge", "starksprouts", "ai-smart-contract-vuln"],
-    limit: 3
-  },
-  education: {
-    include: ["university-iowa"]
-  },
+  personalInfo: DefaultPersonalInfo,
+  workExperience: [
+    SuffixLabsWorkExperience,
+    TholosWorkExperience,
+    NakamotoWorkExperience
+  ],
+  openSourceExperience: [
+    StarknetPhoneOpenSourceExperience,
+    CairoZedOpenSourceExperience
+  ],
+  projects: [
+    KakarotBridgeProject,
+    StarkSproutsProject,
+    AISmartContractVulnerabilityProject
+  ],
+  education: [
+    UIowaEducation
+  ],
   skillsToHighlight: [
     "Solidity",
     "React",

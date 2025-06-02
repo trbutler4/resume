@@ -52,16 +52,6 @@ export interface ExperienceData {
   education: Education[];
 }
 
-export interface SectionConfig {
-  include: string[];
-  order: string[];
-  limit?: number;
-}
-
-export interface EducationConfig {
-  include: string[];
-}
-
 export interface EmphasizeConfig {
   keywords: string[];
   metrics: string[];
@@ -72,10 +62,11 @@ export type SectionName = 'workExperience' | 'openSourceExperience' | 'projects'
 export interface ResumeConfig {
   resumeType: string;
   title: string;
-  workExperience: SectionConfig;
-  openSourceExperience: SectionConfig;
-  projects: SectionConfig;
-  education: EducationConfig;
+  personalInfo: PersonalInfo;
+  workExperience: WorkExperience[];
+  openSourceExperience: OpenSourceExperience[];
+  projects: Project[];
+  education: Education[];
   skillsToHighlight: string[];
   sectionsOrder: SectionName[];
   emphasize: EmphasizeConfig;

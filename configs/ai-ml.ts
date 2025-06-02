@@ -1,25 +1,32 @@
 import { ResumeConfig } from '../types';
+import {
+  DefaultPersonalInfo,
+  NakamotoWorkExperience,
+  TholosWorkExperience,
+  CairoZedOpenSourceExperience,
+  AISmartContractVulnerabilityProject,
+  KakarotBridgeProject,
+  UIowaEducation
+} from '../experience-data';
 
 export const aiMlConfig: ResumeConfig = {
   resumeType: "ai-ml",
   title: "Senior AI/ML Engineer",
-  workExperience: {
-    include: ["nakamoto-senior", "tholos-mobile"],
-    order: ["nakamoto-senior", "tholos-mobile"]
-  },
-  openSourceExperience: {
-    include: ["cairo-zed"],
-    order: ["cairo-zed"],
-    limit: 1
-  },
-  projects: {
-    include: ["ai-smart-contract-vuln", "kakarot-bridge"],
-    order: ["ai-smart-contract-vuln", "kakarot-bridge"],
-    limit: 2
-  },
-  education: {
-    include: ["university-iowa"]
-  },
+  personalInfo: DefaultPersonalInfo,
+  workExperience: [
+    NakamotoWorkExperience,
+    TholosWorkExperience
+  ],
+  openSourceExperience: [
+    CairoZedOpenSourceExperience
+  ],
+  projects: [
+    AISmartContractVulnerabilityProject,
+    KakarotBridgeProject
+  ],
+  education: [
+    UIowaEducation
+  ],
   skillsToHighlight: [
     "Python",
     "PyTorch",

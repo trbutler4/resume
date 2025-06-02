@@ -1,23 +1,36 @@
 import { ResumeConfig } from '../types';
+import {
+  DefaultPersonalInfo,
+  NakamotoWorkExperience,
+  TholosWorkExperience,
+  ETHChiWorkExperience,
+  StarknetPhoneOpenSourceExperience,
+  CairoZedOpenSourceExperience,
+  KakarotBridgeProject,
+  StarkSproutsProject,
+  UIowaEducation
+} from '../experience-data';
 
 export const blockchainConfig: ResumeConfig = {
   resumeType: "blockchain",
   title: "Blockchain Engineer",
-  workExperience: {
-    include: ["nakamoto-senior", "tholos-mobile", "ethchi-cofounder"],
-    order: ["nakamoto-senior", "tholos-mobile", "ethchi-cofounder"]
-  },
-  openSourceExperience: {
-    include: ["starknet-phone", "cairo-zed"],
-    order: ["starknet-phone", "cairo-zed"]
-  },
-  projects: {
-    include: ["kakarot-bridge", "starksprouts"],
-    order: ["kakarot-bridge", "starksprouts"]
-  },
-  education: {
-    include: ["university-iowa"]
-  },
+  personalInfo: DefaultPersonalInfo,
+  workExperience: [
+    NakamotoWorkExperience,
+    TholosWorkExperience,
+    ETHChiWorkExperience
+  ],
+  openSourceExperience: [
+    StarknetPhoneOpenSourceExperience,
+    CairoZedOpenSourceExperience
+  ],
+  projects: [
+    KakarotBridgeProject,
+    StarkSproutsProject
+  ],
+  education: [
+    UIowaEducation
+  ],
   skillsToHighlight: [
     "Solidity",
     "Cairo",

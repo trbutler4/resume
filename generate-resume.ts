@@ -1,24 +1,17 @@
 #!/usr/bin/env node
 
-import * as fs from "fs";
-import { experienceData } from "./experience-data";
-import { getConfig, getAvailableConfigTypes } from "./configs";
-import {
-  ExperienceData,
-  ResumeConfig,
-  WorkExperience,
-  OpenSourceExperience,
-  Project,
-  Education,
-} from "./types";
+import * as fs from 'fs';
+import { getConfig, getAvailableConfigTypes } from './configs';
+import { 
+  ResumeConfig, 
+  WorkExperience, 
+  OpenSourceExperience, 
+  Project, 
+  Education 
+} from './types';
 
 class ResumeGenerator {
-  private experienceData: ExperienceData;
   private config: ResumeConfig | null = null;
-
-  constructor() {
-    this.experienceData = experienceData;
-  }
 
   loadConfig(configType: string): void {
     try {
@@ -30,9 +23,9 @@ class ResumeGenerator {
   }
 
   generateHeader(): string {
-    if (!this.config) throw new Error("Config not loaded");
-
-    const { personalInfo } = this.experienceData;
+    if (!this.config) throw new Error('Config not loaded');
+    
+    const { personalInfo } = this.config;
     const title = this.config.title || personalInfo.title;
 
     return `
@@ -47,26 +40,9 @@ class ResumeGenerator {
   }
 
   generateWorkExperience(): string {
-    if (
-      !this.config ||
-      !this.config.workExperience ||
-      !this.config.workExperience.include.length
-    ) {
+    if (!this.config || !this.config.workExperience || !this.config.workExperience.length) {
       return "";
     }
-
-    const experiences = this.config.workExperience.include
-      .map((id: string) =>
-        this.experienceData.workExperience.find(
-          (exp: WorkExperience) => exp.id === id,
-        ),
-      )
-      .filter((exp): exp is WorkExperience => exp !== undefined)
-      .sort((a, b) => {
-        const orderA = this.config!.workExperience.order.indexOf(a.id);
-        const orderB = this.config!.workExperience.order.indexOf(b.id);
-        return orderA - orderB;
-      });
 
     let html = `
         <section class="section">
@@ -74,11 +50,8 @@ class ResumeGenerator {
             <hr class="divider" />
             <div class="section-content">`;
 
-    experiences.forEach((exp: WorkExperience) => {
-      if (
-        exp.status === "optional" &&
-        this.config!.resumeType !== "blockchain"
-      ) {
+    this.config.workExperience.forEach((exp: WorkExperience) => {
+      if (exp.status === "optional" && this.config!.resumeType !== "blockchain" && this.config!.resumeType !== "suffix-labs") {
         return;
       }
 
@@ -108,29 +81,9 @@ class ResumeGenerator {
   }
 
   generateOpenSourceExperience(): string {
-    if (
-      !this.config ||
-      !this.config.openSourceExperience ||
-      !this.config.openSourceExperience.include.length
-    ) {
+    if (!this.config || !this.config.openSourceExperience || !this.config.openSourceExperience.length) {
       return "";
     }
-
-    const experiences = this.config.openSourceExperience.include
-      .map((id: string) =>
-        this.experienceData.openSourceExperience.find(
-          (exp: OpenSourceExperience) => exp.id === id,
-        ),
-      )
-      .filter((exp): exp is OpenSourceExperience => exp !== undefined)
-      .sort((a, b) => {
-        const orderA = this.config!.openSourceExperience.order.indexOf(a.id);
-        const orderB = this.config!.openSourceExperience.order.indexOf(b.id);
-        return orderA - orderB;
-      });
-
-    const limit = this.config.openSourceExperience.limit || experiences.length;
-    const limitedExperiences = experiences.slice(0, limit);
 
     let html = `
         <section class="section">
@@ -138,7 +91,7 @@ class ResumeGenerator {
             <hr class="divider" />
             <div class="section-content">`;
 
-    limitedExperiences.forEach((exp: OpenSourceExperience) => {
+    this.config.openSourceExperience.forEach((exp: OpenSourceExperience) => {
       html += `
                 <div class="job-title">
                     <strong>${exp.position}</strong> –
@@ -166,27 +119,9 @@ class ResumeGenerator {
   }
 
   generateProjects(): string {
-    if (
-      !this.config ||
-      !this.config.projects ||
-      !this.config.projects.include.length
-    ) {
+    if (!this.config || !this.config.projects || !this.config.projects.length) {
       return "";
     }
-
-    const projects = this.config.projects.include
-      .map((id: string) =>
-        this.experienceData.projects.find((proj: Project) => proj.id === id),
-      )
-      .filter((proj): proj is Project => proj !== undefined)
-      .sort((a, b) => {
-        const orderA = this.config!.projects.order.indexOf(a.id);
-        const orderB = this.config!.projects.order.indexOf(b.id);
-        return orderA - orderB;
-      });
-
-    const limit = this.config.projects.limit || projects.length;
-    const limitedProjects = projects.slice(0, limit);
 
     let html = `
         <section class="section">
@@ -194,7 +129,7 @@ class ResumeGenerator {
             <hr class="divider" />
             <div class="section-content">`;
 
-    limitedProjects.forEach((proj: Project) => {
+    this.config.projects.forEach((proj: Project) => {
       html += `
                 <div class="job-title">
                     <strong>${proj.name} - </strong>
@@ -234,19 +169,9 @@ class ResumeGenerator {
   }
 
   generateEducation(): string {
-    if (
-      !this.config ||
-      !this.config.education ||
-      !this.config.education.include.length
-    ) {
+    if (!this.config || !this.config.education || !this.config.education.length) {
       return "";
     }
-
-    const education = this.config.education.include
-      .map((id: string) =>
-        this.experienceData.education.find((edu: Education) => edu.id === id),
-      )
-      .filter((edu): edu is Education => edu !== undefined);
 
     let html = `
         <section class="section">
@@ -254,7 +179,7 @@ class ResumeGenerator {
             <hr class="divider" />
             <div class="education-content">`;
 
-    education.forEach((edu: Education) => {
+    this.config.education.forEach((edu: Education) => {
       html += `${edu.institution}, ${edu.degree}`;
     });
 
@@ -276,7 +201,7 @@ class ResumeGenerator {
         const regex = new RegExp(`\\b${keyword}\\b`, "gi");
         emphasizedText = emphasizedText.replace(
           regex,
-          `<strong>${keyword}</strong>`,
+          `<strong>${keyword}</strong>`
         );
       });
     }
@@ -287,7 +212,7 @@ class ResumeGenerator {
         if (emphasizedText.includes(metric)) {
           emphasizedText = emphasizedText.replace(
             metric,
-            `<strong>${metric}</strong>`,
+            `<strong>${metric}</strong>`
           );
         }
       });
@@ -297,7 +222,7 @@ class ResumeGenerator {
   }
 
   generateSections(): string {
-    if (!this.config) throw new Error("Config not loaded");
+    if (!this.config) throw new Error('Config not loaded');
 
     const sectionGenerators: Record<string, () => string> = {
       workExperience: () => this.generateWorkExperience(),
@@ -313,6 +238,8 @@ class ResumeGenerator {
   }
 
   generateHTML(): string {
+    if (!this.config) throw new Error('Config not loaded');
+    
     const header = this.generateHeader();
     const sections = this.generateSections();
 
@@ -322,7 +249,7 @@ class ResumeGenerator {
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="../global.css" />
-        <title>Resume - ${this.experienceData.personalInfo.name}</title>
+        <title>Resume - ${this.config.personalInfo.name}</title>
     </head>
     <body>
         ${header}
@@ -355,7 +282,7 @@ if (require.main === module) {
   if (args.length < 1) {
     const availableConfigs = getAvailableConfigTypes();
     console.log("Usage: node generate-resume.js <config-type> [output-file]");
-    console.log(`Available configs: ${availableConfigs.join(", ")}`);
+    console.log(`Available configs: ${availableConfigs.join(', ')}`);
     process.exit(1);
   }
 
