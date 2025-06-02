@@ -246,7 +246,7 @@
       "duration": "July 2024 - Present",
       "link": "https://github.com/trbutler4/zed-cairo",
       "responsibilities": [
-        "Developed and maintain the Cairo programming language extension for the Zed text editor, with 7000+ installs."
+        "Developed and maintain the Cairo programming language extension for the Zed text editor, with 7000+ users."
       ],
       "tools": [
         "Rust",
@@ -255,7 +255,7 @@
         "Git/Github"
       ],
       "tags": ["tooling", "blockchain", "open-source", "developer-tools"],
-      "highlights": ["7000+ installs"]
+      "highlights": ["7000+ users"]
     }
   ],
   "projects": [
