@@ -1,0 +1,56 @@
+{
+  "resumeType": "blockchain",
+  "title": "Blockchain Engineer",
+  "workExperience": {
+    "include": ["nakamoto-senior", "tholos-mobile", "suffix-labs-founder"],
+    "order": ["nakamoto-senior", "tholos-mobile", "suffix-labs-founder"]
+  },
+  "openSourceExperience": {
+    "include": ["starknet-phone", "cairo-zed"],
+    "order": ["starknet-phone", "cairo-zed"]
+  },
+  "projects": {
+    "include": ["kakarot-bridge", "starksprouts"],
+    "order": ["kakarot-bridge", "starksprouts"],
+    "limit": 2
+  },
+  "education": {
+    "include": ["university-iowa"]
+  },
+  "skillsToHighlight": [
+    "Solidity",
+    "Cairo",
+    "Rust",
+    "Python",
+    "Golang",
+    "Ethereum",
+    "Starknet",
+    "React",
+    "TypeScript",
+    "AWS",
+    "Docker",
+    "Kubernetes"
+  ],
+  "sectionsOrder": [
+    "workExperience",
+    "openSourceExperience",
+    "projects",
+    "education"
+  ],
+  "emphasize": {
+    "keywords": [
+      "blockchain",
+      "web3",
+      "DeFi",
+      "smart contracts",
+      "cryptocurrency",
+      "L2",
+      "zkEVM"
+    ],
+    "metrics": [
+      "$35M+ assets secured",
+      "top 10% subnet performance",
+      "15+ contributors"
+    ]
+  }
+}
