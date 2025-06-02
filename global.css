@@ -48,19 +48,18 @@ body {
 .section-title {
     font-size: 22px;
     font-weight: 600;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     color: #1a1a1a;
 }
 
 .divider {
     border: none;
     border-top: 1px solid #e2e8f0;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .section-content {
     padding-left: 20px;
-    font-size: 16px
 }
 
 .job-title {
