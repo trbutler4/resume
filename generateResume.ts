@@ -1,14 +1,12 @@
-#!/usr/bin/env node
-
-import * as fs from 'fs';
-import { getConfig, getAvailableConfigTypes } from './configs';
-import { 
-  ResumeConfig, 
-  WorkExperience, 
-  OpenSourceExperience, 
-  Project, 
-  Education 
-} from './types';
+import * as fs from "fs";
+import { getConfig, getAvailableConfigTypes } from "./configs";
+import {
+  ResumeConfig,
+  WorkExperience,
+  OpenSourceExperience,
+  Project,
+  Education,
+} from "./types";
 
 class ResumeGenerator {
   private config: ResumeConfig | null = null;
@@ -23,8 +21,8 @@ class ResumeGenerator {
   }
 
   generateHeader(): string {
-    if (!this.config) throw new Error('Config not loaded');
-    
+    if (!this.config) throw new Error("Config not loaded");
+
     const { personalInfo } = this.config;
     const title = this.config.title || personalInfo.title;
 
@@ -40,7 +38,11 @@ class ResumeGenerator {
   }
 
   generateWorkExperience(): string {
-    if (!this.config || !this.config.workExperience || !this.config.workExperience.length) {
+    if (
+      !this.config ||
+      !this.config.workExperience ||
+      !this.config.workExperience.length
+    ) {
       return "";
     }
 
@@ -51,7 +53,11 @@ class ResumeGenerator {
             <div class="section-content">`;
 
     this.config.workExperience.forEach((exp: WorkExperience) => {
-      if (exp.status === "optional" && this.config!.resumeType !== "blockchain" && this.config!.resumeType !== "suffix-labs") {
+      if (
+        exp.status === "optional" &&
+        this.config!.resumeType !== "blockchain" &&
+        this.config!.resumeType !== "suffix-labs"
+      ) {
         return;
       }
 
@@ -81,7 +87,11 @@ class ResumeGenerator {
   }
 
   generateOpenSourceExperience(): string {
-    if (!this.config || !this.config.openSourceExperience || !this.config.openSourceExperience.length) {
+    if (
+      !this.config ||
+      !this.config.openSourceExperience ||
+      !this.config.openSourceExperience.length
+    ) {
       return "";
     }
 
@@ -169,7 +179,11 @@ class ResumeGenerator {
   }
 
   generateEducation(): string {
-    if (!this.config || !this.config.education || !this.config.education.length) {
+    if (
+      !this.config ||
+      !this.config.education ||
+      !this.config.education.length
+    ) {
       return "";
     }
 
@@ -201,7 +215,7 @@ class ResumeGenerator {
         const regex = new RegExp(`\\b${keyword}\\b`, "gi");
         emphasizedText = emphasizedText.replace(
           regex,
-          `<strong>${keyword}</strong>`
+          `<strong>${keyword}</strong>`,
         );
       });
     }
@@ -212,7 +226,7 @@ class ResumeGenerator {
         if (emphasizedText.includes(metric)) {
           emphasizedText = emphasizedText.replace(
             metric,
-            `<strong>${metric}</strong>`
+            `<strong>${metric}</strong>`,
           );
         }
       });
@@ -222,7 +236,7 @@ class ResumeGenerator {
   }
 
   generateSections(): string {
-    if (!this.config) throw new Error('Config not loaded');
+    if (!this.config) throw new Error("Config not loaded");
 
     const sectionGenerators: Record<string, () => string> = {
       workExperience: () => this.generateWorkExperience(),
@@ -238,8 +252,8 @@ class ResumeGenerator {
   }
 
   generateHTML(): string {
-    if (!this.config) throw new Error('Config not loaded');
-    
+    if (!this.config) throw new Error("Config not loaded");
+
     const header = this.generateHeader();
     const sections = this.generateSections();
 
@@ -282,7 +296,7 @@ if (require.main === module) {
   if (args.length < 1) {
     const availableConfigs = getAvailableConfigTypes();
     console.log("Usage: node generate-resume.js <config-type> [output-file]");
-    console.log(`Available configs: ${availableConfigs.join(', ')}`);
+    console.log(`Available configs: ${availableConfigs.join(", ")}`);
     process.exit(1);
   }
 

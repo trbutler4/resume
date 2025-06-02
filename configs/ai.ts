@@ -1,4 +1,4 @@
-import { ResumeConfig } from '../types';
+import { ResumeConfig } from "../types";
 import {
   DefaultPersonalInfo,
   NakamotoWorkExperience,
@@ -6,27 +6,17 @@ import {
   CairoZedOpenSourceExperience,
   AISmartContractVulnerabilityProject,
   KakarotBridgeProject,
-  UIowaEducation
-} from '../experience-data';
+  UIowaEducation,
+} from "../experienceData";
 
 export const aiMlConfig: ResumeConfig = {
   resumeType: "ai-ml",
   title: "Senior AI/ML Engineer",
   personalInfo: DefaultPersonalInfo,
-  workExperience: [
-    NakamotoWorkExperience,
-    TholosWorkExperience
-  ],
-  openSourceExperience: [
-    CairoZedOpenSourceExperience
-  ],
-  projects: [
-    AISmartContractVulnerabilityProject,
-    KakarotBridgeProject
-  ],
-  education: [
-    UIowaEducation
-  ],
+  workExperience: [NakamotoWorkExperience, TholosWorkExperience],
+  openSourceExperience: [CairoZedOpenSourceExperience],
+  projects: [AISmartContractVulnerabilityProject, KakarotBridgeProject],
+  education: [UIowaEducation],
   skillsToHighlight: [
     "Python",
     "PyTorch",
@@ -39,16 +29,16 @@ export const aiMlConfig: ResumeConfig = {
     "AWS",
     "Docker",
     "Git/Github",
-    "Linux"
+    "Linux",
   ],
   sectionsOrder: [
     "workExperience",
     "projects",
     "openSourceExperience",
-    "education"
+    "education",
   ],
   emphasize: {
     keywords: [],
-    metrics: ["top 10% performance"]
-  }
+    metrics: ["top 10% performance"],
+  },
 };

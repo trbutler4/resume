@@ -1,4 +1,4 @@
-import { ResumeConfig } from '../types';
+import { ResumeConfig } from "../types";
 import {
   DefaultPersonalInfo,
   TholosWorkExperience,
@@ -8,29 +8,24 @@ import {
   KakarotBridgeProject,
   StarkSproutsProject,
   AISmartContractVulnerabilityProject,
-  UIowaEducation
-} from '../experience-data';
+  UIowaEducation,
+} from "../experienceData";
 
-export const fullStackConfig: ResumeConfig = {
+export const sreConfig: ResumeConfig = {
   resumeType: "full-stack",
-  title: "Senior Full-Stack Software Engineer",
+  title: "Software Engineer - SRE",
   personalInfo: DefaultPersonalInfo,
-  workExperience: [
-    TholosWorkExperience,
-    NakamotoWorkExperience
-  ],
+  workExperience: [TholosWorkExperience, NakamotoWorkExperience],
   openSourceExperience: [
     StarknetPhoneOpenSourceExperience,
-    CairoZedOpenSourceExperience
+    CairoZedOpenSourceExperience,
   ],
   projects: [
     KakarotBridgeProject,
     StarkSproutsProject,
-    AISmartContractVulnerabilityProject
+    AISmartContractVulnerabilityProject,
   ],
-  education: [
-    UIowaEducation
-  ],
+  education: [UIowaEducation],
   skillsToHighlight: [
     "JavaScript",
     "TypeScript",
@@ -47,13 +42,14 @@ export const fullStackConfig: ResumeConfig = {
     "Git/Github",
     "REST APIs",
     "Microservices",
-    "Linux"
+    "Linux",
+    "Bash",
   ],
   sectionsOrder: [
     "workExperience",
     "projects",
     "openSourceExperience",
-    "education"
+    "education",
   ],
   emphasize: {
     keywords: [],
@@ -61,7 +57,7 @@ export const fullStackConfig: ResumeConfig = {
       "$35M+ assets secured",
       "entire stack ownership",
       "multi-timezone remote team",
-      "15+ contributors"
-    ]
-  }
+      "15+ contributors",
+    ],
+  },
 };

@@ -1,4 +1,4 @@
-import { ResumeConfig } from '../types';
+import { ResumeConfig } from "../types";
 import {
   DefaultPersonalInfo,
   NakamotoWorkExperience,
@@ -8,8 +8,8 @@ import {
   CairoZedOpenSourceExperience,
   KakarotBridgeProject,
   StarkSproutsProject,
-  UIowaEducation
-} from '../experience-data';
+  UIowaEducation,
+} from "../experienceData";
 
 export const blockchainConfig: ResumeConfig = {
   resumeType: "blockchain",
@@ -18,19 +18,14 @@ export const blockchainConfig: ResumeConfig = {
   workExperience: [
     NakamotoWorkExperience,
     TholosWorkExperience,
-    ETHChiWorkExperience
+    ETHChiWorkExperience,
   ],
   openSourceExperience: [
     StarknetPhoneOpenSourceExperience,
-    CairoZedOpenSourceExperience
+    CairoZedOpenSourceExperience,
   ],
-  projects: [
-    KakarotBridgeProject,
-    StarkSproutsProject
-  ],
-  education: [
-    UIowaEducation
-  ],
+  projects: [KakarotBridgeProject, StarkSproutsProject],
+  education: [UIowaEducation],
   skillsToHighlight: [
     "Solidity",
     "Cairo",
@@ -43,20 +38,20 @@ export const blockchainConfig: ResumeConfig = {
     "TypeScript",
     "AWS",
     "Docker",
-    "Kubernetes"
+    "Kubernetes",
   ],
   sectionsOrder: [
     "workExperience",
     "openSourceExperience",
     "projects",
-    "education"
+    "education",
   ],
   emphasize: {
     keywords: [],
     metrics: [
       "$35M+ assets secured",
       "top 10% subnet performance",
-      "15+ contributors"
-    ]
-  }
+      "15+ contributors",
+    ],
+  },
 };

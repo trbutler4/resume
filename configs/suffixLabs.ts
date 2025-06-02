@@ -1,4 +1,4 @@
-import { ResumeConfig } from '../types';
+import { ResumeConfig } from "../types";
 import {
   DefaultPersonalInfo,
   SuffixLabsWorkExperience,
@@ -9,8 +9,8 @@ import {
   KakarotBridgeProject,
   StarkSproutsProject,
   AISmartContractVulnerabilityProject,
-  UIowaEducation
-} from '../experience-data';
+  UIowaEducation,
+} from "../experienceData";
 
 export const suffixLabsConfig: ResumeConfig = {
   resumeType: "suffix-labs",
@@ -19,20 +19,18 @@ export const suffixLabsConfig: ResumeConfig = {
   workExperience: [
     SuffixLabsWorkExperience,
     TholosWorkExperience,
-    NakamotoWorkExperience
+    NakamotoWorkExperience,
   ],
   openSourceExperience: [
     StarknetPhoneOpenSourceExperience,
-    CairoZedOpenSourceExperience
+    CairoZedOpenSourceExperience,
   ],
   projects: [
     KakarotBridgeProject,
     StarkSproutsProject,
-    AISmartContractVulnerabilityProject
+    AISmartContractVulnerabilityProject,
   ],
-  education: [
-    UIowaEducation
-  ],
+  education: [UIowaEducation],
   skillsToHighlight: [
     "Solidity",
     "React",
@@ -49,13 +47,13 @@ export const suffixLabsConfig: ResumeConfig = {
     "Consulting",
     "Project Management",
     "AWS",
-    "Docker"
+    "Docker",
   ],
   sectionsOrder: [
     "workExperience",
     "openSourceExperience",
     "projects",
-    "education"
+    "education",
   ],
   emphasize: {
     keywords: [],
@@ -64,7 +62,7 @@ export const suffixLabsConfig: ResumeConfig = {
       "blockchain validator",
       "multi-client consulting",
       "$35M+ assets secured",
-      "15+ contributors"
-    ]
-  }
+      "15+ contributors",
+    ],
+  },
 };

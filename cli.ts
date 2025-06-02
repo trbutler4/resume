@@ -6,7 +6,7 @@ import ora from "ora";
 import * as fs from "fs";
 import * as path from "path";
 import { execSync } from "child_process";
-import ResumeGenerator from "./generate-resume";
+import ResumeGenerator from "./generateResume";
 import { getAvailableConfigTypes } from "./configs";
 
 const program = new Command();
