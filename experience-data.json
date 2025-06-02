@@ -177,6 +177,33 @@
       ],
       "highlights": ["Co-Founder of ETHChicago", "500+ attendees"],
       "status": "optional"
+    },
+    {
+      "id": "maverick-software-coop",
+      "position": "Cloud Software Engineer",
+      "company": "Maverick Software Consulting -- Thomson Reuters",
+      "duration": "June 2021 - May 2023",
+      "responsibilities": [
+        "Responsible for all stages of the software development life cycle of an automated AWS cloud orphaned asset cleanup application using Python and AWS Lambda with Step Functions which is projected to save Thomson Reuters $14 million initially, and reduce cloud spend over time.",
+        "Took ownership in all aspects of development process from ideation to production implementation, including unit and integration testing, CI/CD pipelines, and documentaion.",
+        "Contributed to the development of an internal AWS RDS Database tool that is used across all cloud teams at Thomson Reuters.",
+        "Worked remotely with multipls teams across the globe.",
+        "Continually followed best AWS best practices, and guided team of 3 other engineers in software engineering best practices."
+      ],
+      "tools": [
+        "Git/Github",
+        "Python",
+        "AWS",
+        "AWS Lambda",
+        "AWS Step Functions",
+        "AWS Lambda Layers",
+        "AWS CloudFormation",
+        "AWS CodePipeline",
+        "Github Actions"
+      ],
+      "tags": ["consulting", "coop", "cloud", "devops", "software engineering"],
+      "highlights": ["$14 Million"],
+      "status": "optional"
     }
   ],
   "openSourceExperience": [
