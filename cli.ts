@@ -7,7 +7,7 @@ import * as fs from "fs";
 import * as path from "path";
 import { execSync } from "child_process";
 import ResumeGenerator from "./generateResume";
-import { getAvailableConfigTypes } from "./configs";
+import { getAvailableConfigTypes } from "./config";
 
 const program = new Command();
 

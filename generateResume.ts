@@ -1,5 +1,5 @@
 import * as fs from "fs";
-import { getConfig, getAvailableConfigTypes } from "./configs";
+import { getConfig, getAvailableConfigTypes } from "./config";
 import {
   ResumeConfig,
   WorkExperience,
