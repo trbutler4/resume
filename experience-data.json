@@ -40,15 +40,6 @@
         "ElizaOS",
         "Daydreams"
       ],
-      "tags": [
-        "AI/ML",
-        "blockchain",
-        "infrastructure",
-        "backend",
-        "distributed-systems",
-        "fintech",
-        "mining"
-      ],
       "highlights": [
         "beating SOTA models",
         "top 10% subnet performance",
@@ -81,14 +72,6 @@
         "Docker",
         "Git/Github",
         "FastAPI"
-      ],
-      "tags": [
-        "mobile",
-        "blockchain",
-        "fintech",
-        "security",
-        "full-stack",
-        "remote"
       ],
       "highlights": [
         "$35M+ assets secured",
@@ -125,14 +108,6 @@
         "Chromatic",
         "Git/Github"
       ],
-      "tags": [
-        "entrepreneurship",
-        "blockchain",
-        "consulting",
-        "frontend",
-        "web3",
-        "leadership"
-      ],
       "highlights": [
         "Founded LLC",
         "blockchain validator",
@@ -166,29 +141,20 @@
         "Chromatic",
         "Git/Github"
       ],
-      "tags": [
-        "entrepreneurship",
-        "blockchain",
-        "consulting",
-        "frontend",
-        "web3",
-        "leadership",
-        "community building"
-      ],
       "highlights": ["Co-Founder of ETHChicago", "500+ attendees"],
       "status": "optional"
     },
     {
       "id": "maverick-software-coop",
-      "position": "cloud software engineer",
-      "company": "maverick software consulting -- thomson reuters",
-      "duration": "june 2021 - may 2023",
+      "position": "Cloud Software Engineer",
+      "company": "Maverick Software Consulting -- Thomson Reuters",
+      "duration": "June 2021 - May 2023",
       "responsibilities": [
-        "responsible for all stages of the software development life cycle of an automated aws cloud orphaned asset cleanup application using python and aws lambda with step functions which is projected to save thomson reuters $14 million initially, and reduce cloud spend over time.",
-        "took ownership in all aspects of development process from ideation to production implementation, including unit and integration testing, ci/cd pipelines, and documentaion.",
-        "contributed to the development of an internal aws rds database tool that is used across all cloud teams at thomson reuters.",
-        "worked remotely with multipls teams across the globe.",
-        "continually followed best aws best practices, and guided team of 3 other engineers in software engineering best practices."
+        "Responsible for all stages of the software development life cycle of an automated AWS orphaned asset cleanup application using Python and AWS lambda with step functions which is projected to save thomson reuters $14 million initially, and reduce cloud spend over time.",
+        "Took ownership in all aspects of development process from ideation to production implementation, including unit and integration testing, ci/cd pipelines, and documentaion.",
+        "Contributed to the development of an internal AWS RDS database tool that is used across all cloud teams at Thomson Reuters.",
+        "Worked remotely with multipls teams across the globe.",
+        "Continually followed best aws best practices, and guided team of 3 other engineers in software engineering best practices."
       ],
       "tools": [
         "git/github",
@@ -201,7 +167,6 @@
         "AWS codepipeline",
         "Github actions"
       ],
-      "tags": ["consulting", "coop", "cloud", "devops", "software engineering"],
       "highlights": ["$14 million"],
       "status": "optional"
     }
@@ -229,14 +194,6 @@
         "JNI",
         "Git/Github"
       ],
-      "tags": [
-        "mobile",
-        "blockchain",
-        "open-source",
-        "android",
-        "leadership",
-        "community"
-      ],
       "highlights": ["15+ contributors"]
     },
     {
@@ -254,7 +211,6 @@
         "Language Server Protocol",
         "Git/Github"
       ],
-      "tags": ["tooling", "blockchain", "open-source", "developer-tools"],
       "highlights": ["7000+ users"]
     }
   ],
@@ -275,7 +231,6 @@
         "React",
         "Starknet React"
       ],
-      "tags": ["blockchain", "hackathon", "winner", "zk", "defi"],
       "highlights": ["Hackathon winner", "trustless bridge design"]
     },
     {
@@ -286,7 +241,6 @@
       "achievements": ["Top 10 at Starknet Hacker House Denver"],
       "additionalInfo": "Gameplay implemented with ThreeJS, and the game was deployed on Starknet using Slot.",
       "tools": ["Cairo", "Katana", "Starkli", "Dojo", "ThreeJS", "Slot"],
-      "tags": ["blockchain", "gaming", "hackathon", "top-10", "frontend"],
       "highlights": ["Top 10 hackathon placement", "fully on-chain game"]
     },
     {
@@ -296,7 +250,6 @@
       "description": "Supervised and Unsupervised methods to detect potential vulnerabilities in smart contracts.",
       "additionalInfo": "Methods included analyzing bytecode directly by constructing a 'sliding window' of relevant opcodes, as well converting bytecode into RGB images, both of which were analyzed using neural networks.",
       "tools": ["Python", "PyTorch", "Jupyter Notebook", "Solidity", "Slither"],
-      "tags": ["AI/ML", "security", "blockchain", "research", "academic"],
       "highlights": ["novel ML approaches", "security research"]
     }
   ],
@@ -304,8 +257,7 @@
     {
       "id": "university-iowa",
       "institution": "University of Iowa",
-      "degree": "BSE Computer Science and Engineering",
-      "tags": ["computer-science", "engineering", "bachelor"]
+      "degree": "BSE Computer Science and Engineering"
     }
   ]
 }
