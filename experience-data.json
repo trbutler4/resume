@@ -39,11 +39,6 @@
         "AI Agents",
         "ElizaOS",
         "Daydreams"
-      ],
-      "highlights": [
-        "beating SOTA models",
-        "top 10% subnet performance",
-        "infrastructure optimization"
       ]
     },
     {
@@ -72,12 +67,6 @@
         "Docker",
         "Git/Github",
         "FastAPI"
-      ],
-      "highlights": [
-        "$35M+ assets secured",
-        "multi-blockchain support",
-        "full mobile ownership",
-        "100% key recovery"
       ]
     },
     {
@@ -108,11 +97,6 @@
         "Chromatic",
         "Git/Github"
       ],
-      "highlights": [
-        "Founded LLC",
-        "blockchain validator",
-        "multi-client consulting"
-      ],
       "status": "optional"
     },
     {
@@ -141,7 +125,6 @@
         "Chromatic",
         "Git/Github"
       ],
-      "highlights": ["Co-Founder of ETHChicago", "500+ attendees"],
       "status": "optional"
     },
     {
@@ -167,7 +150,6 @@
         "AWS codepipeline",
         "Github actions"
       ],
-      "highlights": ["$14 million"],
       "status": "optional"
     }
   ],
@@ -193,8 +175,7 @@
         "NDK",
         "JNI",
         "Git/Github"
-      ],
-      "highlights": ["15+ contributors"]
+      ]
     },
     {
       "id": "cairo-zed",
@@ -205,13 +186,7 @@
       "responsibilities": [
         "Developed and maintain the Cairo programming language extension for the Zed text editor, with 7000+ users."
       ],
-      "tools": [
-        "Rust",
-        "Tree-Sitter",
-        "Language Server Protocol",
-        "Git/Github"
-      ],
-      "highlights": ["7000+ users"]
+      "tools": ["Rust", "Tree-Sitter", "Language Server Protocol", "Git/Github"]
     }
   ],
   "projects": [
@@ -230,8 +205,7 @@
         "Docker",
         "React",
         "Starknet React"
-      ],
-      "highlights": ["Hackathon winner", "trustless bridge design"]
+      ]
     },
     {
       "id": "starksprouts",
@@ -240,8 +214,7 @@
       "description": "StarkSprouts is a fully on-chain game using the Dojo toolchain. The goal of the game is simply to grow a garden, which will slowly die, and must be watered to stay alive.",
       "achievements": ["Top 10 at Starknet Hacker House Denver"],
       "additionalInfo": "Gameplay implemented with ThreeJS, and the game was deployed on Starknet using Slot.",
-      "tools": ["Cairo", "Katana", "Starkli", "Dojo", "ThreeJS", "Slot"],
-      "highlights": ["Top 10 hackathon placement", "fully on-chain game"]
+      "tools": ["Cairo", "Katana", "Starkli", "Dojo", "ThreeJS", "Slot"]
     },
     {
       "id": "ai-smart-contract-vuln",
@@ -249,8 +222,7 @@
       "link": "https://github.com/trbutler4/AML_Project",
       "description": "Supervised and Unsupervised methods to detect potential vulnerabilities in smart contracts.",
       "additionalInfo": "Methods included analyzing bytecode directly by constructing a 'sliding window' of relevant opcodes, as well converting bytecode into RGB images, both of which were analyzed using neural networks.",
-      "tools": ["Python", "PyTorch", "Jupyter Notebook", "Solidity", "Slither"],
-      "highlights": ["novel ML approaches", "security research"]
+      "tools": ["Python", "PyTorch", "Jupyter Notebook", "Solidity", "Slither"]
     }
   ],
   "education": [
