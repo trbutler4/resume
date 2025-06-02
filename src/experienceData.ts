@@ -254,24 +254,3 @@ export const AISmartContractVulnerabilityProject: Project = {
     "Methods included analyzing bytecode directly by constructing a 'sliding window' of relevant opcodes, as well converting bytecode into RGB images, both of which were analyzed using neural networks.",
   tools: ["Python", "PyTorch", "Jupyter Notebook", "Solidity", "Slither"],
 };
-
-export const experienceData: ExperienceData = {
-  personalInfo: DefaultPersonalInfo,
-  workExperience: [
-    NakamotoWorkExperience,
-    TholosWorkExperience,
-    SuffixLabsWorkExperience,
-    ETHChiWorkExperience,
-    MSCWorkExperience,
-  ],
-  openSourceExperience: [
-    StarknetPhoneOpenSourceExperience,
-    CairoZedOpenSourceExperience,
-  ],
-  projects: [
-    KakarotBridgeProject,
-    StarkSproutsProject,
-    AISmartContractVulnerabilityProject,
-  ],
-  education: [UIowaEducation],
-};
