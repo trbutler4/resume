@@ -9,7 +9,7 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 GENERATOR_SCRIPT="$SCRIPT_DIR/generate-resume.js"
 
 # Available resume types
-RESUME_TYPES=("blockchain" "ai-ml" "mobile" "full-stack")
+RESUME_TYPES=("blockchain" "ai-ml" "mobile" "full-stack" "suffix-labs")
 
 # Colors for output
 RED='\033[0;31m'
