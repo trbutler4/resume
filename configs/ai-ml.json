@@ -19,9 +19,18 @@
     "include": ["university-iowa"]
   },
   "skillsToHighlight": [
-    "Python", "PyTorch", "NumPy", "Rust", "Golang", 
-    "Machine Learning", "Deep Learning", "Kubernetes", 
-    "AWS", "Docker", "Git/Github", "Linux"
+    "Python",
+    "PyTorch",
+    "NumPy",
+    "Rust",
+    "Golang",
+    "Machine Learning",
+    "Deep Learning",
+    "Kubernetes",
+    "AWS",
+    "Docker",
+    "Git/Github",
+    "Linux"
   ],
   "sectionsOrder": [
     "workExperience",
@@ -30,7 +39,7 @@
     "education"
   ],
   "emphasize": {
-    "keywords": ["machine learning", "AI", "neural networks", "fine-tuning", "LLMs", "PyTorch", "model optimization", "inference", "SOTA"],
-    "metrics": ["SOTA models", "top 10% performance", "Berkley Function Calling Leaderboard"]
+    "keywords": [],
+    "metrics": ["top 10% performance"]
   }
 }

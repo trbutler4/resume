@@ -18,9 +18,22 @@
     "include": ["university-iowa"]
   },
   "skillsToHighlight": [
-    "JavaScript", "TypeScript", "Python", "Golang", "React", "React Native",
-    "Node.js", "Postgres", "Redis", "AWS", "Docker", "Kubernetes",
-    "Git/Github", "REST APIs", "Microservices", "Linux"
+    "JavaScript",
+    "TypeScript",
+    "Python",
+    "Golang",
+    "React",
+    "React Native",
+    "Node.js",
+    "Postgres",
+    "Redis",
+    "AWS",
+    "Docker",
+    "Kubernetes",
+    "Git/Github",
+    "REST APIs",
+    "Microservices",
+    "Linux"
   ],
   "sectionsOrder": [
     "workExperience",
@@ -29,7 +42,12 @@
     "education"
   ],
   "emphasize": {
-    "keywords": ["full-stack", "frontend", "backend", "microservices", "scalable systems", "cross-platform", "end-to-end development", "API design"],
-    "metrics": ["$35M+ assets secured", "entire stack ownership", "multi-timezone remote team", "15+ contributors"]
+    "keywords": [],
+    "metrics": [
+      "$35M+ assets secured",
+      "entire stack ownership",
+      "multi-timezone remote team",
+      "15+ contributors"
+    ]
   }
 }

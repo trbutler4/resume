@@ -18,18 +18,30 @@
     "include": ["university-iowa"]
   },
   "skillsToHighlight": [
-    "React Native", "JavaScript", "TypeScript", "Java", "Kotlin", 
-    "Android Studio", "Expo", "iOS", "Android", "NDK", "JNI",
-    "Git/Github", "AWS", "ThreeJS", "React"
+    "React Native",
+    "JavaScript",
+    "TypeScript",
+    "Java",
+    "Kotlin",
+    "Android Studio",
+    "Expo",
+    "iOS",
+    "Android",
+    "NDK",
+    "JNI",
+    "Git/Github",
+    "AWS",
+    "ThreeJS",
+    "React"
   ],
   "sectionsOrder": [
     "workExperience",
     "openSourceExperience",
-    "projects", 
+    "projects",
     "education"
   ],
   "emphasize": {
-    "keywords": ["mobile development", "React Native", "iOS", "Android", "cross-platform", "native development", "mobile apps", "mobile UX"],
-    "metrics": ["$35M+ assets secured", "full ownership iOS/Android", "15+ contributors", "79+ installs"]
+    "keywords": [],
+    "metrics": ["$35M+ assets secured", "15+ contributors", "7000+ installs"]
   }
 }

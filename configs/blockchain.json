@@ -38,15 +38,7 @@
     "education"
   ],
   "emphasize": {
-    "keywords": [
-      "blockchain",
-      "web3",
-      "DeFi",
-      "smart contracts",
-      "cryptocurrency",
-      "L2",
-      "zkEVM"
-    ],
+    "keywords": [],
     "metrics": [
       "$35M+ assets secured",
       "top 10% subnet performance",
