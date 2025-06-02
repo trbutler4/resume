@@ -237,11 +237,7 @@
         "leadership",
         "community"
       ],
-      "highlights": [
-        "Starkware Exploration Project",
-        "15+ contributors",
-        "community leadership"
-      ]
+      "highlights": ["15+ contributors"]
     },
     {
       "id": "cairo-zed",
@@ -250,7 +246,7 @@
       "duration": "July 2024 - Present",
       "link": "https://github.com/trbutler4/zed-cairo",
       "responsibilities": [
-        "Developed and maintain the Cairo programming language extension for the Zed text editor, with 79+ installs."
+        "Developed and maintain the Cairo programming language extension for the Zed text editor, with 7000+ installs."
       ],
       "tools": [
         "Rust",
@@ -259,7 +255,7 @@
         "Git/Github"
       ],
       "tags": ["tooling", "blockchain", "open-source", "developer-tools"],
-      "highlights": ["79+ installs", "language tooling"]
+      "highlights": ["7000+ installs"]
     }
   ],
   "projects": [
