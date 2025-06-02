@@ -74,7 +74,6 @@ check_dependencies() {
         exit 1
     fi
 }
-</edits>
 
 validate_resume_type() {
     local type="$1"
