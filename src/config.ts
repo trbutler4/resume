@@ -13,6 +13,7 @@ import {
   ETHChiWorkExperience,
 } from "./experienceData";
 
+// AI/ML engineer resume
 export const aiMlConfig: ResumeConfig = {
   resumeType: "ai-ml",
   title: "Senior AI/ML Engineer",
@@ -33,6 +34,7 @@ export const aiMlConfig: ResumeConfig = {
   },
 };
 
+// blockchain engineer resume
 export const blockchainConfig: ResumeConfig = {
   resumeType: "blockchain",
   title: "Blockchain Engineer",
@@ -64,6 +66,7 @@ export const blockchainConfig: ResumeConfig = {
   },
 };
 
+// full stack engineer resume
 export const fullStackConfig: ResumeConfig = {
   resumeType: "full-stack",
   title: "Senior Full-Stack Software Engineer",
@@ -96,6 +99,7 @@ export const fullStackConfig: ResumeConfig = {
   },
 };
 
+// mobile engineer resume
 export const mobileConfig: ResumeConfig = {
   resumeType: "mobile",
   title: "Senior Mobile Software Engineer",
@@ -119,6 +123,7 @@ export const mobileConfig: ResumeConfig = {
   },
 };
 
+// Site Reliability Engineer resume
 export const sreConfig: ResumeConfig = {
   resumeType: "full-stack",
   title: "Software Engineer - SRE",
@@ -151,6 +156,7 @@ export const sreConfig: ResumeConfig = {
   },
 };
 
+// Suffix Labs / contract work resume
 export const suffixLabsConfig: ResumeConfig = {
   resumeType: "suffix-labs",
   title: "Founder & Blockchain Consultant",
