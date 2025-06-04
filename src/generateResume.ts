@@ -37,25 +37,31 @@ class ResumeGenerator {
         </header>`;
   }
 
-  generateSkillsSummary(): string {
+  generateProfessionalSummary(): string {
     if (
       !this.config ||
-      !this.config.skillSummary
+      !this.config.professionalSummary
     ) {
       return "";
     }
 
+    const education = this.config.professionalSummary.education
+    const skills = this.config.professionalSummary.skills
+
     let html = `
       <section class="section">
-        <h3 class="section-title">Skill Summary</h3>
+        <h3 class="section-title">Summary</h3>
         <hr class="divider" />
         <div class="section-content">
           <ul>
             <li>
-              <strong>Languages:</strong> ${this.config.skillSummary.languages.join(", ")}
+              <strong>Education:</strong> ${education.institution}, ${education.degree}
             </li>
             <li>
-              <strong>Tools:</strong> ${this.config.skillSummary.tools.join(", ")}
+              <strong>Languages:</strong> ${skills.languages.join(", ")}
+            </li>
+            <li>
+              <strong>Tools:</strong> ${skills.tools.join(", ")}
             </li>
           </ul>
         </div>
@@ -269,7 +275,7 @@ class ResumeGenerator {
 
     const sectionGenerators: Record<string, () => string> = {
       workExperience: () => this.generateWorkExperience(),
-      skillSummary: () => this.generateSkillsSummary(),
+      professionalSummary: () => this.generateProfessionalSummary(),
       openSourceExperience: () => this.generateOpenSourceExperience(),
       projects: () => this.generateProjects(),
       education: () => this.generateEducation(),

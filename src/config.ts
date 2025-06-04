@@ -1,4 +1,4 @@
-import { ResumeConfig, SkillSummary, SectionName } from "./types";
+import { ResumeConfig, SectionName } from "./types";
 import {
   DefaultPersonalInfo,
   NakamotoWorkExperience,
@@ -17,12 +17,12 @@ import {
   CurateProject,
   PeerioProject,
   NFTicketProject,
-  DefaultSkillSummary,
+  DefaultProfessionalSummary,
 } from "./experienceData";
 
 const baseMetrics = ["$35M+ Million", "15+ contributors", "7000+ users"];
 const baseSectionOrder: SectionName[] = [
-  "skillSummary",
+  "professionalSummary",
   "workExperience",
   "projects",
   "openSourceExperience",
@@ -34,7 +34,7 @@ export const aiMlConfig: ResumeConfig = {
   resumeType: "ai-ml",
   title: "Senior AI/ML Engineer",
   personalInfo: DefaultPersonalInfo,
-  skillSummary: DefaultSkillSummary,
+  professionalSummary: DefaultProfessionalSummary,
   workExperience: [NakamotoWorkExperience, TholosWorkExperience],
   openSourceExperience: [CairoZedOpenSourceExperience],
   projects: [AISmartContractVulnerabilityProject],
@@ -51,7 +51,7 @@ export const blockchainConfig: ResumeConfig = {
   resumeType: "blockchain",
   title: "Blockchain Engineer",
   personalInfo: DefaultPersonalInfo,
-  skillSummary: DefaultSkillSummary,
+  professionalSummary: DefaultProfessionalSummary,
   workExperience: [
     NakamotoWorkExperience,
     TholosWorkExperience,
@@ -75,7 +75,7 @@ export const fullStackConfig: ResumeConfig = {
   resumeType: "full-stack",
   title: "Senior Full-Stack Software Engineer",
   personalInfo: DefaultPersonalInfo,
-  skillSummary: DefaultSkillSummary,
+  professionalSummary: DefaultProfessionalSummary,
   workExperience: [TholosWorkExperience, NakamotoWorkExperience],
   openSourceExperience: [
     StarknetPhoneOpenSourceExperience,
@@ -95,7 +95,7 @@ export const mobileConfig: ResumeConfig = {
   resumeType: "mobile",
   title: "Senior Mobile Software Engineer",
   personalInfo: DefaultPersonalInfo,
-  skillSummary: DefaultSkillSummary,
+  professionalSummary: DefaultProfessionalSummary,
   workExperience: [TholosWorkExperience, NakamotoWorkExperience],
   openSourceExperience: [
     StarknetPhoneOpenSourceExperience,
@@ -115,7 +115,7 @@ export const sreConfig: ResumeConfig = {
   resumeType: "full-stack",
   title: "Software Engineer - SRE",
   personalInfo: DefaultPersonalInfo,
-  skillSummary: DefaultSkillSummary,
+  professionalSummary: DefaultProfessionalSummary,
   workExperience: [TholosWorkExperience, NakamotoWorkExperience],
   openSourceExperience: [
     StarknetPhoneOpenSourceExperience,
@@ -135,7 +135,7 @@ export const suffixLabsConfig: ResumeConfig = {
   resumeType: "suffix-labs",
   title: "Founder & Blockchain Consultant",
   personalInfo: DefaultPersonalInfo,
-  skillSummary: DefaultSkillSummary,
+  professionalSummary: DefaultProfessionalSummary,
   workExperience: [
     SuffixLabsWorkExperience,
     TholosWorkExperience,

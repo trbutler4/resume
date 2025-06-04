@@ -4,7 +4,8 @@ import {
   Project,
   PersonalInfo,
   Education,
-  SkillSummary,
+  ProfessionalSummary,
+  Skills,
 } from "./types";
 
 export const DefaultPersonalInfo: PersonalInfo = {
@@ -22,8 +23,9 @@ export const UIowaEducation: Education = {
   degree: "BSE Computer Science and Engineering",
 };
 
-export const DefaultSkillSummary: SkillSummary = {
-  languages: [
+export const AllSkills: Skills = {
+  
+ languages: [
     "Python",
     "C/C++",
     "Go",
@@ -79,7 +81,12 @@ export const DefaultSkillSummary: SkillSummary = {
     "Dojo",
     "Cypress",
     "Synpress",
-  ],
+  ]
+}
+
+export const DefaultProfessionalSummary: ProfessionalSummary = {
+  education: UIowaEducation,
+  skills: AllSkills
 };
 
 // ---- Work Experience ----

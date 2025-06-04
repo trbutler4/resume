@@ -7,7 +7,12 @@ export interface PersonalInfo {
   onlydust: string;
 }
 
-export interface SkillSummary {
+export interface ProfessionalSummary {
+  education: Education,
+  skills: Skills
+}
+
+export interface Skills {
   tools: string[]
   languages: string[]
 }
@@ -63,7 +68,7 @@ export interface EmphasizeConfig {
 }
 
 export type SectionName =
-  | "skillSummary"
+  | "professionalSummary"
   | "workExperience"
   | "openSourceExperience"
   | "projects"
@@ -73,7 +78,7 @@ export interface ResumeConfig {
   resumeType: string;
   title: string;
   personalInfo: PersonalInfo;
-  skillSummary: SkillSummary;
+  professionalSummary: ProfessionalSummary;
   workExperience: WorkExperience[];
   openSourceExperience: OpenSourceExperience[];
   projects: Project[];
