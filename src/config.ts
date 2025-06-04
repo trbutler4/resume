@@ -36,7 +36,7 @@ export const aiMlConfig: ResumeConfig = {
   ],
   emphasize: {
     keywords: [],
-    metrics: ["top 10% performance"],
+    metrics: ["top 10% performance", "7000+ users"],
   },
 };
 
@@ -74,6 +74,7 @@ export const blockchainConfig: ResumeConfig = {
       "$35M+ assets secured",
       "top 10% subnet performance",
       "15+ contributors",
+      "7000+ users",
     ],
   },
 };

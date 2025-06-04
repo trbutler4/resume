@@ -22,7 +22,6 @@
     "cv"
   ],
   "author": "Thomas Robert Butler IV",
-  "license": "MIT",
   "dependencies": {
     "commander": "^11.0.0",
     "chalk": "^4.1.2",
