@@ -7,6 +7,12 @@ export interface PersonalInfo {
   onlydust: string;
 }
 
+export interface SkillSummary {
+  tools: string[]
+  languages: string[]
+  softSkills: string[]
+}
+
 export interface WorkExperience {
   id: string;
   position: string;
@@ -58,6 +64,7 @@ export interface EmphasizeConfig {
 }
 
 export type SectionName =
+  | "skillSummary"
   | "workExperience"
   | "openSourceExperience"
   | "projects"
@@ -67,6 +74,7 @@ export interface ResumeConfig {
   resumeType: string;
   title: string;
   personalInfo: PersonalInfo;
+  skillSummary: SkillSummary;
   workExperience: WorkExperience[];
   openSourceExperience: OpenSourceExperience[];
   projects: Project[];

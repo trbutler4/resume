@@ -1,4 +1,4 @@
-import { ResumeConfig } from "./types";
+import { ResumeConfig, SkillSummary } from "./types";
 import {
   DefaultPersonalInfo,
   NakamotoWorkExperience,
@@ -19,17 +19,25 @@ import {
   NFTicketProject,
 } from "./experienceData";
 
+const defaultSkillSummary: SkillSummary = {
+  languages: ["Python", "C/C++", "Go", "Rust", "Solidity", "Cairo", "Javascript/Typescript", "HTML" ],
+  tools: ["React"],
+  softSkills: ["Leadership"]
+}
+
 // AI/ML engineer resume
 export const aiMlConfig: ResumeConfig = {
   resumeType: "ai-ml",
   title: "Senior AI/ML Engineer",
   personalInfo: DefaultPersonalInfo,
+  skillSummary: defaultSkillSummary,
   workExperience: [NakamotoWorkExperience, TholosWorkExperience],
   openSourceExperience: [CairoZedOpenSourceExperience],
   projects: [AISmartContractVulnerabilityProject],
   education: [UIowaEducation],
   sectionsOrder: [
     "education",
+    "skillSummary",
     "workExperience",
     "projects",
     "openSourceExperience",
@@ -45,6 +53,7 @@ export const blockchainConfig: ResumeConfig = {
   resumeType: "blockchain",
   title: "Blockchain Engineer",
   personalInfo: DefaultPersonalInfo,
+  skillSummary: defaultSkillSummary,
   workExperience: [
     NakamotoWorkExperience,
     TholosWorkExperience,
@@ -78,6 +87,7 @@ export const fullStackConfig: ResumeConfig = {
   resumeType: "full-stack",
   title: "Senior Full-Stack Software Engineer",
   personalInfo: DefaultPersonalInfo,
+  skillSummary: defaultSkillSummary,
   workExperience: [TholosWorkExperience, NakamotoWorkExperience],
   openSourceExperience: [
     StarknetPhoneOpenSourceExperience,
@@ -107,6 +117,7 @@ export const mobileConfig: ResumeConfig = {
   resumeType: "mobile",
   title: "Senior Mobile Software Engineer",
   personalInfo: DefaultPersonalInfo,
+  skillSummary: defaultSkillSummary,
   workExperience: [TholosWorkExperience, NakamotoWorkExperience],
   openSourceExperience: [
     StarknetPhoneOpenSourceExperience,
@@ -131,6 +142,7 @@ export const sreConfig: ResumeConfig = {
   resumeType: "full-stack",
   title: "Software Engineer - SRE",
   personalInfo: DefaultPersonalInfo,
+  skillSummary: defaultSkillSummary,
   workExperience: [TholosWorkExperience, NakamotoWorkExperience],
   openSourceExperience: [
     StarknetPhoneOpenSourceExperience,
@@ -160,6 +172,7 @@ export const suffixLabsConfig: ResumeConfig = {
   resumeType: "suffix-labs",
   title: "Founder & Blockchain Consultant",
   personalInfo: DefaultPersonalInfo,
+  skillSummary: defaultSkillSummary,
   workExperience: [
     SuffixLabsWorkExperience,
     TholosWorkExperience,

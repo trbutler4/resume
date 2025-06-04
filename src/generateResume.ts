@@ -37,6 +37,38 @@ class ResumeGenerator {
         </header>`;
   }
 
+  generateSkillsSummary(): string {
+    if (
+      !this.config ||
+      !this.config.skillSummary
+    ) {
+      return "";
+    }
+
+    let html = `
+      <section class="section">
+        <h3 class="section-title">Skill Summary</h3>
+        <hr class="divider" />
+        <div class="section-content">
+          <ul>
+            <li>
+              <strong>Languages:</strong> ${this.config.skillSummary.languages.join(", ")}
+            </li>
+            <li>
+              <strong>Tools:</strong> ${this.config.skillSummary.tools.join(", ")}
+            </li>
+            <li>
+              <strong>Soft Skills:</strong> ${this.config.skillSummary.softSkills.join(", ")}
+            </li>
+          </ul>
+        </div>
+      </section>
+    `;
+
+    return html
+    
+  }
+
   generateWorkExperience(): string {
     if (
       !this.config ||
@@ -240,6 +272,7 @@ class ResumeGenerator {
 
     const sectionGenerators: Record<string, () => string> = {
       workExperience: () => this.generateWorkExperience(),
+      skillSummary: () => this.generateSkillsSummary(),
       openSourceExperience: () => this.generateOpenSourceExperience(),
       projects: () => this.generateProjects(),
       education: () => this.generateEducation(),
