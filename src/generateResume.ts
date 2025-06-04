@@ -213,32 +213,6 @@ class ResumeGenerator {
     return html;
   }
 
-  generateEducation(): string {
-    if (
-      !this.config ||
-      !this.config.education ||
-      !this.config.education.length
-    ) {
-      return "";
-    }
-
-    let html = `
-        <section class="section">
-            <h3 class="section-title">Education</h3>
-            <hr class="divider" />
-            <div class="education-content">`;
-
-    this.config.education.forEach((edu: Education) => {
-      html += `${edu.institution}, ${edu.degree}`;
-    });
-
-    html += `
-            </div>
-        </section>`;
-
-    return html;
-  }
-
   emphasizeText(text: string): string {
     if (!this.config || !this.config.emphasize) return text;
 
@@ -278,7 +252,6 @@ class ResumeGenerator {
       professionalSummary: () => this.generateProfessionalSummary(),
       openSourceExperience: () => this.generateOpenSourceExperience(),
       projects: () => this.generateProjects(),
-      education: () => this.generateEducation(),
     };
 
     return this.config.sectionsOrder

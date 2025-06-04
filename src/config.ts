@@ -5,18 +5,9 @@ import {
   TholosWorkExperience,
   CairoZedOpenSourceExperience,
   AISmartContractVulnerabilityProject,
-  KakarotBridgeProject,
-  UIowaEducation,
   SuffixLabsWorkExperience,
   StarknetPhoneOpenSourceExperience,
-  StarkSproutsProject,
   ETHChiWorkExperience,
-  ZkCreditProofsProject,
-  StarkfishProject,
-  SISCComputerProject,
-  CurateProject,
-  PeerioProject,
-  NFTicketProject,
   DefaultProfessionalSummary,
 } from "./experienceData";
 
@@ -26,7 +17,6 @@ const baseSectionOrder: SectionName[] = [
   "workExperience",
   "projects",
   "openSourceExperience",
-  "education",
 ];
 
 // AI/ML engineer resume
@@ -38,7 +28,6 @@ export const aiMlConfig: ResumeConfig = {
   workExperience: [NakamotoWorkExperience, TholosWorkExperience],
   openSourceExperience: [CairoZedOpenSourceExperience],
   projects: [AISmartContractVulnerabilityProject],
-  education: [UIowaEducation],
   sectionsOrder: baseSectionOrder,
   emphasize: {
     keywords: [],
@@ -61,8 +50,7 @@ export const blockchainConfig: ResumeConfig = {
     StarknetPhoneOpenSourceExperience,
     CairoZedOpenSourceExperience,
   ],
-  projects: [KakarotBridgeProject, StarkSproutsProject, ZkCreditProofsProject],
-  education: [UIowaEducation],
+  projects: [], //[KakarotBridgeProject, StarkSproutsProject, ZkCreditProofsProject],
   sectionsOrder: baseSectionOrder,
   emphasize: {
     keywords: [],
@@ -81,8 +69,7 @@ export const fullStackConfig: ResumeConfig = {
     StarknetPhoneOpenSourceExperience,
     CairoZedOpenSourceExperience,
   ],
-  projects: [NFTicketProject, CurateProject, PeerioProject],
-  education: [UIowaEducation],
+  projects: [], // [NFTicketProject, CurateProject, PeerioProject],
   sectionsOrder: baseSectionOrder,
   emphasize: {
     keywords: [],
@@ -101,8 +88,7 @@ export const mobileConfig: ResumeConfig = {
     StarknetPhoneOpenSourceExperience,
     CairoZedOpenSourceExperience,
   ],
-  projects: [StarkSproutsProject, KakarotBridgeProject],
-  education: [UIowaEducation],
+  projects: [], // [StarkSproutsProject, KakarotBridgeProject],
   sectionsOrder: baseSectionOrder,
   emphasize: {
     keywords: [],
@@ -122,7 +108,6 @@ export const sreConfig: ResumeConfig = {
     CairoZedOpenSourceExperience,
   ],
   projects: [],
-  education: [UIowaEducation],
   sectionsOrder: baseSectionOrder,
   emphasize: {
     keywords: [],
@@ -147,7 +132,6 @@ export const suffixLabsConfig: ResumeConfig = {
     CairoZedOpenSourceExperience,
   ],
   projects: [],
-  education: [UIowaEducation],
   sectionsOrder: baseSectionOrder,
   emphasize: {
     keywords: [],

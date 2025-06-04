@@ -71,8 +71,7 @@ export type SectionName =
   | "professionalSummary"
   | "workExperience"
   | "openSourceExperience"
-  | "projects"
-  | "education";
+  | "projects";
 
 export interface ResumeConfig {
   resumeType: string;
@@ -82,7 +81,6 @@ export interface ResumeConfig {
   workExperience: WorkExperience[];
   openSourceExperience: OpenSourceExperience[];
   projects: Project[];
-  education: Education[];
   sectionsOrder: SectionName[];
   emphasize: EmphasizeConfig;
 }
