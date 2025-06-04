@@ -11,6 +11,12 @@ import {
   StarknetPhoneOpenSourceExperience,
   StarkSproutsProject,
   ETHChiWorkExperience,
+  ZkCreditProofsProject,
+  StarkfishProject,
+  SISCComputerProject,
+  CurateProject,
+  PeerioProject,
+  NFTicketProject,
 } from "./experienceData";
 
 // AI/ML engineer resume
@@ -48,7 +54,13 @@ export const blockchainConfig: ResumeConfig = {
     StarknetPhoneOpenSourceExperience,
     CairoZedOpenSourceExperience,
   ],
-  projects: [KakarotBridgeProject, StarkSproutsProject],
+  projects: [
+    KakarotBridgeProject,
+    StarkSproutsProject,
+    ZkCreditProofsProject,
+    StarkfishProject,
+    SISCComputerProject,
+  ],
   education: [UIowaEducation],
   sectionsOrder: [
     "education",
@@ -76,11 +88,7 @@ export const fullStackConfig: ResumeConfig = {
     StarknetPhoneOpenSourceExperience,
     CairoZedOpenSourceExperience,
   ],
-  projects: [
-    KakarotBridgeProject,
-    StarkSproutsProject,
-    AISmartContractVulnerabilityProject,
-  ],
+  projects: [NFTicketProject, CurateProject, PeerioProject],
   education: [UIowaEducation],
   sectionsOrder: [
     "education",
@@ -133,11 +141,7 @@ export const sreConfig: ResumeConfig = {
     StarknetPhoneOpenSourceExperience,
     CairoZedOpenSourceExperience,
   ],
-  projects: [
-    KakarotBridgeProject,
-    StarkSproutsProject,
-    AISmartContractVulnerabilityProject,
-  ],
+  projects: [],
   education: [UIowaEducation],
   sectionsOrder: [
     "education",
@@ -165,16 +169,13 @@ export const suffixLabsConfig: ResumeConfig = {
     SuffixLabsWorkExperience,
     TholosWorkExperience,
     NakamotoWorkExperience,
+    ETHChiWorkExperience,
   ],
   openSourceExperience: [
     StarknetPhoneOpenSourceExperience,
     CairoZedOpenSourceExperience,
   ],
-  projects: [
-    KakarotBridgeProject,
-    StarkSproutsProject,
-    AISmartContractVulnerabilityProject,
-  ],
+  projects: [],
   education: [UIowaEducation],
   sectionsOrder: [
     "education",
