@@ -11,7 +11,7 @@ import {
   DefaultProfessionalSummary,
 } from "./experienceData";
 
-const baseMetrics = ["$35M+ Million", "15+ contributors", "7000+ users"];
+const baseMetrics = ["$35 Million", "15+ contributors", "7000+ users", "500+ attendees", "100% key recovery", "top 10% subnet performance"];
 const baseSectionOrder: SectionName[] = [
   "professionalSummary",
   "workExperience",
