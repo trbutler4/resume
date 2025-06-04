@@ -10,7 +10,6 @@ export interface PersonalInfo {
 export interface SkillSummary {
   tools: string[]
   languages: string[]
-  softSkills: string[]
 }
 
 export interface WorkExperience {

@@ -57,9 +57,6 @@ class ResumeGenerator {
             <li>
               <strong>Tools:</strong> ${this.config.skillSummary.tools.join(", ")}
             </li>
-            <li>
-              <strong>Soft Skills:</strong> ${this.config.skillSummary.softSkills.join(", ")}
-            </li>
           </ul>
         </div>
       </section>
