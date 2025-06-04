@@ -253,3 +253,126 @@ export const AISmartContractVulnerabilityProject: Project = {
     "Methods included analyzing bytecode directly by constructing a 'sliding window' of relevant opcodes, as well converting bytecode into RGB images, both of which were analyzed using neural networks.",
   tools: ["Python", "PyTorch", "Jupyter Notebook", "Solidity", "Slither"],
 };
+
+export const ZkCreditProofsProject: Project = {
+  id: "zkcredit-proofs",
+  name: "ZK Credit Proofs",
+  link: "",
+  description:
+    "Uses Polygon ID to issue credentials for an individuals credit score, and submit a ZK proof that their credit score is above a certain threshold to prevent the need for sharing SSN with the leasing company.",
+  tools: ["Go", "Polygon ID", "NGROK", "React"],
+};
+
+export const StarkfishProject: Project = {
+  id: "starkfish",
+  name: "Starkfish -- a Starknet Chess Engine",
+  link: "",
+  description: "Prveable chess engine implemented in Cairo.",
+  achievements: [
+    "Frontend created with starknet-react and NextJs to against the engine.",
+  ],
+  tools: ["Cairo", "Katana", "Starkli", "Starknet", "Starknet-react", "NextJs"],
+};
+
+export const MiscSMartContractProjects: Project = {
+  id: "misc-smart-contract",
+  name: "General Solidity and Cairo Projects",
+  link: "",
+  description: "Various Smart Contract projects in Solidity and Cairo",
+  achievements: [
+    "Various Solidity projects on Node Guardians with topics including gas optimization, security, storage, and more.",
+    "Completed various Solidity CTFs on Ethernaut, fully testing all solutions and exploits in Solidity with Foundry.",
+  ],
+  tools: [
+    "Solidity",
+    "Cairo",
+    "Hardhat",
+    "Brownie",
+    "Foundry",
+    "Ethers",
+    "Scarb",
+  ],
+};
+
+export const NFTicketProject: Project = {
+  id: "nfticket",
+  name: "Full Stack App",
+  link: "https://github.com/trbutler4/NFTicket",
+  description:
+    "NFT event ticketing platform which allows organizers to easily create events, sell tickets, and redeem tickets for events.",
+  achievements: [
+    "Lead team of 4 developers to follow software engineering best practices",
+    "Fully tested metamask integration using Cypress and Synpress.",
+  ],
+  tools: [
+    "Solidity",
+    "Hardhat",
+    "React",
+    "Firebase",
+    "Infura",
+    "Cypress",
+    "Synpress",
+  ],
+};
+
+export const CurateProject: Project = {
+  id: "curate",
+  name: "Full Stack App",
+  link: "https://github.com/sep-23/team_01/wiki",
+  description:
+    "Full stack web application that leverages Spotify and Apple music APIs to allow users to curate playlists, post them to the platform, like and comment on playlists, follow users, and upload/export playlists to and from Spotify and Apple Music.",
+  achievements: [
+    "Includes CI/CD pipelines, PR templates, and branch protections.",
+    "Fully documented project wiki detailing all aspects of the project.",
+  ],
+  tools: ["React", "Firebase", "Node", "Cypress"],
+};
+
+export const PeerioProject: Project = {
+  id: "peerio",
+  name: "Full Stack App",
+  link: "https://github.com/brandonsurh/peerio",
+  description: "Decentralized peer review process on filecoin network.",
+  achievements: [
+    "Tokenized voting system, with rewards tied to a users reputation.",
+  ],
+  hackathonLink: "https://ethglobal.com/showcase/peerio-0bv55",
+  tools: ["Solidity", "Hardhat", "React", "Firebase", "IPFS", "Web3.Storage"],
+};
+
+export const SISCComputerProject: Project = {
+  id: "sisc-computer",
+  name: "SISC Computer Processor",
+  link: "",
+  description:
+    "Built and tested a SISC computer processor using Verilog and ModelSim",
+  achievements: [
+    "Implemented machine code that directly executes on the computer.",
+  ],
+  tools: ["Verilog", "ModelSim"],
+};
+
+export const EmbeddedCryptoDisplayProject: Project = {
+  id: "embedded-display",
+  name: "Embedded Crypto Price Display",
+  link: "https://github.com/trbutler4/Project_ES_S21",
+  description:
+    "Embedded system that display the live prices of Bitcoin and Ethereum. Includes a push button to swap between the different cryptocurrencies, and an alarm if the price crashes.",
+  achievements: [
+    "Python script to interact with API to retrieve live prices for Bitcoin and Ethereum, then send serially to arduino via bluetooth.",
+    "Arduino microcontroller with LED display module, bluetooth module, buzzer, and push button",
+  ],
+  tools: ["Python", "C", "Ardiuino", "Atmel Studio", "x64 Assembly", "Linux"],
+};
+
+export const DesktopVotingAppProject: Project = {
+  id: "desktop-voting-app",
+  name: "Java Voting App",
+  link: "",
+  description:
+    "GUI desktop application implemented with Java and SQLite to allow for national voting.",
+  achievements: [
+    "Authentication for different user types, including voter, auditor, and media users.",
+  ],
+  tools: ["Java", "SQL", "SQLite"],
+};
