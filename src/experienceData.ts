@@ -29,11 +29,12 @@ export const NakamotoWorkExperience: WorkExperience = {
   company: "Nakamoto LLC",
   duration: "January 2025 - June 2025",
   responsibilities: [
-    "Supported team of two engineers to compete in Bittensor subnets.",
+    "Lead team of two engineers to compete in Bittensor subnets.",
     "Fine-tuned tool calling LLMs to compete in Bittensor subnet 20 (BitAgent), beating SOTA models on Berkley Function Calling Leaderboard, and achieving top 10% subnet performance.",
-    "Built and managed both physical and cloud server infrastructure for AI inference, combining datacenter and cloud servers into a single kubernetes cluster providing compute to Bittensor subnet 64 (Chutes). Optimized auto-scaling and resource allocation for maximum profit.",
-    "Designed high performance concurrent microservice architecture in Python and Golang for scraping large amounts of Reddit, Twitter, and Youtube data for competing in Bittensor subnet 13 (Data Universe).",
-    "Built a network of AI agents on twiter to compete on the bitensor Agent Arena subnet, using ElizaOS",
+    "Architected and orchestrated a complex hybrid infrastructure combining physical datacenter and cloud servers into a unified kubernetes cluster, delivering high-performance AI inference capabilities for Bittensor subnet 64 (Chutes). Implemented sophisticated auto-scaling algorithms and resource allocation strategies that maximized profitability and operational efficiency.",
+    "Served as the sole on-call engineer for critical infrastructure, responding within minutes to a server outage caused by CPU hardware failure. Rapidly diagnosed the issue, coordinated with datacenter technicians, and orchestrated a seamless migration to backup systems, minimizing downtime and maintaining subnet performance metrics during the incident.",
+    "Engineered an advanced concurrent microservice architecture in Python and Golang that efficiently harvested and processed massive datasets from Reddit, Twitter, and Youtube, providing competitive edge in Bittensor subnet 13 (Data Universe).",
+    "Developed and deployed a sophisticated network of autonomous AI agents on Twitter to strategically compete in the Bittensor Agent Arena subnet, leveraging ElizaOS for enhanced interaction capabilities and performance optimization.",
   ],
   tools: [
     "Python",
