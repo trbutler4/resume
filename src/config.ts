@@ -1,4 +1,4 @@
-import { ResumeConfig, SkillSummary } from "./types";
+import { ResumeConfig, SkillSummary, SectionName } from "./types";
 import {
   DefaultPersonalInfo,
   NakamotoWorkExperience,
@@ -20,6 +20,14 @@ import {
   DefaultSkillSummary,
 } from "./experienceData";
 
+const baseMetrics = ["$35M+ Million", "15+ contributors", "7000+ users"];
+const baseSectionOrder: SectionName[] = [
+  "skillSummary",
+  "workExperience",
+  "projects",
+  "openSourceExperience",
+  "education",
+];
 
 // AI/ML engineer resume
 export const aiMlConfig: ResumeConfig = {
@@ -31,16 +39,10 @@ export const aiMlConfig: ResumeConfig = {
   openSourceExperience: [CairoZedOpenSourceExperience],
   projects: [AISmartContractVulnerabilityProject],
   education: [UIowaEducation],
-  sectionsOrder: [
-    "education",
-    "skillSummary",
-    "workExperience",
-    "projects",
-    "openSourceExperience",
-  ],
+  sectionsOrder: baseSectionOrder,
   emphasize: {
     keywords: [],
-    metrics: ["top 10% performance", "7000+ users"],
+    metrics: baseMetrics,
   },
 };
 
@@ -61,21 +63,10 @@ export const blockchainConfig: ResumeConfig = {
   ],
   projects: [KakarotBridgeProject, StarkSproutsProject, ZkCreditProofsProject],
   education: [UIowaEducation],
-  sectionsOrder: [
-    "education",
-    "skillSummary",
-    "workExperience",
-    "openSourceExperience",
-    "projects",
-  ],
+  sectionsOrder: baseSectionOrder,
   emphasize: {
     keywords: [],
-    metrics: [
-      "$35M+ assets secured",
-      "top 10% subnet performance",
-      "15+ contributors",
-      "7000+ users",
-    ],
+    metrics: baseMetrics,
   },
 };
 
@@ -92,21 +83,10 @@ export const fullStackConfig: ResumeConfig = {
   ],
   projects: [NFTicketProject, CurateProject, PeerioProject],
   education: [UIowaEducation],
-  sectionsOrder: [
-    "education",
-    "skillSummary",
-    "workExperience",
-    "projects",
-    "openSourceExperience",
-  ],
+  sectionsOrder: baseSectionOrder,
   emphasize: {
     keywords: [],
-    metrics: [
-      "$35M+ assets secured",
-      "entire stack ownership",
-      "multi-timezone remote team",
-      "15+ contributors",
-    ],
+    metrics: baseMetrics,
   },
 };
 
@@ -123,16 +103,10 @@ export const mobileConfig: ResumeConfig = {
   ],
   projects: [StarkSproutsProject, KakarotBridgeProject],
   education: [UIowaEducation],
-  sectionsOrder: [
-    "education",
-    "skillSummary",
-    "workExperience",
-    "openSourceExperience",
-    "projects",
-  ],
+  sectionsOrder: baseSectionOrder,
   emphasize: {
     keywords: [],
-    metrics: ["$35M+ assets secured", "15+ contributors", "7000+ installs"],
+    metrics: baseMetrics,
   },
 };
 
@@ -149,21 +123,10 @@ export const sreConfig: ResumeConfig = {
   ],
   projects: [],
   education: [UIowaEducation],
-  sectionsOrder: [
-    "education",
-    "skillSummary",
-    "workExperience",
-    "projects",
-    "openSourceExperience",
-  ],
+  sectionsOrder: baseSectionOrder,
   emphasize: {
     keywords: [],
-    metrics: [
-      "$35M+ assets secured",
-      "entire stack ownership",
-      "multi-timezone remote team",
-      "15+ contributors",
-    ],
+    metrics: baseMetrics,
   },
 };
 
@@ -185,22 +148,10 @@ export const suffixLabsConfig: ResumeConfig = {
   ],
   projects: [],
   education: [UIowaEducation],
-  sectionsOrder: [
-    "education",
-    "skillSummary",
-    "workExperience",
-    "openSourceExperience",
-    "projects",
-  ],
+  sectionsOrder: baseSectionOrder,
   emphasize: {
     keywords: [],
-    metrics: [
-      "Founded LLC",
-      "blockchain validator",
-      "multi-client consulting",
-      "$35M+ assets secured",
-      "15+ contributors",
-    ],
+    metrics: baseMetrics,
   },
 };
 
