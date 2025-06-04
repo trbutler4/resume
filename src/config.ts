@@ -54,13 +54,7 @@ export const blockchainConfig: ResumeConfig = {
     StarknetPhoneOpenSourceExperience,
     CairoZedOpenSourceExperience,
   ],
-  projects: [
-    KakarotBridgeProject,
-    StarkSproutsProject,
-    ZkCreditProofsProject,
-    StarkfishProject,
-    SISCComputerProject,
-  ],
+  projects: [KakarotBridgeProject, StarkSproutsProject, ZkCreditProofsProject],
   education: [UIowaEducation],
   sectionsOrder: [
     "education",
