@@ -26,7 +26,7 @@ export const aiMlConfig: ResumeConfig = {
   personalInfo: DefaultPersonalInfo,
   workExperience: [NakamotoWorkExperience, TholosWorkExperience],
   openSourceExperience: [CairoZedOpenSourceExperience],
-  projects: [AISmartContractVulnerabilityProject, KakarotBridgeProject],
+  projects: [AISmartContractVulnerabilityProject],
   education: [UIowaEducation],
   sectionsOrder: [
     "education",
