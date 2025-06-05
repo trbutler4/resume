@@ -38,15 +38,12 @@ class ResumeGenerator {
   }
 
   generateProfessionalSummary(): string {
-    if (
-      !this.config ||
-      !this.config.professionalSummary
-    ) {
+    if (!this.config || !this.config.professionalSummary) {
       return "";
     }
 
-    const education = this.config.professionalSummary.education
-    const skills = this.config.professionalSummary.skills
+    const education = this.config.professionalSummary.education;
+    const skills = this.config.professionalSummary.skills;
 
     let html = `
       <section class="section">
@@ -68,8 +65,7 @@ class ResumeGenerator {
       </section>
     `;
 
-    return html
-    
+    return html;
   }
 
   generateWorkExperience(): string {
@@ -88,14 +84,6 @@ class ResumeGenerator {
             <div class="section-content">`;
 
     this.config.workExperience.forEach((exp: WorkExperience) => {
-      if (
-        exp.status === "optional" &&
-        this.config!.resumeType !== "blockchain" &&
-        this.config!.resumeType !== "suffix-labs"
-      ) {
-        return;
-      }
-
       html += `
                 <div class="job-title">
                     <strong>${exp.position}</strong> –

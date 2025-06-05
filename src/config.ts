@@ -11,7 +11,14 @@ import {
   DefaultProfessionalSummary,
 } from "./experienceData";
 
-const baseMetrics = ["$35 Million", "15+ contributors", "7000+ users", "500+ attendees", "100% key recovery", "top 10% subnet performance"];
+const baseMetrics = [
+  "$35 Million",
+  "15+ contributors",
+  "7000+ users",
+  "500+ attendees",
+  "100% key recovery",
+  "top 10% subnet performance",
+];
 const baseSectionOrder: SectionName[] = [
   "professionalSummary",
   "workExperience",
@@ -19,7 +26,28 @@ const baseSectionOrder: SectionName[] = [
   "openSourceExperience",
 ];
 
-// AI/ML engineer resume
+export const sweConfig: ResumeConfig = {
+  resumeType: "swe",
+  title: "Senior Software Engineer",
+  personalInfo: DefaultPersonalInfo,
+  professionalSummary: DefaultProfessionalSummary,
+  workExperience: [
+    NakamotoWorkExperience,
+    TholosWorkExperience,
+    ETHChiWorkExperience,
+  ],
+  openSourceExperience: [
+    StarknetPhoneOpenSourceExperience,
+    CairoZedOpenSourceExperience,
+  ],
+  projects: [],
+  sectionsOrder: baseSectionOrder,
+  emphasize: {
+    keywords: [],
+    metrics: baseMetrics,
+  },
+};
+
 export const aiMlConfig: ResumeConfig = {
   resumeType: "ai-ml",
   title: "Senior AI/ML Engineer",
@@ -98,7 +126,7 @@ export const mobileConfig: ResumeConfig = {
 
 // Site Reliability Engineer resume
 export const sreConfig: ResumeConfig = {
-  resumeType: "full-stack",
+  resumeType: "sre",
   title: "Software Engineer - SRE",
   personalInfo: DefaultPersonalInfo,
   professionalSummary: DefaultProfessionalSummary,
@@ -140,6 +168,7 @@ export const suffixLabsConfig: ResumeConfig = {
 };
 
 export const configs: Record<string, ResumeConfig> = {
+  swe: sweConfig,
   ai: aiMlConfig,
   blockchain: blockchainConfig,
   fullStack: fullStackConfig,
